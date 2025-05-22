@@ -1,0 +1,4 @@
+title: Sridevi's DevOps Blog
+theme: minima
+plugins:
+  - jekyll-feed
