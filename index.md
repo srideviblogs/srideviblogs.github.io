@@ -1,7 +1,10 @@
 ---
 layout: home
-title: "Welcome to my page"
+title: "Welcome to Sridevi’s DevOps Blog!"
 ---
 
-Hi! I’ll be sharing stories, tips, and tutorials about **DevOps, SRE, Kubernetes, CI/CD, and more**.  
-Stay tuned for updates!
+Hi there! 👋 I'm Sridevi, and this is my space to share insights, stories, and tutorials from my journey in **DevOps**, **SRE**, **Kubernetes**, **CI/CD**, and beyond.
+
+Whether you're just getting started or looking for advanced tips, I hope you’ll find something useful and inspiring here.
+
+Stay tuned — more content coming soon!
