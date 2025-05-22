@@ -52,10 +52,15 @@ navigation:
 paginate: 5
 paginate_path: /page:num/
 
-# Enable custom CSS
+# Custom CSS
+sass:
+  style: compressed
+
 defaults:
-  - scope:
+  -
+    scope:
       path: ""
     values:
-      css: "assets/css/custom.css"
+      css: "/assets/css/custom.css"
+
 
