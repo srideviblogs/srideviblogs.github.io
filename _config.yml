@@ -19,7 +19,7 @@ author:
       url: "https://github.com/srideviblogs"
 
 # Theme design
-minimal_mistakes_skin: "neon"  # Options: default, dark, air, neon, etc.
+minimal_mistakes_skin: "plum"  # Options: default, dark, air, neon, etc.
 locale: "en-US"
 logo: "/assets/images/logo.png"  # Optional: place logo image in assets/images/
 
