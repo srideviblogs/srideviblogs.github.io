@@ -1,16 +1,54 @@
+title: "SWelcome to Sridevi’s DevOps Blog!"
+description: "Hi there! 👋 I’m Sridevi, and this is my space to share insights, stories, and tutorials from my journey in DevOps, SRE, Kubernetes, CI/CD, and beyond.
+  Whether you’re just getting started or looking for advanced tips, I hope you’ll find something useful and inspiring here.
+  Stay tuned — more content coming soon!."
+url: "https://srideviblogs.github.io" # Do not end with a slash
+baseurl: "" # Leave this empty for user/organization site (not a project site)
+
+# Minimal Mistakes theme via GitHub Pages
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Author info (for sidebar and post meta)
+author:
+  name: "Sridevi Velpula"
+  avatar: "/assets/images/bio-photo.jpg" # Optional: replace with your own image
+  bio: "DevOps Engineer | Blogger | Lifelong Learner"
+  location: "USA"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/srideviblogs"
+# Theme options
+minimal_mistakes_skin: "default"
+locale: "en-US"
+logo: "/assets/images/logo.png" # Optional
+
+# Plugins
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-include-cache
+  - jekyll-remote-theme
 
-# Remove or comment out any line like `theme: minima`
-# Add your existing configs like title, email, etc below
-title: "Welcome to Sridevi’s DevOps Blog!"
-description: >-
-  Hi there! 👋 I’m Sridevi, and this is my space to share insights, stories, and tutorials from my journey in DevOps, SRE, Kubernetes, CI/CD, and beyond.
-  Whether you’re just getting started or looking for advanced tips, I hope you’ll find something useful and inspiring here.
-  Stay tuned — more content coming soon!
-baseurl: "" # no trailing slash for user/org site
-url: "https://srideviblogs.github.io"
+# Markdown configuration
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks
+permalink: /:categories/:title/
+
+# Navigation (optional)
+# Remove this section if you don’t need a navbar
+nav:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Blog"
+    url: /year-archive/
+
+# Pagination (optional)
+paginate: 5
+paginate_path: /page:num/
+
