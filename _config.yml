@@ -1,4 +1,16 @@
-title: Sridevi's DevOps Blog
-theme: minima
+remote_theme: mmistakes/minimal-mistakes@4.24.0
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Remove or comment out any line like `theme: minima`
+# Add your existing configs like title, email, etc below
+title: "Welcome to Sridevi’s DevOps Blog!"
+description: >-
+  Hi there! 👋 I’m Sridevi, and this is my space to share insights, stories, and tutorials from my journey in DevOps, SRE, Kubernetes, CI/CD, and beyond.
+  Whether you’re just getting started or looking for advanced tips, I hope you’ll find something useful and inspiring here.
+  Stay tuned — more content coming soon!
+baseurl: "" # no trailing slash for user/org site
+url: "https://srideviblogs.github.io"
