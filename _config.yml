@@ -51,3 +51,11 @@ navigation:
 # Pagination
 paginate: 5
 paginate_path: /page:num/
+
+# Enable custom CSS
+defaults:
+  - scope:
+      path: ""
+    values:
+      css: "assets/css/custom.css"
+
