@@ -9,7 +9,7 @@ github_username: srideviblogs
 
 # Theme settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "Dark"  # Options: default, dark, contrast, sunrise, etc.
+minimal_mistakes_skin: "air"  # Options: default, dark, contrast, sunrise, etc.
 
 # Author
 author:
