@@ -1,4 +1,4 @@
-title: "Welcome to Sridevi's DevOps Blog"
+title: "Sridevi Blogs"
 email: ""
 description: >-
   A DevOps blog focused on real-world learning and career growth — by Sridevi Velpula.
@@ -9,7 +9,7 @@ github_username: srideviblogs
 
 # Theme settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "sunrise"  # Options: default, dark, contrast, sunrise, etc.
+minimal_mistakes_skin: "Plum"  # Options: default, dark, contrast, sunrise, etc.
 
 # Author
 author:
