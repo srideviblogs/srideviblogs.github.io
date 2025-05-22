@@ -11,5 +11,5 @@ author_profile: true
 - Step-by-step DevOps how-tos (AWS, Azure, CI/CD, Kubernetes, Jenkins, Terraform, etc.)
 - Cloud tips and automation guides
 - Interview prep and career advice
-- 
+  
 Stay tuned — more content coming soon!
