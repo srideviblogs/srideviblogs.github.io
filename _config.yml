@@ -9,13 +9,13 @@ github_username: srideviblogs
 
 # Theme settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "air"  # Options: default, dark, contrast, sunrise, etc.
+minimal_mistakes_skin: "dark"  # Options: default, dark, contrast, sunrise, etc.
 
 # Author
 author:
   name: "Sridevi Velpula"
   # avatar: "/assets/images/profile.jpg"
-  bio: "DevOps Engineer Cloud Enthusiast Lifelong Learner"
+  bio: "DevOps Engineer&nbsp;|&nbsp;Cloud Enthusiast&nbsp;|&nbsp;Lifelong Learner"
   location: "USA"
 
 # Navigation
