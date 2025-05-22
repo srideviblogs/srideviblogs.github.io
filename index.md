@@ -12,4 +12,4 @@ author_profile: true
 - Cloud tips and automation guides
 - Interview prep and career advice
 
-Dive into the [Blog](/blog/) to get started!
+Stay tuned — more content coming soon!
