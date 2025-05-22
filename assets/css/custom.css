@@ -1,12 +1,14 @@
-/* Light blue background for full site */
 body {
-  background-color: #f0f8ff;
+  background-color: #fff8f0;
 }
 
-/* Optional styling for content box */
 .page {
-  background-color: white;
+  background: white;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+a {
+  color: #c75b39;
 }
