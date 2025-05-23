@@ -12,3 +12,12 @@ body {
 a {
   color: #c75b39;
 }
+.contact-container {
+  background: linear-gradient(135deg, #ffe4e1, #e0ffff);
+  border-radius: 20px;
+  padding: 30px;
+  color: #333;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  line-height: 1.8;
+}
