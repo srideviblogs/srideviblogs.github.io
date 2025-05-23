@@ -1,27 +1,17 @@
 body {
-  background-color: #fff8f0;
+  background-color: #fef6ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.page {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+h1, h2, h3 {
+  color: #5c1a78;
 }
 
-a {
-  color: #c75b39;
-}
 .contact-container {
-  background: linear-gradient(135deg, #ffe4e1, #e0ffff);
-  border-radius: 20px;
-  padding: 30px;
-  color: #333;
-  font-size: 1.1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  line-height: 1.8;
-}
-.skip-links {
-  position: absolute;
-  left: -9999px;
+  background-color: #fff2fa;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(92, 26, 120, 0.2);
+  max-width: 600px;
+  margin: auto;
 }
