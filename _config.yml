@@ -5,51 +5,29 @@ description: >-
 baseurl: ""
 url: "https://srideviblogs.github.io"
 
-# Theme settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "air"  # You can also try: sunrise, neon, contrast, default
+minimal_mistakes_skin: "sunrise"
 
-# Author info
 author:
   name: "Sridevi Velpula"
-  avatar: "/assets/images/profile.jpg"
   bio: "DevOps Engineer | Cloud Enthusiast | Lifelong Learner"
 
-# Navigation links
 nav:
   - title: "Home"
     url: /
   - title: "Blog"
     url: /blog/
-  - title: "About"
-    url: /about/
   - title: "Contact"
     url: /contact/
 
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-include-cache
 
-# Enable output for standalone pages
-collections:
-  pages:
-    output: true
-
-# Default values for pages
 defaults:
   - scope:
       path: ""
     values:
-      layout: single
-      author_profile: true
-      classes: wide
       css: "assets/css/custom.css"
-
-# Exclude unnecessary files
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
