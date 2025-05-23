@@ -98,6 +98,7 @@ footer {
   }
 }
 /* Hide the Follow button */
+a[href$="/feed.xml"],
 a[title="Follow"] {
   display: none !important;
 }
