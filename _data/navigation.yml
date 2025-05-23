@@ -1,7 +1,0 @@
-main:
-  - title: "Home"
-    url: /
-  - title: "Blog"
-    url: /year-archive/
-  - title: "Contact"
-    url: /contact/
