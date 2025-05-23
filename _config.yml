@@ -1,5 +1,5 @@
 title: "Sridevi Blogs"
-email: "sridevisandeep.pochu@gmail.com"
+email: ""
 description: >-
   A DevOps blog focused on real-world learning and career growth — by Sridevi Velpula.
 baseurl: ""
@@ -10,7 +10,7 @@ minimal_mistakes_skin: "mint"
 
 author:
   name: "Sridevi Velpula"
-  bio: "DevOps Engineer . Cloud Enthusiast . Lifelong Learner"
+  bio: "DevOps Engineer | Cloud Enthusiast | Lifelong Learner"
 
 nav:
   - title: "Home"
@@ -19,7 +19,7 @@ nav:
     url: /blog/
 
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-include-cache
