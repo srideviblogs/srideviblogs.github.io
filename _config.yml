@@ -19,7 +19,7 @@ nav:
     url: /blog/
 
 plugins:
-  # - jekyll-feed
+  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-include-cache
