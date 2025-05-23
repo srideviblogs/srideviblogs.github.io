@@ -52,3 +52,19 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+# Enable custom homepage
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+  - scope:
+      path: ""
+    values:
+      layout: home
+      css: "assets/css/custom.css"
+
