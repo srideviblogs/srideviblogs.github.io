@@ -1,6 +1,6 @@
 ---
-# layout: home
-layout: default
+layout: home
+# layout: default
 title: "Welcome to Sridevi's DevOps Blog"
 excerpt: "Real stories, tools, and tips from a woman in tech"
 author_profile: true
