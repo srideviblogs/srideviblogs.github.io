@@ -13,3 +13,12 @@ author_profile: true
 - Interview prep and career advice
   
 Stay tuned — more content coming soon!
+
+<button id="toggle-font">Story Mode</button>
+<script>
+  const btn = document.getElementById('toggle-font');
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('serif-mode');
+    btn.textContent = document.body.classList.contains('serif-mode') ? 'Modern Mode' : 'Story Mode';
+  });
+</script>
