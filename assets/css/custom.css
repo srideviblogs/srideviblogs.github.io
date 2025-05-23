@@ -22,5 +22,6 @@ a {
   line-height: 1.8;
 }
 .skip-links {
-  display: none !important;
+  position: absolute;
+  left: -9999px;
 }
