@@ -1,24 +1,30 @@
+/* Header background and padding */
 .site-header {
-  background-color: #f0f8ff; /* light blue background */
-  padding: 10px 20px;
+  background-color: #f0f8ff; /* soft light blue */
+  padding: 15px 30px;
 }
 
+/* Site title on left */
 .site-title {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #2a2a72;
+  margin: 0;
 }
 
+/* Nav menu on right */
 .nav-primary {
   font-weight: 600;
+  font-size: 1rem;
 }
 
+/* Nav links style */
 .nav-primary a {
   color: #2a2a72;
-  padding: 0 12px;
+  margin-left: 20px;
   text-decoration: none;
 }
 
 .nav-primary a:hover {
-  color: #ff4500;
+  color: #ff4500; /* bright orange hover */
 }
