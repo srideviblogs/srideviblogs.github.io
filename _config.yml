@@ -40,3 +40,10 @@ defaults:
       path: ""
     values:
       css: "assets/css/custom.css"
+      
+# Ensure these are not removing your file
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
