@@ -97,3 +97,7 @@ footer {
     padding: 0 0.5rem;
   }
 }
+/* Hide the Follow button */
+a[title="Follow"] {
+  display: none !important;
+}
