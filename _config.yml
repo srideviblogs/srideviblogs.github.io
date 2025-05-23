@@ -1,29 +1,21 @@
 title: "Sridevi Blogs"
-email: ""
+email: "sridevisandeep.pochu@gmail.com"
 description: >-
   A DevOps blog focused on real-world learning and career growth — by Sridevi Velpula.
 baseurl: ""
 url: "https://srideviblogs.github.io"
-twitter_username: ""
-github_username: srideviblogs
-
-collections:
-  pages:
-    output: true
-    permalink: /:name/
 
 # Theme settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "neon"  # Options: default, dark, contrast, sunrise, etc.
+minimal_mistakes_skin: "air"  # You can also try: sunrise, neon, contrast, default
 
-# Author
+# Author info
 author:
   name: "Sridevi Velpula"
-  # avatar: "/assets/images/profile.jpg"
-  bio: "DevOps Engineer&nbsp;|&nbsp;Cloud Enthusiast&nbsp;|&nbsp;Lifelong Learner"
-  location: "USA"
+  avatar: "/assets/images/profile.jpg"
+  bio: "DevOps Engineer | Cloud Enthusiast | Lifelong Learner"
 
-# Navigation
+# Navigation links
 nav:
   - title: "Home"
     url: /
@@ -31,6 +23,8 @@ nav:
     url: /blog/
   - title: "About"
     url: /about/
+  - title: "Contact"
+    url: /contact/
 
 # Plugins
 plugins:
@@ -39,32 +33,23 @@ plugins:
   - jekyll-paginate
   - jekyll-include-cache
 
-# Custom CSS
+# Enable output for standalone pages
+collections:
+  pages:
+    output: true
+
+# Default values for pages
 defaults:
   - scope:
       path: ""
     values:
+      layout: single
+      author_profile: true
+      classes: wide
       css: "assets/css/custom.css"
-      
-# Ensure these are not removing your file
+
+# Exclude unnecessary files
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-
-# Enable custom homepage
-paginate: 5
-paginate_path: "/blog/page:num/"
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: single
-  - scope:
-      path: ""
-    values:
-      layout: home
-      css: "assets/css/custom.css"
-
