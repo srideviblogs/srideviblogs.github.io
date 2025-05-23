@@ -7,6 +7,11 @@ url: "https://srideviblogs.github.io"
 twitter_username: ""
 github_username: srideviblogs
 
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
 # Theme settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "sunrise"  # Options: default, dark, contrast, sunrise, etc.
