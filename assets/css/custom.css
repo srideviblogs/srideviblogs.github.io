@@ -1,17 +1,24 @@
-body {
-  background-color: #fef6ff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.site-header {
+  background-color: #f0f8ff; /* light blue background */
+  padding: 10px 20px;
 }
 
-h1, h2, h3 {
-  color: #5c1a78;
+.site-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #2a2a72;
 }
 
-.contact-container {
-  background-color: #fff2fa;
-  padding: 1.5em;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(92, 26, 120, 0.2);
-  max-width: 600px;
-  margin: auto;
+.nav-primary {
+  font-weight: 600;
+}
+
+.nav-primary a {
+  color: #2a2a72;
+  padding: 0 12px;
+  text-decoration: none;
+}
+
+.nav-primary a:hover {
+  color: #ff4500;
 }
