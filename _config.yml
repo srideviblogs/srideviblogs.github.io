@@ -18,7 +18,7 @@ nav:
   - title: "Blog"
     url: /blog/
   - title: "About"
-    url: "/about/"
+    url: /about/
 
 plugins:
   - jekyll-feed
@@ -26,13 +26,13 @@ plugins:
   - jekyll-paginate
   - jekyll-include-cache
 
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
 defaults:
   - scope:
       path: ""
     values:
       css: "assets/css/custom.css"
-      
-collections:
-  pages:
-    output: true
-    permalink: /:path/
