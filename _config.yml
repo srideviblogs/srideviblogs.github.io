@@ -17,6 +17,8 @@ nav:
     url: /
   - title: "Blog"
     url: /blog/
+ - title: "About"
+   url: "/about/"
 
 plugins:
   - jekyll-feed
