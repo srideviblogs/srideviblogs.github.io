@@ -1,7 +1,8 @@
 ---
-layout: page
-title: About Me
+layout: single
+title: "About Me"
 permalink: /about/
+author_profile: true
 ---
 
 # About Sridevi Velpula
@@ -13,3 +14,4 @@ On this blog you’ll find:
 I share my hands-on experiences by breaking down complex DevOps concepts into simple, practical tutorials you can easily apply. You’ll also find interview questions I’ve encountered, career advice I wish I had earlier, and personal reflections from my journey in tech.
 
 This space is more than just technical content — it’s created to help others grow by providing valuable resources and guidance at every step of their learning journey.
+
