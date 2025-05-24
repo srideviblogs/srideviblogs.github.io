@@ -6,8 +6,10 @@ permalink: /about/
 
 # About Me
 
-Hi, I'm **Sridevi Velpula**, a passionate DevOps Engineer and curious explorer of technology. I believe that learning never stops, and I enjoy discovering new tools, tackling challenges, and sharing the insights I gather along the way.
+**Hi, I'm Sridevi Velpula**, — a passionate DevOps Engineer and curious explorer of technology. I believe learning never stops, and I enjoy discovering new tools, tackling challenges, and sharing the insights I gather along the way.
 
-I specialize in tools like AWS, Kubernetes, CI/CD, Terraform, Jenkins, and more. On this blog, I document practical DevOps tutorials, real-world lessons, interview questions, and reflections from my journey in tech.
+**On this blog you’ll find:**
 
-This space is built to help others grow, providing the guidance I once searched for — now shared with you.
+I share my hands-on experiences by breaking down complex DevOps concepts into simple, practical tutorials you can easily apply. You’ll also find interview questions I’ve encountered, career advice I wish I had earlier, and personal reflections from my journey in tech.
+
+This space is more than just technical content — it’s created to help others grow by providing valuable resources and guidance at every step of their learning journey.
