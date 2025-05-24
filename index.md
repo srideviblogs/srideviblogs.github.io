@@ -21,7 +21,7 @@ This space is more than just technical content — it’s created to help others
 
 ### Explore More
 
-- [Latest Blog Posts](/blog/)  
+- [Latest Blog Posts](/posts/)  
 - [About Me](/about/)  
 - [Contact Me](mailto:your.email@example.com)  
 
