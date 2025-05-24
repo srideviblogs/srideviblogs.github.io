@@ -26,11 +26,6 @@ plugins:
   - jekyll-paginate
   - jekyll-include-cache
 
-collections:
-  pages:
-    output: true
-    permalink: /:path/
-
 defaults:
   - scope:
       path: ""
