@@ -16,10 +16,3 @@ This space is more than just technical content — it’s created to help others
 
 Stay tuned - more content coming soon!
 
-<h2>Featured Posts</h2>
-<ul>
-  {% assign featured = site.posts | where_exp:"post","post.featured == true" %}
-  {% for post in featured %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%b %-d, %Y" }}</li>
-  {% endfor %}
-</ul>
