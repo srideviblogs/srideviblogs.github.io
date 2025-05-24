@@ -31,7 +31,7 @@ defaults:
       path: ""
     values:
       css: "assets/css/custom.css"
-
+      
 collections:
   pages:
     output: true
