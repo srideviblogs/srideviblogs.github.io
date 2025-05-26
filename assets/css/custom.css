@@ -1,41 +1,35 @@
-/* Font import */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Source+Sans+Pro&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
-/* Base body font */
+/* Body styling */
 body {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'PT Serif', serif;
+  font-size: 19px;
+  line-height: 1.7;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.6;
   color: #333;
   background-color: #fff;
   margin: 0 auto;
   max-width: 700px;
   padding: 20px;
-
-  /* Font smoothing for better clarity */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Fira Sans', sans-serif;
   font-weight: 600;
   color: #000;
   margin-top: 2rem;
   margin-bottom: 1rem;
-
-  /* Font smoothing */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Links */
 a {
   color: #0069ed;
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
@@ -49,8 +43,9 @@ header.site-header {
   padding-bottom: 0.5rem;
 }
 
+/* Site title in header */
 .site-header h1 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Fira Sans', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
   margin: 0;
@@ -67,7 +62,7 @@ header.site-header {
   font-size: 1rem;
 }
 
-/* Post list */
+/* Post list styling */
 .post-list article {
   border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
@@ -96,11 +91,25 @@ header.site-header {
   text-align: center;
 }
 
-/* About page and Home page specific tweaks */
+/* Main page content for better readability */
 .page-content {
-  font-size: 19px;         /* Slightly larger font for readability */
+  font-size: 19px;
   font-weight: 400;
   line-height: 1.7;
-  letter-spacing: 0.02em;  /* Improves readability */
+  letter-spacing: 0.02em;
   color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+  }
 }
