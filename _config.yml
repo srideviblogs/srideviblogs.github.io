@@ -5,11 +5,11 @@ url: "https://srideviblogs.github.io"
 theme: millennial
 
 author:
-  name: "Sridevi Velpula”
+  name: "Sridevi Velpula"
   github: srideviblogs
-  linkedin: https://www.linkedin.com/in/sandeep-pochu-27589b274/
-  location: Santa Clara, CA
-  bio: “DevOps Engineer | Blogger | Tech Enthusiast"
+  linkedin: "https://www.linkedin.com/in/sandeep-pochu-27589b274/"
+  location: "Santa Clara, CA"
+  bio: "DevOps Engineer | Blogger | Tech Enthusiast"
 
 permalink: /:title/
 paginate: 5
@@ -29,8 +29,8 @@ nav:
     url: /
   - title: About
     url: /about/
-- title: Blogs
+  - title: Blogs
     url: /blogs/
 
 google_analytics: ""  # Optional
-disqus: ""           # Optional
+disqus: ""            # Optional
