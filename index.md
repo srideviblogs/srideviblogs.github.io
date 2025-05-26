@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home
-permalink: /home/
+permalink: /
 ---
 
 # Welcome to Sridevi's DevOps Blog!
