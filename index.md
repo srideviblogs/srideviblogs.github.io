@@ -4,8 +4,6 @@ title: Home
 permalink: /
 ---
 
-<div class="page-content">
-
 # Welcome to Sridevi's DevOps Blog!
 
 This is my space to share insights, stories, and tutorials from my journey in DevOps, SRE, Kubernetes, CI/CD, and beyond.
@@ -28,4 +26,3 @@ Connect with me on:
 
 Thank you for visiting!
 
-</div>
