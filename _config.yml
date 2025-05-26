@@ -2,7 +2,6 @@ title: "Sridevi Blogs"
 description: "A DevOps blog focused on real-world learning and career growth — by Sridevi Velpula."
 baseurl: "" 
 url: "https://srideviblogs.github.io"
-theme: millennial
 
 author:
   name: "Sridevi Velpula"
@@ -16,6 +15,7 @@ paginate: 5
 paginate_path: "/page:num/"
 
 markdown: kramdown
+highlighter: rouge
 
 plugins:
   - jekyll-paginate
@@ -25,12 +25,20 @@ plugins:
   - jekyll-archives
 
 nav:
-  - title: Home
-    url: /
-  - title: About
-    url: /about/
-  - title: Blogs
-    url: /blogs/
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Blogs"
+    url: "/blogs/"
 
-google_analytics: ""  # Optional
-disqus: ""            # Optional
+google_analytics: ""  # Optional – replace with your ID
+disqus: ""             # Optional – replace with your shortname
+
+# Social Links (optional)
+social:
+  github: "https://github.com/srideviblogs"
+  linkedin: "https://www.linkedin.com/in/sandeep-pochu-27589b274/"
+
+# Build settings (Important)
+exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor", "README.md"]
