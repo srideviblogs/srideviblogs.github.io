@@ -1,13 +1,1 @@
-/* Apply PT Serif to body text */
-body {
-  font-family: 'PT Serif', serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-  background-color: #fff;
-}
 
-/* Apply Fira Sans to headings and navigation */
-h1, h2, h3, h4, h5, h6, nav, .site-title {
-  font-family: 'Fira Sans', sans-serif;
-}
