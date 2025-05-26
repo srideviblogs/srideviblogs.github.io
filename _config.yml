@@ -1,33 +1,42 @@
 title: "Sridevi Blogs"
-email: ""
-description: >-
-  A DevOps blog focused on real-world learning and career growth — by Sridevi Velpula.
-baseurl: ""
+description: "A DevOps blog focused on real-world learning and career growth — by Sridevi Velpula."
+baseurl: "" 
 url: "https://srideviblogs.github.io"
-
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "sunrise"
+theme: millennial
 
 author:
-  name: "Sridevi Velpula"
-  bio: "DevOps Engineer&nbsp;|&nbsp;Cloud Enthusiast&nbsp;|&nbsp;Ideas to Action"
+  name: "Sridevi Velpula”
+  github: srideviblogs
+  linkedin: https://www.linkedin.com/in/sandeep-pochu-27589b274/
+  location: Santa Clara, CA
+  bio: “DevOps Engineer | Blogger | Tech Enthusiast"
 
-nav:
-  - title: "Home"
-    url: /
-  - title: "Posts"
-    url: /posts/
-  - title: "About"
-    url: /about/
+permalink: /:title/
+paginate: 5
+paginate_path: "/page:num/"
+
+markdown: kramdown
 
 plugins:
+  - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-archives
+
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+- title: Blogs
+    url: /blogs/
 
 defaults:
   - scope:
       path: ""
     values:
       css: "assets/css/custom.css"
+
+google_analytics: ""  # Optional
+disqus: ""           # Optional
