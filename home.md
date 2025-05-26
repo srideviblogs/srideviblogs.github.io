@@ -6,7 +6,9 @@ permalink: /home/
 
 # Welcome to Sridevi's DevOps Blog!
 
-This is the home page of my personal blog where I share insights and tutorials on DevOps, cloud computing, and career growth.
+This is my space to share insights, stories, and tutorials from my journey in DevOps, SRE, Kubernetes, CI/CD, and beyond.
+
+This blog is where I document my journey, insights, and tips for fellow engineers.
 
 ## Explore
 
