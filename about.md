@@ -4,8 +4,6 @@ title: "About"
 permalink: /about/
 ---
 
-# About Me
-
 **Hi, I'm Sridevi Velpula**, — a passionate DevOps Engineer and curious explorer of technology. I believe learning never stops, and I enjoy discovering new tools, tackling challenges, and sharing the insights I gather along the way.
 
 **On this blog you’ll find:**
