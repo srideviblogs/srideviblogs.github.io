@@ -32,11 +32,5 @@ nav:
 - title: Blogs
     url: /blogs/
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      css: "assets/css/custom.css"
-
 google_analytics: ""  # Optional
 disqus: ""           # Optional
