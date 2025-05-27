@@ -24,6 +24,18 @@ plugins:
   - jekyll-sitemap
   - jekyll-archives
 
+collections:
+  posts:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      
 nav:
   - title: "Home"
     url: "/"
@@ -31,6 +43,8 @@ nav:
     url: "/about/"
   - title: "Blogs"
     url: "/blogs/"
+  - title: "Categories"
+    url: "/categories/"
 
 google_analytics: ""  # Optional – replace with your ID
 disqus: ""             # Optional – replace with your shortname
