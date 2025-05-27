@@ -2,7 +2,7 @@
 layout: post
 title: "Kubernetes Introduction for Beginners"
 date: 2025-05-28 12:00:00 +0000
-categories: [Kubernetes, DevOps]
+categories: [kubernetes, devOps]
 tags: [kubernetes, pods, containers, orchestration]
 ---
 
