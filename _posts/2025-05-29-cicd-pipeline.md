@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "CI/CD Pipeline Explained"
-date: 2025-05-29
-categories: [cicd]
+date: 2025-05-29 12:00:00 +0000
+categories: [cicd, devops]
 tags: [ci, cd, devops, jenkins, gitlab]
 ---
 
