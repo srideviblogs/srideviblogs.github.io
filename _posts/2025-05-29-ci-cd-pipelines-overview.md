@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CI/CD Pipelines: Automating Your Software Delivery"
-date: YYYY-MM-DD
+date: 2025-05-29 12:00:00 +0000
 categories: [CI/CD, DevOps]
 tags: [ci-cd, jenkins, automation, pipelines]
 ---
