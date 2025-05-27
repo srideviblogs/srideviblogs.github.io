@@ -2,7 +2,7 @@
 layout: post
 title: "Terraform Basics: Infrastructure as Code"
 date: 2025-05-27 12:00:00 +0000
-categories: [Terraform, DevOps]
+categories: [terraform, devOps]
 tags: [terraform, infrastructure-as-code, aws]
 ---
 
