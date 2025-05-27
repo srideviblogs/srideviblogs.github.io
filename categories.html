@@ -1,18 +1,20 @@
 ---
 layout: default
-title: Categories
-permalink: /categories/
 ---
 
-<h1>Categories</h1>
+<h1>Posts in category: "{{ page.title }}"</h1>
 
 <ul>
-  {% assign categories = site.categories %}
-  {% for category in categories %}
-    <li>
-      <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">
-        {{ category[0] | capitalize }}
-      </a> ({{ category[1].size }} posts)
-    </li>
-  {% endfor %}
+  {% assign posts_in_category = site.categories[page.title] %}
+  {% if posts_in_category %}
+    {% for post in posts_in_category %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%b %-d, %Y" }}
+      </li>
+    {% endfor %}
+  {% else %}
+    <li>No posts found in this category.</li>
+  {% endif %}
 </ul>
+
+<a href="{{ site.baseurl }}/categories/" class="btn-back">Back to Categories</a>
