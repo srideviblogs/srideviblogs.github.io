@@ -2,7 +2,7 @@
 layout: post
 title: "Getting Started with CI/CD Pipelines"
 date: 2025-05-26 12:00:00 +0000
-categories: [CI/CD, DevOps]
+categories: [ci/cd, devOps]
 tags: [jenkins, cicd, automation]
 ---
 
