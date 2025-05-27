@@ -10,7 +10,9 @@ author:
   location: "Santa Clara, CA"
   bio: "DevOps Engineer | Blogger | Tech Enthusiast"
 
+# Permalink style - you can keep this or change if you want dated URLs
 permalink: /:title/
+
 paginate: 5
 paginate_path: "/page:num/"
 
@@ -23,6 +25,17 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 collections:
   posts:
