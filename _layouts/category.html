@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<h1>Posts in category: "{{ page.title }}"</h1>
+<h1>Posts in category: "{{ page.category | capitalize }}"</h1>
 
 <ul>
-  {% assign posts_in_category = site.categories[page.title] %}
+  {% assign posts_in_category = site.categories[page.category] %}
   {% if posts_in_category %}
     {% for post in posts_in_category %}
       <li>
@@ -17,4 +17,4 @@ layout: default
   {% endif %}
 </ul>
 
-<a href="{{ site.baseurl }}/categories/">Back to Categories</a>
+<a href="/categories/">Back to Categories</a>
