@@ -1,6 +1,6 @@
 ---
 layout: category
-title: "Terraform"
+title: Terraform
 category: terraform
 permalink: /categories/terraform/
 ---
