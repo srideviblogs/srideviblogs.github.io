@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Kubernetes Basics: Understanding the Fundamentals"
-date: 2025-05-28
-categories: [kubernetes]
+title: "Kubernetes Basics"
+date: 2024-08-01 10:00:00 +0000
+categories: kubernetes
 tags: [kubernetes, containers, pods]
 ---
 
