@@ -1,6 +1,6 @@
 ---
 layout: category
-title: "Kubernetes"
+title: Kubernetes
 category: kubernetes
 permalink: /categories/kubernetes/
 ---
