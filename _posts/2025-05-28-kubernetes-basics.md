@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kubernetes Basics: Understanding the Fundamentals"
-date: YYYY-MM-DD
+date: 2025-05-28 12:00:00 +0000
 categories: [Kubernetes, DevOps]
 tags: [kubernetes, containers, orchestration, pods]
 ---
