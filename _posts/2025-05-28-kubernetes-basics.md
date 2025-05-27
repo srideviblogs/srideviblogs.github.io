@@ -6,4 +6,4 @@ categories: kubernetes
 tags: [kubernetes, containers, pods]
 ---
 
-This is a sample post about Kubernetes fundamentals.
+This is a sample post about Kubernetes fundamentals. 
