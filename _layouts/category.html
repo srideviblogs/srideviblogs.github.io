@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>Posts in category: {{ page.title }}</h1>
+<h1>Posts in category: {{ page.category | capitalize }}</h1>
 
 <ul>
   {% assign posts = site.categories[page.category] %}
