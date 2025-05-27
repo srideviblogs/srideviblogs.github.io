@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Sridevi's DevOps Blog"
 date: 2025-05-17 10:00:00 +0000
-categories: [meta]
+categories: []
 tags: [welcome, blog]
 excerpt: "An introduction to my new blog."
 ---
