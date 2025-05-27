@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>Posts in category: {{ page.category | capitalize }}</h1>
+
+<ul>
+  {% assign cat_posts = site.categories[page.category] %}
+  {% for post in cat_posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}
+    </li>
+  {% endfor %}
+</ul>
