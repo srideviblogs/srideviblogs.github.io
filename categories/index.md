@@ -4,7 +4,7 @@ title: Categories
 permalink: /categories/
 ---
 
-# Explore by Category
+# Browse Posts by Category
 
 <ul>
 {% for category in site.categories %}
