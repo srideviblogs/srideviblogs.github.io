@@ -9,7 +9,9 @@ permalink: /categories/
 <ul>
 {% for category in site.categories %}
   <li>
-    <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">{{ category[0] | capitalize }} ({{ category[1].size }})</a>
+    <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">
+      {{ category[0] | capitalize }} ({{ category[1].size }})
+    </a>
   </li>
 {% endfor %}
 </ul>
