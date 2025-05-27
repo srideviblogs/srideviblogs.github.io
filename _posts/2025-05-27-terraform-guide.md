@@ -2,7 +2,7 @@
 layout: post
 title: "Terraform Beginner’s Guide"
 date: 2025-05-27
-categories: [terraform, devops]
+categories: [terraform]
 tags: [terraform, infrastructure-as-code, aws]
 ---
 
