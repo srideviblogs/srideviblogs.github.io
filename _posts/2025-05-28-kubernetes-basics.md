@@ -2,8 +2,8 @@
 layout: post
 title: "Kubernetes Basics: Understanding the Fundamentals"
 date: 2025-05-28 12:00:00 +0000
-categories: [kubernetes, devops]
-tags: [kubernetes, containers, orchestration]
+categories: [kubernetes]
+tags: [kubernetes, containers, pods]
 ---
 
-Kubernetes is the leading container orchestration platform that automates deployment, scaling, and management of containerized applications.
+This is a sample post about Kubernetes fundamentals.
