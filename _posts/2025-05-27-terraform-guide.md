@@ -6,4 +6,7 @@ categories: [Terraform, DevOps]
 tags: [terraform, infrastructure-as-code, aws]
 ---
 
-This is your blog post content...
+Welcome to your beginner-friendly guide on **Terraform**. In this post, we'll explore what Terraform is, how it works, and a simple example to help you get started.
+
+...
+
