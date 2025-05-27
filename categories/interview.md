@@ -1,6 +1,7 @@
 ---
 layout: category
-title: interview
+title: Interview Questions and Answers
+category: interview
 permalink: /categories/interview/
 ---
 
