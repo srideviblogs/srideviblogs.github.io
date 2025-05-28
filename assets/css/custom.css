@@ -1,24 +1,29 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
-/* Universal box-sizing and scroll fix */
-*, *::before, *::after {
+/* Reset and Base Styles */
+* {
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: 'PT Serif', serif;
   font-size: 19px;
   line-height: 1.7;
   font-weight: 400;
   color: #333;
   background-color: #fff;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
   margin: 0 auto;
-  max-width: 100%;
   padding: 20px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 /* Headings */
@@ -36,6 +41,7 @@ a {
   text-decoration: none;
   font-weight: 600;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -46,6 +52,8 @@ header.site-header {
   margin-bottom: 2rem;
   padding: 0.5rem 0;
   background: #fff;
+  position: relative;
+  z-index: 1000;
 }
 
 /* Header container layout */
@@ -55,7 +63,6 @@ header.site-header {
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 20px;
-  position: relative;
 }
 
 /* Site title */
@@ -73,8 +80,7 @@ header.site-header {
   flex-grow: 1;
   justify-content: flex-end;
   font-weight: 600;
-  z-index: 100;
-  flex-wrap: wrap;
+  z-index: 1000;
 }
 
 .site-nav a {
@@ -82,6 +88,7 @@ header.site-header {
   color: #333;
   padding: 0.5rem 1rem;
 }
+
 .site-nav a:hover {
   color: #0069ed;
 }
@@ -101,11 +108,10 @@ header.site-header {
 
 /* Search container */
 #search-container {
-  margin-left: 20px;
-  z-index: 1000;
-  flex-shrink: 0;
   position: relative;
+  margin-left: 20px;
 }
+
 #search-input {
   padding: 6px 10px;
   width: 200px;
@@ -113,6 +119,7 @@ header.site-header {
   border: 1px solid #ccc;
   font-size: 1rem;
 }
+
 #search-results {
   position: absolute;
   top: 100%;
@@ -123,21 +130,25 @@ header.site-header {
   max-height: 300px;
   overflow-y: auto;
   display: none;
-  z-index: 1000;
+  z-index: 999;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 #search-results ul {
   list-style: none;
   margin: 0;
   padding: 0.5rem;
 }
+
 #search-results li {
   padding: 0.4rem 0;
 }
+
 #search-results li a {
   color: #007acc;
   text-decoration: none;
 }
+
 #search-results li a:hover {
   text-decoration: underline;
 }
@@ -148,11 +159,13 @@ header.site-header {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
+
 .post-list article:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
 .post-list .excerpt {
   color: #666;
   font-size: 1rem;
@@ -168,7 +181,7 @@ header.site-header {
   text-align: center;
 }
 
-/* ===== Responsive for Mobile ===== */
+/* Responsive (mobile) */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
