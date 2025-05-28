@@ -96,8 +96,9 @@ header.site-header {
 
 /* Search container */
 #search-container {
-  position: relative;
-  margin-left: 20px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 #search-input {
