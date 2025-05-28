@@ -6,6 +6,9 @@ body {
   padding: 0;
   background-color: #fafafa;
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -26,6 +29,7 @@ a:hover {
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
+  flex: 1;
 }
 
 /* Welcome intro section */
@@ -119,6 +123,7 @@ p {
   font-size: 1.2rem;
 }
 
+/* Header */
 .site-header {
   background: #f8f9fa;
   border-bottom: 1px solid #ddd;
@@ -138,9 +143,11 @@ p {
   color: #333;
 }
 
+/* Navigation */
 .site-nav {
   display: flex;
   gap: 1.5rem;
+  list-style: none;
 }
 
 .site-nav a {
@@ -159,8 +166,27 @@ p {
   cursor: pointer;
 }
 
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
 /* Responsive (mobile) */
 @media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .site-nav {
     display: none;
     flex-direction: column;
