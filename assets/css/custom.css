@@ -121,38 +121,41 @@ p {
 
 .site-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
 }
 
-.site-header h1 a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.5rem;
-}
-
-.site-nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
+.site-header h1 {
   margin: 0;
-  padding: 0;
+  font-size: 1.8rem;
 }
 
-.site-nav li {
-  display: inline;
+.site-nav {
+  margin-top: 0.5rem;
 }
 
 .site-nav a {
+  margin: 0 0.75rem;
   text-decoration: none;
   color: #333;
   font-weight: 600;
 }
 
-.site-nav a:hover {
-  color: #007acc;
+/* Responsive breakpoint */
+@media (min-width: 600px) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+  }
+
+  .site-nav {
+    margin-top: 0;
+  }
 }
 
