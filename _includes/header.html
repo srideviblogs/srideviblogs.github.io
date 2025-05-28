@@ -1,30 +1,32 @@
 <header class="site-header">
   <div class="container">
-    <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-    
+    <div class="header-row">
+      <h1 class="site-title">
+        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </h1>
+
+      <!-- Navigation Toggle (for mobile) -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <!-- Search bar (top right in desktop) -->
+    <div id="search-container" class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search posts..."
+        aria-label="Search posts"
+        autocomplete="off"
+      />
+      <div id="search-results" class="search-results"></div>
+    </div>
+
+    <!-- Navigation links -->
     <nav class="site-nav" id="site-nav">
       {% for item in site.nav %}
         <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
       {% endfor %}
     </nav>
-
-    <!-- Search container -->
-    <div id="search-container" class="search-container">
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Search posts..."
-        aria-label="Search posts"
-        autocomplete="off"
-        class="search-input"
-      />
-      <div
-        id="search-results"
-        class="search-results"
-        style="display: none;"
-      ></div>
-    </div>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </div>
 </header>
