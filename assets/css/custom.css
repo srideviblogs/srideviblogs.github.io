@@ -1,6 +1,12 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
+/* Global fix to remove right-side overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Body styling */
 body {
   font-family: 'PT Serif', serif;
@@ -31,7 +37,6 @@ a {
   text-decoration: none;
   font-weight: 600;
 }
-
 a:hover {
   text-decoration: underline;
 }
@@ -51,6 +56,9 @@ header.site-header {
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 20px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Site title */
@@ -76,7 +84,6 @@ header.site-header {
   color: #333;
   padding: 0.5rem 1rem;
 }
-
 .site-nav a:hover {
   color: #0069ed;
 }
@@ -89,7 +96,7 @@ header.site-header {
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 1001; /* Stay above other elements */
+  z-index: 1001;
   background: none;
   border: none;
 }
@@ -99,7 +106,6 @@ header.site-header {
   position: relative;
   margin-left: 20px;
 }
-
 #search-input {
   padding: 6px 10px;
   width: 200px;
@@ -107,7 +113,6 @@ header.site-header {
   border: 1px solid #ccc;
   font-size: 1rem;
 }
-
 #search-results {
   position: absolute;
   top: 100%;
@@ -121,22 +126,18 @@ header.site-header {
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
 #search-results ul {
   list-style: none;
   margin: 0;
   padding: 0.5rem;
 }
-
 #search-results li {
   padding: 0.4rem 0;
 }
-
 #search-results li a {
   color: #007acc;
   text-decoration: none;
 }
-
 #search-results li a:hover {
   text-decoration: underline;
 }
@@ -147,13 +148,11 @@ header.site-header {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
-
 .post-list article:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-
 .post-list .excerpt {
   color: #666;
   font-size: 1rem;
