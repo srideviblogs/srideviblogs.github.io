@@ -116,7 +116,9 @@ header.site-header {
 
   .menu-toggle {
     display: block;
-    margin-top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other elements */
   }
 
   .site-nav {
@@ -127,6 +129,7 @@ header.site-header {
     width: 100%;
     padding: 1rem 0;
     position: relative;
+    z-index: 1000;
   }
 
   .site-nav.active {
