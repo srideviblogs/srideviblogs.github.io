@@ -7,7 +7,6 @@ body {
   font-size: 19px;
   line-height: 1.7;
   font-weight: 400;
-
   color: #333;
   background-color: #fff;
   margin: 0 auto;
@@ -41,41 +40,102 @@ a:hover {
 header.site-header {
   border-bottom: 1px solid #eee;
   margin-bottom: 2rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  background: #fff;
+}
+
+/* Header container layout */
+.site-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
 }
 
-/* Site title in header */
-.site-header h1 {
+/* Site title */
+.site-title {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0;
 }
 
 /* Navigation */
 .site-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-grow: 1;
+  justify-content: flex-end;
   font-weight: 600;
+  z-index: 1000;
 }
 
 .site-nav a {
   font-size: 1rem;
   color: #333;
+  padding: 0.5rem 1rem;
 }
 
 .site-nav a:hover {
   color: #0069ed;
 }
 
-/* Responsive menu toggle button */
+/* Responsive menu toggle */
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
+  background: none;
+  border: none;
+  margin-left: auto;
+}
+
+/* Search container */
+#search-container {
+  position: relative;
+  margin-left: 20px;
+}
+
+#search-input {
+  padding: 6px 10px;
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#search-results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+#search-results li {
+  padding: 0.4rem 0;
+}
+
+#search-results li a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+#search-results li a:hover {
+  text-decoration: underline;
 }
 
 /* Post list styling */
@@ -91,7 +151,6 @@ header.site-header {
   padding-bottom: 0;
 }
 
-/* Post excerpt */
 .post-list .excerpt {
   color: #666;
   font-size: 1rem;
@@ -107,7 +166,7 @@ header.site-header {
   text-align: center;
 }
 
-/* Responsive (mobile) */
+/* ===== Responsive for Mobile ===== */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
@@ -116,120 +175,30 @@ header.site-header {
 
   .menu-toggle {
     display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1001; /* Ensure it's above other elements */
   }
 
   .site-nav {
     display: none;
     flex-direction: column;
-    gap: 1rem;
-    background: #fff;
     width: 100%;
+    background: #fff;
     padding: 1rem 0;
-    position: relative;
-    z-index: 1000;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   }
 
   .site-nav.active {
     display: flex;
   }
 
-  .search-container {
-    position: static;
-    margin-top: 10px;
+  #search-container {
     width: 100%;
+    margin: 10px 0;
     text-align: center;
   }
 
-  .search-input {
+  #search-input {
     width: 90%;
     max-width: 300px;
   }
 }
-
-/* Header container - flex layout to space title and nav */
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-/* Site title styling */
-.site-title {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-/* Navigation bar on the top right */
-.site-nav {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-  flex-grow: 1; /* take remaining space */
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: #000;
-  padding: 0.5rem 1rem;
-}
-
-.site-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Search container & input */
-.search-container {
-  position: fixed; /* stays fixed on screen */
-  top: 20px;
-  left: 20px;
-  margin-left: 0;
-  z-index: 1000; /* stay on top */
-}
-
-.search-input {
-  padding: 6px 10px;
-  width: 200px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-/* Search results dropdown */
-.search-results {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: white;
-  border: 1px solid #ccc;
-  border-top: none;
-  max-height: 300px;
-  overflow-y: auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: none; /* hidden by default */
-  z-index: 1000;
-}
-
-.search-results ul {
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem;
-}
-
-.search-results li {
-  padding: 0.4rem 0;
-}
-
-.search-results li a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-.search-results li a:hover {
-  text-decoration: underline;
-}
-
