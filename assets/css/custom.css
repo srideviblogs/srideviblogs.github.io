@@ -1,192 +1,114 @@
-/* General body and typography */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
+
+/* Body styling */
 body {
-  font-family: 'Fira Sans', Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-h1, h2, h3 {
   font-family: 'PT Serif', serif;
-  color: #222;
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: 400;
+
+  color: #333;
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  color: #000;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Links */
 a {
-  color: #007acc;
+  color: #0069ed;
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-.site-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  flex: 1;
-}
-
-/* Welcome intro section */
-.welcome-intro p {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* Latest posts */
-.latest-posts ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.latest-posts li {
-  margin-bottom: 0.8rem;
-}
-
-/* Categories list */
-.category-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.category-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  width: 180px;
-  border-radius: 6px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 0.05);
-  text-align: center;
-}
-
-.category-link {
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #007acc;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.category-card p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Category page post list */
-ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Back to categories button */
-.btn-back {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #007acc;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.btn-back:hover {
-  background-color: #005ea2;
-}
-
-/* Blogs page styling */
-ul li p {
-  margin: 0.3rem 0 1rem 0;
-  color: #555;
-}
-
-/* 404 page */
-h1 {
-  margin-top: 2rem;
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-p {
-  text-align: center;
-  font-size: 1.2rem;
-}
-
 /* Header */
-.site-header {
-  background: #f8f9fa;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 20px;
-}
-
-.site-header .container {
+header.site-header {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.site-title a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
+/* Site title in header */
+.site-header h1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 /* Navigation */
 .site-nav {
   display: flex;
   gap: 1.5rem;
-  list-style: none;
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: #333;
   font-weight: 600;
 }
 
-.site-nav a:hover {
-  color: #007acc;
+.site-nav a {
+  font-size: 1rem;
+  color: #333;
 }
 
+.site-nav a:hover {
+  color: #0069ed;
+}
+
+/* Responsive menu toggle button */
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
+/* Post list styling */
+.post-list article {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-list article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Post excerpt */
+.post-list .excerpt {
+  color: #666;
+  font-size: 1rem;
+}
+
 /* Footer */
 .site-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f4f4f4;
-  width: 100%;
+  margin-top: 3rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
   font-size: 0.9rem;
-  color: #666;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60px;
+  color: #999;
+  text-align: center;
 }
 
 /* Responsive (mobile) */
 @media (max-width: 768px) {
-  .site-header .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .site-nav {
     display: none;
     flex-direction: column;
