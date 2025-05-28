@@ -109,24 +109,40 @@ header.site-header {
 
 /* Responsive (mobile) */
 @media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 10px;
+  }
+
   .site-nav {
     display: none;
     flex-direction: column;
     gap: 1rem;
     background: #fff;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 1rem 0;
+    position: relative;
   }
 
   .site-nav.active {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
+  .search-container {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-input {
+    width: 90%;
+    max-width: 300px;
   }
 }
 
