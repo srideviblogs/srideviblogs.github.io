@@ -1,205 +1,33 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
+<header class="site-header">
+  <div class="container">
+    <!-- Site title and mobile toggle -->
+    <div class="header-row">
+      <h1 class="site-title">
+        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </h1>
 
-/* Reset and Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+      <!-- Navigation Toggle (for mobile) -->
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+    </div>
 
-body {
-  font-family: 'PT Serif', serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-  background-color: #fff;
-  padding: 0 1rem;
-}
+    <!-- Search bar -->
+    <div id="search-container" class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search posts..."
+        aria-label="Search posts"
+        autocomplete="off"
+      />
+      <div id="search-results" class="search-results"></div>
+    </div>
 
-/* Container to center content */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 600;
-  color: #000;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* Links */
-a {
-  color: #0069ed;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Header */
-.site-header {
-  border-bottom: 1px solid #eee;
-  background: #fff;
-  padding: 1rem 0;
-}
-
-.site-header .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Site Title */
-.site-title {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-/* Navigation */
-.site-nav {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.site-nav a {
-  font-size: 1rem;
-  color: #333;
-  padding: 0.5rem 1rem;
-}
-
-.site-nav a:hover {
-  color: #0069ed;
-}
-
-/* Menu Toggle for Mobile */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-/* Search Container */
-.search-container {
-  position: relative;
-  margin-left: auto;
-}
-
-.search-input {
-  padding: 6px 10px;
-  width: 200px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.search-results {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
-  max-height: 300px;
-  overflow-y: auto;
-  display: none;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.search-results ul {
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem;
-}
-
-.search-results li {
-  padding: 0.4rem 0;
-}
-
-.search-results li a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-.search-results li a:hover {
-  text-decoration: underline;
-}
-
-/* Post List Styling */
-.post-list article {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-
-.post-list article:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.post-list .excerpt {
-  color: #666;
-  font-size: 1rem;
-}
-
-/* Footer */
-.site-footer {
-  margin-top: 3rem;
-  border-top: 1px solid #eee;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: #999;
-  text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .site-header .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle {
-    display: block;
-    align-self: flex-end;
-  }
-
-  .site-nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #fff;
-    padding: 1rem 0;
-    margin-top: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  }
-
-  .site-nav.active {
-    display: flex;
-  }
-
-  .search-container {
-    width: 100%;
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .search-input {
-    width: 90%;
-    max-width: 300px;
-  }
-}
+    <!-- Navigation links -->
+    <nav class="site-nav" id="site-nav">
+      {% for item in site.nav %}
+        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
