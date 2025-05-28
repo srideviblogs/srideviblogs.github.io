@@ -118,3 +118,26 @@ p {
   text-align: center;
   font-size: 1.2rem;
 }
+
+.site-nav ul {
+  display: flex;
+  gap: 1.5rem; /* Adjust as needed */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li {
+  display: inline;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.site-nav a:hover {
+  color: #007acc;
+}
+
