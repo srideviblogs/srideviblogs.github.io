@@ -8,6 +8,22 @@
       {% endfor %}
     </nav>
 
+    <!-- Search container -->
+    <div id="search-container" style="position: relative; margin-left: 20px;">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search posts..."
+        aria-label="Search posts"
+        autocomplete="off"
+        style="padding: 6px 10px; width: 180px; border-radius: 4px; border: 1px solid #ccc;"
+      />
+      <div
+        id="search-results"
+        style="position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid #ccc; max-height: 300px; overflow-y: auto; display: none; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+      ></div>
+    </div>
+
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </div>
 </header>
