@@ -119,9 +119,24 @@ p {
   font-size: 1.2rem;
 }
 
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.site-header h1 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
 .site-nav ul {
   display: flex;
-  gap: 1.5rem; /* Adjust as needed */
+  gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
