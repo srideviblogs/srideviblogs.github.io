@@ -131,10 +131,13 @@ header.site-header {
 }
 
 .search-container {
-  position: relative;
-  margin-left: 1.5rem;
+  position: fixed;       /* fixed position on screen */
+  top: 20px;             /* 20px from the top */
+  left: 20px;            /* 20px from the left */
+  margin-left: 0;        /* remove left margin since positioning is fixed */
   display: inline-block;
   vertical-align: middle;
+  z-index: 1000;         /* make sure it stays on top */
 }
 
 #search-input {
@@ -177,4 +180,6 @@ header.site-header {
 .search-results li a:hover {
   text-decoration: underline;
 }
+
+
 
