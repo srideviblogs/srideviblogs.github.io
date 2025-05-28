@@ -130,6 +130,38 @@ header.site-header {
   }
 }
 
+/* Header container - flex layout to space title and nav */
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Site title styling */
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Navigation bar on the top right */
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex-grow: 1; /* take remaining space */
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 0.5rem 1rem;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
 /* Search container & input */
 .search-container {
   position: fixed; /* stays fixed on screen */
@@ -181,5 +213,4 @@ header.site-header {
 .search-results li a:hover {
   text-decoration: underline;
 }
-
 
