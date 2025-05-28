@@ -1,15 +1,16 @@
 <header class="site-header">
   <div class="container">
+    <!-- Site title and mobile toggle -->
     <div class="header-row">
       <h1 class="site-title">
         <a href="{{ site.baseurl }}/">{{ site.title }}</a>
       </h1>
 
       <!-- Navigation Toggle (for mobile) -->
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
     </div>
 
-    <!-- Search bar (top right in desktop) -->
+    <!-- Search bar -->
     <div id="search-container" class="search-container">
       <input
         type="text"
