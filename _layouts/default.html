@@ -16,9 +16,32 @@
 </head>
 <body>
   {% include header.html %}
-  <main class="site-main">
-    {{ content }}
-  </main>
+
+  <!-- Begin layout container for main content and sidebar -->
+  <div class="layout-container">
+    
+    <!-- Main blog content -->
+    <main class="site-main main-content">
+      {{ content }}
+    </main>
+
+    <!-- Right sidebar with search bar -->
+    <aside class="sidebar-right">
+      <div class="search-box">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search posts..."
+          aria-label="Search posts"
+          autocomplete="off"
+        />
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </aside>
+
+  </div>
+
   {% include footer.html %}
 
   <!-- Load mobile menu script -->
