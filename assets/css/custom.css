@@ -10,7 +10,7 @@ body {
   color: #333;
   background-color: #fff;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1100px;
   padding: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -59,6 +59,7 @@ header.site-header {
   margin: 0;
 }
 
+/* Navigation */
 .site-nav {
   display: flex;
   gap: 1rem;
@@ -78,6 +79,7 @@ header.site-header {
   color: #0069ed;
 }
 
+/* Responsive menu toggle */
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -90,75 +92,36 @@ header.site-header {
   border: none;
 }
 
-/* Post list styling */
-.post-list article {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-
-.post-list article:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.post-list .excerpt {
-  color: #666;
-  font-size: 1rem;
-}
-
-/* Footer */
-.site-footer {
-  margin-top: 3rem;
-  border-top: 1px solid #eee;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: #999;
-  text-align: center;
-}
-
-/* ===== New Layout Styles ===== */
-/* Layout wrapper for main content and sidebar */
+/* Layout container for main content and sidebar */
 .layout-container {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  max-width: 1280px; /* increased max-width */
-  margin: 0 auto;
-  padding: 0 20px;
-  gap: 60px; /* more space between content and sidebar */
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-/* Main content */
 .main-content {
-  flex: 1;
-  max-width: 850px; /* widened content area */
+  flex: 1 1 auto;
+  max-width: 700px;
 }
 
-/* Right sidebar */
 .sidebar-right {
-  width: 250px;
-  flex-shrink: 0;
-  margin-left: auto; /* pushes it to the right edge */
+  flex: 0 0 280px;
 }
 
-/* Search box in right sidebar */
 .search-box {
-  position: sticky;
-  top: 80px;
+  margin-top: 1rem;
 }
 
-/* Search input field */
+/* Search input styles */
 .search-input {
   padding: 6px 10px;
   width: 100%;
+  max-width: 260px;
   border-radius: 4px;
   border: 1px solid #ccc;
   font-size: 1rem;
 }
 
-/* Search results box */
 .search-results {
   position: absolute;
   top: 100%;
@@ -192,7 +155,35 @@ header.site-header {
   text-decoration: underline;
 }
 
-/* ===== Responsive Mobile Fixes ===== */
+/* Post list styling */
+.post-list article {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-list article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.post-list .excerpt {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #999;
+  text-align: center;
+}
+
+/* ===== Responsive for Mobile Only ===== */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
@@ -217,31 +208,28 @@ header.site-header {
     display: flex;
   }
 
-  #search-container {
+  .layout-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar-right {
+    order: -1;
     width: 100%;
-    margin: 10px 0;
+  }
+
+  .search-box {
+    width: 100%;
     text-align: center;
   }
 
-  #search-input {
+  .search-input {
     width: 90%;
     max-width: 300px;
   }
 
-  .layout-container {
-    flex-direction: column;
-  }
-
   .main-content {
-    padding-right: 0;
-  }
-
-  .sidebar-right {
-    max-width: 100%;
-    margin-top: 1rem;
-  }
-
-  .sidebar-right .search-box input {
     width: 100%;
+    max-width: 100%;
   }
 }
