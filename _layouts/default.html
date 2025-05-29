@@ -8,40 +8,48 @@
   {% include head.html %}
   {% seo %}
 
-  <!-- Load custom fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=PT+Serif&display=swap" rel="stylesheet" />
-
-  <!-- Load custom stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
 <body>
   {% include header.html %}
 
-  <div class="layout-container">
+  <!-- Search container shown only on mobile -->
+  <div id="search-container" class="search-container mobile-search">
+    <input
+      type="text"
+      id="search-input"
+      class="search-input"
+      placeholder="Search posts..."
+      aria-label="Search posts"
+      autocomplete="off"
+    />
+    <div id="search-results" class="search-results"></div>
+  </div>
 
+  <div class="layout-container">
     <main class="site-main main-content">
       {{ content }}
     </main>
 
     <aside class="sidebar-right">
+      <!-- Desktop search sidebar -->
       <div class="search-box">
         <input
           type="text"
-          id="search-input"
+          id="search-input-desktop"
           class="search-input"
           placeholder="Search posts..."
           aria-label="Search posts"
           autocomplete="off"
         />
-        <div id="search-results" class="search-results"></div>
+        <div id="search-results-desktop" class="search-results"></div>
       </div>
     </aside>
-
   </div>
 
   {% include footer.html %}
 
-  <!-- Load scripts -->
   <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
