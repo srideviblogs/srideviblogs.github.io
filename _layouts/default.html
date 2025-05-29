@@ -17,24 +17,24 @@
 <body>
   {% include header.html %}
 
-  <!-- Mobile search bar (only visible on small screens) -->
-  <div class="mobile-search-container">
-    <div class="search-box">
-      <input
-        type="text"
-        id="search-input-mobile"
-        class="search-input"
-        placeholder="Search posts..."
-        aria-label="Search posts"
-        autocomplete="off"
-      />
-      <div id="search-results-mobile" class="search-results"></div>
-    </div>
-  </div>
-
   <!-- Begin layout container for main content and sidebar -->
   <div class="layout-container">
-    
+
+    <!-- Mobile search bar (only visible on mobile) -->
+    <div class="mobile-search-container">
+      <div class="search-box">
+        <input
+          type="text"
+          id="mobile-search-input"
+          class="search-input"
+          placeholder="Search posts..."
+          aria-label="Search posts"
+          autocomplete="off"
+        />
+        <div id="mobile-search-results" class="search-results"></div>
+      </div>
+    </div>
+
     <!-- Main blog content -->
     <main class="site-main main-content">
       {{ content }}
