@@ -225,16 +225,18 @@ header.site-header {
     display: flex;
   }
 
-   .main-content {
-    width: 100%;
-    padding: 0 1rem; /* Optional padding for some breathing space */
-  }
-
   .layout-container {
+    padding: 0 10px;
     flex-direction: column;
     align-items: center;
   }
 
+  .main-content {
+    max-width: none;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
   .sidebar-right {
     display: none; /* Hide sidebar on mobile */
   }
