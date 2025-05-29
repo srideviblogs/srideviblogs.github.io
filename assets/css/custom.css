@@ -217,22 +217,31 @@ header.site-header {
     display: flex;
   }
 
+  #search-container {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  #search-input {
+    width: 90%;
+    max-width: 300px;
+  }
+
   .layout-container {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .main-content {
+    padding-right: 0;
   }
 
   .sidebar-right {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .sidebar-right .search-box input {
     width: 100%;
-    margin-top: 20px;
-  }
-
-  .search-box {
-    position: static;
-  }
-
-  .search-input {
-    width: 90%;
-    max-width: 300px;
   }
 }
