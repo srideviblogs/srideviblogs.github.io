@@ -10,7 +10,7 @@ body {
   color: #333;
   background-color: #fff;
   margin: 0 auto;
-  max-width: 1200px; /* wider content area */
+  max-width: 1100px; /* desktop content width */
   padding: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -81,7 +81,7 @@ header.site-header {
   color: #0069ed;
 }
 
-/* Responsive menu toggle */
+/* Responsive menu toggle (hidden on desktop) */
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -89,46 +89,26 @@ header.site-header {
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 1001; /* Stay above other elements */
+  z-index: 1101; /* above nav */
   background: none;
   border: none;
 }
 
-/* Layout container for main content + sidebar */
-.layout-container {
-  display: flex;
-  gap: 20px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Main content styling */
-.main-content {
-  flex: 1;
-  max-width: 900px; /* comfortable reading width */
-  padding-right: 40px;
-}
-
-/* Right sidebar styling */
-.sidebar-right {
-  width: 250px;
-  flex-shrink: 0;
-}
-
 /* Search container */
-.search-box {
+#search-container {
   position: relative;
+  margin-left: 20px;
 }
 
-.search-input {
+#search-input {
   padding: 6px 10px;
-  width: 100%;
+  width: 200px;
   border-radius: 4px;
   border: 1px solid #ccc;
   font-size: 1rem;
 }
 
-.search-results {
+#search-results {
   position: absolute;
   top: 100%;
   left: 0;
@@ -142,22 +122,22 @@ header.site-header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.search-results ul {
+#search-results ul {
   list-style: none;
   margin: 0;
   padding: 0.5rem;
 }
 
-.search-results li {
+#search-results li {
   padding: 0.4rem 0;
 }
 
-.search-results li a {
+#search-results li a {
   color: #007acc;
   text-decoration: none;
 }
 
-.search-results li a:hover {
+#search-results li a:hover {
   text-decoration: underline;
 }
 
@@ -189,56 +169,117 @@ header.site-header {
   text-align: center;
 }
 
-/* ===== Responsive Styles ===== */
+/* Layout container for main + sidebar (desktop) */
+.layout-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  max-width: 700px;
+}
+
+/* Sidebar on right for search (desktop) */
+.sidebar-right {
+  width: 250px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+
+/* Search box wrapper */
+.search-box {
+  width: 100%;
+}
+
+/* ===== Responsive for Mobile ===== */
 @media (max-width: 768px) {
   body {
-    max-width: 100%; /* full width on mobile */
+    max-width: 100%;
     padding: 10px;
   }
 
-  /* Layout stack: search above content */
+  /* Stack layout vertically */
   .layout-container {
     flex-direction: column;
     padding: 0;
   }
 
+  /* Main content full width */
   .main-content {
     max-width: 100%;
     padding-right: 0;
   }
 
+  /* Sidebar (search bar) full width, above content */
   .sidebar-right {
     width: 100%;
     flex-shrink: 0;
     margin-bottom: 20px;
-    order: -1; /* place above main content */
+    order: -1; /* appear above main content */
+    display: flex;
+    justify-content: center; /* center horizontally */
+  }
+
+  /* Search input smaller width */
+  .search-input {
+    width: 90%;
+    max-width: 300px;
   }
 
   /* Show menu toggle button */
   .menu-toggle {
     display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1101;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
   }
 
-  /* Slide-in right menu (nav) */
+  /* Navigation menu hidden by default */
   .site-nav {
     display: none;
     flex-direction: column;
-    width: 250px; /* fixed sidebar width */
+    width: 250px; /* sidebar width */
     background: #fff;
     padding: 1rem 0;
-    margin-top: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
     position: fixed;
-    top: 60px; /* below header */
+    top: 0;
     right: 0;
-    height: calc(100% - 60px);
+    height: 100vh;
     overflow-y: auto;
-    z-index: 1000;
+    z-index: 1100;
     border-left: 1px solid #eee;
   }
 
-  /* Show nav when active */
+  /* Show nav menu when active */
   .site-nav.active {
     display: flex;
+  }
+
+  /* Nav links style for mobile */
+  .site-nav a {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .site-nav a:hover {
+    background-color: #f0f0f0;
+    color: #0069ed;
+  }
+
+  /* Prevent body scroll when menu open */
+  body.menu-open {
+    overflow: hidden;
   }
 }
