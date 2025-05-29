@@ -1,30 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const desktopInput = document.getElementById("search-input");
-  const desktopResults = document.getElementById("search-results");
-
-  const mobileInput = document.getElementById("mobile-search-input");
-  const mobileResults = document.getElementById("mobile-search-results");
+  const desktopSearchInput = document.getElementById("search-input");
+  const desktopResultsContainer = document.getElementById("search-results");
+  const mobileSearchInput = document.getElementById("mobile-search-input");
+  const mobileResultsContainer = document.getElementById("mobile-search-results");
 
   fetch('/assets/data/posts.json')
     .then(response => response.json())
     .then(posts => {
-      function handleSearch(input, resultsContainer) {
-        const query = input.value.trim().toLowerCase();
-        resultsContainer.innerHTML = "";
+      function setupSearch(inputElement, resultsContainer) {
+        inputElement.addEventListener("input", () => {
+          const query = inputElement.value.trim().toLowerCase();
+          resultsContainer.innerHTML = "";
 
-        if (query.length === 0) {
-          resultsContainer.style.display = 'none';
-          return;
-        }
+          if (query.length === 0) {
+            resultsContainer.style.display = 'none';
+            return;
+          }
 
-        const filtered = posts.filter(post =>
-          post.title.toLowerCase().includes(query) ||
-          (post.excerpt && post.excerpt.toLowerCase().includes(query))
-        );
+          const filtered = posts.filter(post =>
+            post.title.toLowerCase().includes(query) ||
+            (post.excerpt && post.excerpt.toLowerCase().includes(query))
+          );
 
-        if (filtered.length === 0) {
-          resultsContainer.innerHTML = "<p style='padding: 0.5rem;'>No results found.</p>";
-        } else {
+          if (filtered.length === 0) {
+            resultsContainer.style.display = 'block';
+            resultsContainer.innerHTML = "<p style='padding: 0.5rem;'>No results found.</p>";
+            return;
+          }
+
           const ul = document.createElement("ul");
           filtered.forEach(post => {
             const li = document.createElement("li");
@@ -34,29 +37,34 @@ document.addEventListener("DOMContentLoaded", function () {
             li.appendChild(a);
             ul.appendChild(li);
           });
+
           resultsContainer.appendChild(ul);
-        }
+          resultsContainer.style.display = 'block';
+        });
 
-        resultsContainer.style.display = 'block';
+        document.addEventListener('click', (e) => {
+          if (!inputElement.contains(e.target) && !resultsContainer.contains(e.target)) {
+            resultsContainer.style.display = 'none';
+          }
+        });
       }
 
-      // Attach event listeners to both inputs if they exist
-      if (desktopInput && desktopResults) {
-        desktopInput.addEventListener("input", () => handleSearch(desktopInput, desktopResults));
+      if (desktopSearchInput && desktopResultsContainer) {
+        setupSearch(desktopSearchInput, desktopResultsContainer);
       }
 
-      if (mobileInput && mobileResults) {
-        mobileInput.addEventListener("input", () => handleSearch(mobileInput, mobileResults));
+      if (mobileSearchInput && mobileResultsContainer) {
+        setupSearch(mobileSearchInput, mobileResultsContainer);
       }
     })
     .catch(() => {
-      if (desktopResults) {
-        desktopResults.innerHTML = "<p style='padding: 0.5rem;'>Search data could not be loaded.</p>";
-        desktopResults.style.display = 'block';
+      if (desktopResultsContainer) {
+        desktopResultsContainer.style.display = 'block';
+        desktopResultsContainer.innerHTML = "<p style='padding: 0.5rem;'>Search data could not be loaded.</p>";
       }
-      if (mobileResults) {
-        mobileResults.innerHTML = "<p style='padding: 0.5rem;'>Search data could not be loaded.</p>";
-        mobileResults.style.display = 'block';
+      if (mobileResultsContainer) {
+        mobileResultsContainer.style.display = 'block';
+        mobileResultsContainer.innerHTML = "<p style='padding: 0.5rem;'>Search data could not be loaded.</p>";
       }
     });
 });
