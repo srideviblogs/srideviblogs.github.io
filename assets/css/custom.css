@@ -193,6 +193,8 @@ header.site-header {
 }
 
 /* ===== Responsive Mobile Fixes ===== */
+/* ... your existing styles ... */
+
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
@@ -223,7 +225,8 @@ header.site-header {
   }
 
   .sidebar-right {
-    display: none;
+    width: 100%;
+    margin-top: 20px;
   }
 
   .search-box {
@@ -235,15 +238,19 @@ header.site-header {
     max-width: 300px;
   }
 
-  /* Mobile-specific search container */
+  /* ✅ Mobile search container */
   .mobile-search-container {
     display: block;
-    padding: 1rem 0;
+    width: 100%;
     text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-search-container .search-input {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 
-/* Hide mobile search on desktop by default */
-.mobile-search-container {
-  display: none;
-}
+
