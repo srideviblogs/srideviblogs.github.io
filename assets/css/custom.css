@@ -1,16 +1,16 @@
-/* Import Google Fonts */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
-/* Body styling */
+/* Body */
 body {
   font-family: 'PT Serif', serif;
   font-size: 19px;
   line-height: 1.7;
   font-weight: 400;
   color: #333;
-  background-color: #fff;
+  background: #fff;
   margin: 0 auto;
-  max-width: 1100px; /* desktop content width */
+  max-width: 1100px; /* desktop width */
   padding: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +31,6 @@ a {
   text-decoration: none;
   font-weight: 600;
 }
-
 a:hover {
   text-decoration: underline;
 }
@@ -42,9 +41,11 @@ header.site-header {
   margin-bottom: 2rem;
   padding: 0.5rem 0;
   background: #fff;
+  position: relative;
+  z-index: 1102;
 }
 
-/* Header container layout */
+/* Header container */
 .site-header .container {
   display: flex;
   justify-content: space-between;
@@ -81,20 +82,21 @@ header.site-header {
   color: #0069ed;
 }
 
-/* Responsive menu toggle (hidden on desktop) */
+/* Menu toggle button - hidden on desktop */
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1101; /* above nav */
   background: none;
   border: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1200;
+  user-select: none;
 }
 
-/* Search container */
+/* Search container (desktop) */
 #search-container {
   position: relative;
   margin-left: 20px;
@@ -118,7 +120,7 @@ header.site-header {
   max-height: 300px;
   overflow-y: auto;
   display: none;
-  z-index: 1000;
+  z-index: 1001;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -141,7 +143,7 @@ header.site-header {
   text-decoration: underline;
 }
 
-/* Post list styling */
+/* Post list */
 .post-list article {
   border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
@@ -169,7 +171,7 @@ header.site-header {
   text-align: center;
 }
 
-/* Layout container for main + sidebar (desktop) */
+/* Layout container desktop */
 .layout-container {
   display: flex;
   justify-content: center;
@@ -182,7 +184,7 @@ header.site-header {
   max-width: 700px;
 }
 
-/* Sidebar on right for search (desktop) */
+/* Sidebar right (search) desktop */
 .sidebar-right {
   width: 250px;
   flex-shrink: 0;
@@ -196,14 +198,15 @@ header.site-header {
   width: 100%;
 }
 
-/* ===== Responsive for Mobile ===== */
+/* === MOBILE VIEW === */
 @media (max-width: 768px) {
+
   body {
     max-width: 100%;
     padding: 10px;
   }
 
-  /* Stack layout vertically */
+  /* Layout vertical stack */
   .layout-container {
     flex-direction: column;
     padding: 0;
@@ -215,40 +218,31 @@ header.site-header {
     padding-right: 0;
   }
 
-  /* Sidebar (search bar) full width, above content */
+  /* Sidebar (search) full width, above content */
   .sidebar-right {
     width: 100%;
-    flex-shrink: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     order: -1; /* appear above main content */
     display: flex;
-    justify-content: center; /* center horizontally */
+    justify-content: center;
   }
 
-  /* Search input smaller width */
+  /* Search input smaller */
   .search-input {
     width: 90%;
     max-width: 300px;
   }
 
-  /* Show menu toggle button */
+  /* Show menu toggle */
   .menu-toggle {
     display: block;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 1101;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
   }
 
-  /* Navigation menu hidden by default */
+  /* Navigation menu - hidden by default */
   .site-nav {
     display: none;
     flex-direction: column;
-    width: 250px; /* sidebar width */
+    width: 250px;
     background: #fff;
     padding: 1rem 0;
     box-shadow: -2px 0 8px rgba(0,0,0,0.1);
@@ -257,20 +251,22 @@ header.site-header {
     right: 0;
     height: 100vh;
     overflow-y: auto;
-    z-index: 1100;
+    z-index: 1199;
     border-left: 1px solid #eee;
+    margin: 0;
   }
 
-  /* Show nav menu when active */
+  /* Show nav when active */
   .site-nav.active {
     display: flex;
   }
 
-  /* Nav links style for mobile */
+  /* Nav links vertical stack */
   .site-nav a {
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
     color: #333;
+    border-bottom: 1px solid #eee;
   }
 
   .site-nav a:hover {
@@ -278,7 +274,7 @@ header.site-header {
     color: #0069ed;
   }
 
-  /* Prevent body scroll when menu open */
+  /* Lock body scroll when menu open */
   body.menu-open {
     overflow: hidden;
   }
