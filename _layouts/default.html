@@ -19,7 +19,10 @@
 
   <div class="layout-container">
 
-    <!-- Search bar above content (visible on all views, adjusts via CSS) -->
+    <main class="site-main main-content">
+      {{ content }}
+    </main>
+
     <aside class="sidebar-right">
       <div class="search-box">
         <input
@@ -34,16 +37,11 @@
       </div>
     </aside>
 
-    <!-- Main content -->
-    <main class="site-main main-content">
-      {{ content }}
-    </main>
-
   </div>
 
   {% include footer.html %}
 
-  <!-- Scripts -->
+  <!-- Load scripts -->
   <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
