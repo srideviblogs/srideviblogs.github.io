@@ -10,7 +10,7 @@ body {
   color: #333;
   background-color: #fff;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 1200px;
   padding: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,7 +44,6 @@ header.site-header {
   background: #fff;
 }
 
-/* Header container layout */
 .site-header .container {
   display: flex;
   justify-content: space-between;
@@ -53,7 +52,6 @@ header.site-header {
   padding: 10px 20px;
 }
 
-/* Site title */
 .site-title {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 700;
@@ -61,7 +59,6 @@ header.site-header {
   margin: 0;
 }
 
-/* Navigation */
 .site-nav {
   display: flex;
   gap: 1rem;
@@ -81,7 +78,6 @@ header.site-header {
   color: #0069ed;
 }
 
-/* Responsive menu toggle */
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -92,53 +88,6 @@ header.site-header {
   z-index: 1001;
   background: none;
   border: none;
-}
-
-/* Search container (used in header, now removed from there) */
-#search-container {
-  position: relative;
-  margin-left: 20px;
-}
-
-#search-input {
-  padding: 6px 10px;
-  width: 200px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-#search-results {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
-  max-height: 300px;
-  overflow-y: auto;
-  display: none;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-#search-results ul {
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem;
-}
-
-#search-results li {
-  padding: 0.4rem 0;
-}
-
-#search-results li a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-#search-results li a:hover {
-  text-decoration: underline;
 }
 
 /* Post list styling */
@@ -169,68 +118,81 @@ header.site-header {
   text-align: center;
 }
 
-/* ===== Layout for Content + Right Sidebar ===== */
+/* ===== New Layout Styles ===== */
+
+/* Layout wrapper for main content and sidebar */
 .layout-container {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 0 20px;
+  gap: 40px;
 }
 
+/* Main content */
 .main-content {
-  flex: 3;
-  padding-right: 2rem;
-}
-
-.sidebar-right {
   flex: 1;
-  max-width: 250px;
+  max-width: 700px;
+}
+
+/* Right sidebar */
+.sidebar-right {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+/* Search box in right sidebar */
+.search-box {
   position: sticky;
-  top: 1rem;
-  align-self: flex-start;
+  top: 80px;
 }
 
-/* Search Box inside Sidebar */
-.sidebar-right .search-box input {
+/* Search input field */
+.search-input {
+  padding: 6px 10px;
   width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 4px;
   border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
-.sidebar-right .search-results {
-  background: #fff;
+/* Search results box */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   max-height: 300px;
   overflow-y: auto;
-  margin-top: 0.25rem;
   display: none;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-results ul {
+  list-style: none;
+  margin: 0;
   padding: 0.5rem;
 }
 
-.sidebar-right .search-results ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-right .search-results li {
+.search-results li {
   padding: 0.4rem 0;
 }
 
-.sidebar-right .search-results li a {
+.search-results li a {
   color: #007acc;
   text-decoration: none;
 }
 
-.sidebar-right .search-results li a:hover {
+.search-results li a:hover {
   text-decoration: underline;
 }
 
-/* ===== Responsive for Mobile ===== */
+/* ===== Responsive Mobile Fixes ===== */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
@@ -255,31 +217,22 @@ header.site-header {
     display: flex;
   }
 
-  #search-container {
-    width: 100%;
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  #search-input {
-    width: 90%;
-    max-width: 300px;
-  }
-
   .layout-container {
     flex-direction: column;
-  }
-
-  .main-content {
-    padding-right: 0;
+    align-items: center;
   }
 
   .sidebar-right {
-    max-width: 100%;
-    margin-top: 1rem;
+    width: 100%;
+    margin-top: 20px;
   }
 
-  .sidebar-right .search-box input {
-    width: 100%;
+  .search-box {
+    position: static;
+  }
+
+  .search-input {
+    width: 90%;
+    max-width: 300px;
   }
 }
