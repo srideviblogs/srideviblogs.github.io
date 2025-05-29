@@ -17,15 +17,9 @@
 <body>
   {% include header.html %}
 
-  <!-- Begin layout container for main content and sidebar -->
   <div class="layout-container">
-    
-    <!-- Main blog content -->
-    <main class="site-main main-content">
-      {{ content }}
-    </main>
 
-    <!-- Right sidebar with search bar -->
+    <!-- Search bar above content (visible on all views, adjusts via CSS) -->
     <aside class="sidebar-right">
       <div class="search-box">
         <input
@@ -40,13 +34,17 @@
       </div>
     </aside>
 
+    <!-- Main content -->
+    <main class="site-main main-content">
+      {{ content }}
+    </main>
+
   </div>
 
   {% include footer.html %}
 
-  <!-- Load mobile menu script -->
+  <!-- Scripts -->
   <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-  <!-- Load search functionality script -->
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
 </html>
