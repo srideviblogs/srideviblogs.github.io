@@ -223,8 +223,7 @@ header.site-header {
   }
 
   .sidebar-right {
-    width: 100%;
-    margin-top: 20px;
+    display: none;
   }
 
   .search-box {
@@ -235,4 +234,16 @@ header.site-header {
     width: 90%;
     max-width: 300px;
   }
+
+  /* Mobile-specific search container */
+  .mobile-search-container {
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+
+/* Hide mobile search on desktop by default */
+.mobile-search-container {
+  display: none;
 }
