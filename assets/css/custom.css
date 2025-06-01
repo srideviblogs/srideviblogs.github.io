@@ -1,7 +1,3 @@
-/* Hide hamburger menu on desktop by default */
-.hamburger {
-  display: none;
-}
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
@@ -196,15 +192,18 @@ header.site-header {
   text-decoration: underline;
 }
 
-/* ... existing styles ... */
-
 /* Hide mobile search bar by default */
 .mobile-search-container {
   display: none;
 }
 
-/* Responsive Mobile Fixes */
+/* Hide hamburger menu and sidenav panel on desktop */
+.hamburger,
+.sidenav {
+  display: none;
+}
 
+/* Responsive Mobile Fixes */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
@@ -309,11 +308,3 @@ header.site-header {
     color: #333;
   }
 }
-
-  
-
- 
-
-
-
-
