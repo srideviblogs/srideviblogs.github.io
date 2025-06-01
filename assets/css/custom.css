@@ -1,3 +1,7 @@
+/* Hide hamburger menu on desktop by default */
+.hamburger {
+  display: none;
+}
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
