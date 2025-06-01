@@ -1,20 +1,16 @@
-/* Hide mobile nav on desktop */
+/* Media queries to control nav visibility */
+
+/* Desktop view: hide mobile sidenav */
 @media (min-width: 768px) {
-  .nav-mobile {
+  .sidenav {
     display: none !important;
-  }
-  .nav-desktop {
-    display: block !important;
   }
 }
 
-/* Hide desktop nav on mobile */
+/* Mobile view: hide desktop nav */
 @media (max-width: 767px) {
-  .nav-desktop {
+  .site-nav {
     display: none !important;
-  }
-  .nav-mobile {
-    display: block !important;
   }
 }
 
