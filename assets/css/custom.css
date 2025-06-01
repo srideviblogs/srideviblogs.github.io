@@ -2,12 +2,12 @@
    Global Theme Color Palette
    ============================ */
 :root {
-  --primary-text: #343434;       /* Main text color (dark gray) */
-  --background: #f5f5f5;         /* Light background */
-  --header-color: #708090;       /* Slate gray header/footer/nav */
-  --link-color: #ff6f61;         /* Soft coral for links/buttons */
-  --link-hover: #e05a4d;         /* Darker coral on hover */
-  --border-color: #dddddd;       /* Light gray for borders */
+  --primary-text: #333333;
+  --background: #ffffff;
+  --header-color: #f8f9fa;
+  --link-color: #4a90e2;      /* Modern soft blue */
+  --link-hover: #357ABD;      /* Darker blue on hover */
+  --border-color: #e0e0e0;
 }
 
 /* ============================
