@@ -6,31 +6,27 @@
         <a href="{{ site.baseurl }}/">{{ site.title }}</a>
       </h1>
 
-      <!-- Navigation Toggle (for mobile) -->
-      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+      <!-- Mobile Hamburger Toggle (replaces old button) -->
+      <div class="hamburger" onclick="openNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
-    <!-- Removed search bar from header -->
-    <!--
-    <div id="search-container" class="search-container">
-      <input
-        type="text"
-        id="search-input"
-        class="search-input"
-        placeholder="Search posts..."
-        aria-label="Search posts"
-        autocomplete="off"
-      />
-      <div id="search-results" class="search-results"></div>
-    </div>
-    -->
-
-    <!-- Navigation links -->
+    <!-- Desktop Navigation -->
     <nav class="site-nav" id="site-nav">
       {% for item in site.nav %}
         <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
       {% endfor %}
     </nav>
   </div>
-</header>
 
+  <!-- Slide-in Side Menu for Mobile -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    {% for item in site.nav %}
+      <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+    {% endfor %}
+  </div>
+</header>
