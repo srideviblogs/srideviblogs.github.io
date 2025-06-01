@@ -1,16 +1,4 @@
 /* ============================
-   Global Theme Color Palette
-   ============================ */
-:root {
-  --primary-text: #333333;
-  --background: #ffffff;
-  --header-color: #f8f9fa;
-  --link-color: #4a90e2;      /* Modern soft blue */
-  --link-hover: #357ABD;      /* Darker blue on hover */
-  --border-color: #e0e0e0;
-}
-
-/* ============================
    Media Queries for Navigation
    ============================ */
 @media (min-width: 768px) {
