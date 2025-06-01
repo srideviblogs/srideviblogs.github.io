@@ -1,16 +1,20 @@
-// Desktop nav toggle (if still needed)
-function toggleMenu() {
-  const nav = document.getElementById('site-nav');
-  nav.classList.toggle('active');
-}
-
-// Mobile slide-in menu
-function openNav() {
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.getElementById("hamburger");
   const sidenav = document.getElementById("mySidenav");
-  sidenav.style.width = "250px";
-}
+  const closebtn = document.getElementById("closebtn");
 
-function closeNav() {
-  const sidenav = document.getElementById("mySidenav");
-  sidenav.style.width = "0";
-}
+  hamburger.addEventListener("click", function() {
+    sidenav.style.width = "250px";
+  });
+
+  closebtn.addEventListener("click", function() {
+    sidenav.style.width = "0";
+  });
+
+  // Optional: close menu if user clicks outside the menu on mobile
+  window.addEventListener("click", function(event) {
+    if (event.target !== sidenav && event.target !== hamburger && !sidenav.contains(event.target)) {
+      sidenav.style.width = "0";
+    }
+  });
+});
