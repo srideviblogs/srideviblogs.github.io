@@ -207,22 +207,28 @@ header.site-header {
     align-items: flex-start;
   }
 
+  /* Hide old menu toggle button if still present */
   .menu-toggle {
-    display: block;
+    display: none;
   }
 
+  /* Hide standard nav in mobile */
   .site-nav {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #fff;
-    padding: 1rem 0;
-    margin-top: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   }
 
-  .site-nav.active {
-    display: flex;
+  /* Mobile search bar setup */
+  .mobile-search-container {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-search-container .search-input {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .layout-container {
@@ -236,24 +242,73 @@ header.site-header {
     width: 100%;
     padding: 0 1rem;
   }
-  
+
   .sidebar-right {
-    display: none; /* Hide sidebar on mobile */
+    display: none;
   }
 
-  .mobile-search-container {
-    display: block; /* Show mobile search bar */
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
+  /* Hamburger styles */
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
   }
 
-  .mobile-search-container .search-input {
-    width: 90%;
-    max-width: 300px;
-    margin: 0 auto;
+  .hamburger span {
+    display: block;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+  }
+
+  /* Slide-in sidenav panel */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s ease;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .sidenav a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    background-color: #333;
+    color: white;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: #333;
   }
 }
+
+  
+
+ 
 
 
 
