@@ -192,18 +192,15 @@ header.site-header {
   text-decoration: underline;
 }
 
+/* ... existing styles ... */
+
 /* Hide mobile search bar by default */
 .mobile-search-container {
   display: none;
 }
 
-/* Hide hamburger menu and sidenav panel on desktop */
-.hamburger,
-.sidenav {
-  display: none;
-}
-
 /* Responsive Mobile Fixes */
+
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
