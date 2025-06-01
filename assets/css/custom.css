@@ -1,30 +1,45 @@
-/* Media queries to control nav visibility */
+/* ============================
+   Global Theme Color Palette
+   ============================ */
+:root {
+  --primary-text: #343434;       /* Main text color (dark gray) */
+  --background: #f5f5f5;         /* Light background */
+  --header-color: #708090;       /* Slate gray header/footer/nav */
+  --link-color: #ff6f61;         /* Soft coral for links/buttons */
+  --link-hover: #e05a4d;         /* Darker coral on hover */
+  --border-color: #dddddd;       /* Light gray for borders */
+}
 
-/* Desktop view: hide mobile sidenav */
+/* ============================
+   Media Queries for Navigation
+   ============================ */
 @media (min-width: 768px) {
   .sidenav {
     display: none !important;
   }
 }
 
-/* Mobile view: hide desktop nav */
 @media (max-width: 767px) {
   .site-nav {
     display: none !important;
   }
 }
 
-/* Import Google Fonts */
+/* ============================
+   Fonts
+   ============================ */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
-/* Body styling */
+/* ============================
+   Base Styles
+   ============================ */
 body {
   font-family: 'PT Serif', serif;
   font-size: 19px;
   line-height: 1.7;
   font-weight: 400;
-  color: #333;
-  background-color: #fff;
+  color: var(--primary-text);
+  background-color: var(--background);
   margin: 0 auto;
   max-width: 1200px;
   padding: 20px;
@@ -32,7 +47,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 600;
@@ -41,20 +55,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-/* Links */
+/* ============================
+   Links
+   ============================ */
 a {
-  color: #0069ed;
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 600;
 }
 
 a:hover {
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
-/* Header */
+/* ============================
+   Header and Navigation
+   ============================ */
 header.site-header {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 2rem;
   padding: 0.5rem 0;
   background: #fff;
@@ -86,12 +105,12 @@ header.site-header {
 
 .site-nav a {
   font-size: 1rem;
-  color: #333;
+  color: var(--primary-text);
   padding: 0.5rem 1rem;
 }
 
 .site-nav a:hover {
-  color: #0069ed;
+  color: var(--link-hover);
 }
 
 .menu-toggle {
@@ -106,9 +125,11 @@ header.site-header {
   border: none;
 }
 
-/* Post list styling */
+/* ============================
+   Post Styling
+   ============================ */
 .post-list article {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
@@ -124,19 +145,21 @@ header.site-header {
   font-size: 1rem;
 }
 
-/* Footer */
+/* ============================
+   Footer
+   ============================ */
 .site-footer {
   margin-top: 3rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   padding-top: 1rem;
   font-size: 0.9rem;
   color: #999;
   text-align: center;
 }
 
-/* ===== New Layout Styles ===== */
-
-/* Layout wrapper for main content and sidebar */
+/* ============================
+   Layout
+   ============================ */
 .layout-container {
   display: flex;
   justify-content: center;
@@ -147,25 +170,24 @@ header.site-header {
   gap: 40px;
 }
 
-/* Main content */
 .main-content {
   flex: 1;
   max-width: 700px;
 }
 
-/* Right sidebar */
 .sidebar-right {
   width: 250px;
   flex-shrink: 0;
 }
 
-/* Search box in right sidebar */
+/* ============================
+   Search Box
+   ============================ */
 .search-box {
   position: sticky;
   top: 80px;
 }
 
-/* Search input field */
 .search-input {
   padding: 6px 10px;
   width: 100%;
@@ -174,14 +196,13 @@ header.site-header {
   font-size: 1rem;
 }
 
-/* Search results box */
 .search-results {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   background: white;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   max-height: 300px;
   overflow-y: auto;
   display: none;
@@ -200,40 +221,39 @@ header.site-header {
 }
 
 .search-results li a {
-  color: #007acc;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 .search-results li a:hover {
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
-/* ... existing styles ... */
-
-/* Hide mobile search bar by default */
+/* ============================
+   Mobile Search
+   ============================ */
 .mobile-search-container {
   display: none;
 }
 
-/* Responsive Mobile Fixes */
-
+/* ============================
+   Mobile Styles
+   ============================ */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  /* Hide old menu toggle button if still present */
   .menu-toggle {
     display: none;
   }
 
-  /* Hide standard nav in mobile */
   .site-nav {
     display: none;
   }
 
-  /* Mobile search bar setup */
   .mobile-search-container {
     display: block;
     width: 100%;
@@ -263,7 +283,6 @@ header.site-header {
     display: none;
   }
 
-  /* Hamburger styles */
   .hamburger {
     display: flex;
     cursor: pointer;
@@ -280,11 +299,10 @@ header.site-header {
   .hamburger span {
     display: block;
     height: 3px;
-    background: #333;
+    background: var(--primary-text);
     border-radius: 2px;
   }
 
-  /* Slide-in sidenav panel */
   .sidenav {
     height: 100%;
     width: 0;
@@ -303,13 +321,13 @@ header.site-header {
     padding: 10px 30px;
     text-decoration: none;
     font-size: 18px;
-    color: #333;
+    color: var(--primary-text);
     display: block;
   }
 
   .sidenav a:hover {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-text);
+    color: #fff;
   }
 
   .sidenav .closebtn {
@@ -318,6 +336,6 @@ header.site-header {
     right: 25px;
     font-size: 36px;
     text-decoration: none;
-    color: #333;
+    color: var(--primary-text);
   }
 }
