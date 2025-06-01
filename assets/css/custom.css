@@ -1,3 +1,23 @@
+/* Hide mobile nav on desktop */
+@media (min-width: 768px) {
+  .nav-mobile {
+    display: none !important;
+  }
+  .nav-desktop {
+    display: block !important;
+  }
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 767px) {
+  .nav-desktop {
+    display: none !important;
+  }
+  .nav-mobile {
+    display: block !important;
+  }
+}
+
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
