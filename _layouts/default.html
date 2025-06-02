@@ -13,7 +13,12 @@
     gtag('js', new Date());
     gtag('config', 'G-T4E4BEQPL1');
   </script>
-  <!-- End Google Analytics -->
+
+  <!-- Open Graph Meta Tags for social sharing (fixes LinkedIn image issue) -->
+  <meta property="og:title" content="Sri Devi Blogs" />
+  <meta property="og:description" content="Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula." />
+  <meta property="og:url" content="https://srideviblogs.github.io" />
+  <meta property="og:image" content="https://srideviblogs.github.io/assets/images/social-preview.png" />
 
   {% include head.html %}
   {% seo %}
@@ -24,15 +29,14 @@
   <!-- Load custom stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-  <!-- Favicon -->
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/images/favicon-96x96.png' | relative_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
-
 </head>
+
 <body>
   {% include header.html %}
 
@@ -56,9 +60,7 @@
     
     <!-- Main blog content -->
     <main class="site-main main-content">
-    <!-- {{ content }} -->
       {{ content | replace: '<img', '<img loading="lazy"' }}
-
     </main>
 
     <!-- Right sidebar with search bar -->
