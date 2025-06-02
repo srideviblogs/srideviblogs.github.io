@@ -399,3 +399,14 @@ header.site-header {
     white-space: normal;
   }
 }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+}
