@@ -348,16 +348,62 @@ header.site-header {
   margin-top: 2em;
   display: flex;
   justify-content: space-between;
-  font-size: 0.95em;
+  font-size: 1rem;
   border-top: 1px solid #eee;
   padding-top: 1em;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .prev-post, .next-post {
-  color: #007acc;
+  background-color: #007acc;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 4px;
   text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  max-width: 48%;
+  box-sizing: border-box;
 }
 
 .prev-post:hover, .next-post:hover {
-  text-decoration: underline;
+  background-color: #005fa3;
+  text-decoration: none;
 }
+
+.post-nav-title {
+  font-style: italic;
+  margin: 0 0.4em;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Adjust arrow spacing */
+.prev-post > span.post-nav-title {
+  margin-left: 0.4em;
+  margin-right: 0;
+}
+
+.next-post > span.post-nav-title {
+  margin-right: 0.4em;
+  margin-left: 0;
+}
+
+/* Responsive: stack buttons on small screens */
+@media (max-width: 600px) {
+  .post-navigation {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .prev-post, .next-post {
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+
