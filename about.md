@@ -12,3 +12,12 @@ I share my hands-on experiences by breaking down complex DevOps concepts into si
 
 This space is more than just technical content — it’s created to help others grow by providing valuable resources and guidance at every step of their learning journey.
 
+---
+
+## Follow Me
+
+Stay connected with me on social media:
+
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/yourinstagramusername)
+&nbsp;&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sandeep-pochu-27589b274/)
