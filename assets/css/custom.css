@@ -133,6 +133,14 @@ header.site-header {
   text-align: center;
 }
 
+.reading-time {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+
 /* ===== New Layout Styles ===== */
 
 /* Layout wrapper for main content and sidebar */
