@@ -56,7 +56,9 @@
     
     <!-- Main blog content -->
     <main class="site-main main-content">
-      {{ content }}
+    <!-- {{ content }} -->
+      {{ content | replace: '<img', '<img loading="lazy"' }}
+
     </main>
 
     <!-- Right sidebar with search bar -->
