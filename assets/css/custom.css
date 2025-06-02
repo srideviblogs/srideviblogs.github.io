@@ -334,10 +334,30 @@ header.site-header {
   color: #555;
   margin-bottom: 0.8em;
 }
+
 .breadcrumb a {
   color: #007acc;
   text-decoration: none;
 }
+
 .breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.post-navigation {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95em;
+  border-top: 1px solid #eee;
+  padding-top: 1em;
+}
+
+.prev-post, .next-post {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.prev-post:hover, .next-post:hover {
   text-decoration: underline;
 }
