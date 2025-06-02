@@ -16,7 +16,7 @@ This space is more than just technical content — it’s created to help others
 
 ## Follow Me
 
-Stay connected with me on social media:
+For the latest updates and more:
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23833AB4.svg?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/yourinstagramusername)
 &nbsp;&nbsp;
