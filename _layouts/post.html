@@ -46,14 +46,18 @@ layout: default
     </p>
   {% endif %}
 
-  <!-- Next/Previous post navigation -->
-  <div class="post-navigation">
+  <!-- Next / Previous Post Navigation -->
+  <nav class="post-navigation" aria-label="Post navigation">
     {% if page.previous %}
-      <a class="prev-post" href="{{ page.previous.url | relative_url }}">&laquo; {{ page.previous.title }}</a>
+      <a href="{{ page.previous.url }}" class="prev-post" aria-label="Previous post: {{ page.previous.title }}">
+        ← <span class="post-nav-title">{{ page.previous.title }}</span>
+      </a>
     {% endif %}
     {% if page.next %}
-      <a class="next-post" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &raquo;</a>
+      <a href="{{ page.next.url }}" class="next-post" aria-label="Next post: {{ page.next.title }}">
+        <span class="post-nav-title">{{ page.next.title }}</span> →
+      </a>
     {% endif %}
-  </div>
+  </nav>
 
 </article>
