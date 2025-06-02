@@ -328,3 +328,16 @@ header.site-header {
     color: #333;
   }
 }
+
+.breadcrumb {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 0.8em;
+}
+.breadcrumb a {
+  color: #007acc;
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
