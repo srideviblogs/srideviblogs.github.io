@@ -9,7 +9,7 @@ author:
   linkedin: "https://www.linkedin.com/in/sandeep-pochu-27589b274/"
   location: "Santa Clara, CA"
   bio: "DevOps Engineer | Blogger | Tech Enthusiast"
-logo: /assets/images/favicon.png
+logo: https://srideviblogs.github.io/assets/images/social-preview.png
 
 # Permalink style - you can keep this or change if you want dated URLs
 permalink: /:title/
