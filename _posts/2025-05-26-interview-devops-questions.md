@@ -4,7 +4,7 @@ title: "Real time DevOps Interview Questions and Answers"
 date: 2025-05-26 12:00:00 +0000
 categories: [interview]
 tags: [devops, interview, preparation]
-image: /assets/images/og-default.jpg
+image: /assets/images/interview.jpg
 excerpt: "Frequently asked DevOps interview questions and detailed answers to help you prepare."
 ---
 
