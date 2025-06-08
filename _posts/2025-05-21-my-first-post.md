@@ -4,7 +4,7 @@ title:  "Welcome to Sridevi's DevOps Blog"
 date: 2025-05-17 10:00:00 +0000
 categories: []
 tags: [welcome, blog]
-image: /assets/images/og-default.jpg
+image: /assets/images/introduction.jpg
 excerpt: "An introduction to my new blog."
 ---
 
