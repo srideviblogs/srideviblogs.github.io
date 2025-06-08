@@ -411,55 +411,68 @@ header.site-header {
   text-decoration: none;
 }
 
+/* Container grid for post cards */
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
 
+/* Individual post card */
 .post-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease;
-}
-
-.post-card:hover {
-  transform: translateY(-4px);
-}
-
-.post-image {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.post-content {
+  transition: box-shadow 0.3s ease;
   padding: 1rem;
 }
 
-.post-card h3 {
-  font-size: 1.1rem;
-  margin: 0 0 0.5rem;
+.post-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-.post-meta {
+/* Post image */
+.post-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Post content inside card */
+.post-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.post-content h3 a {
+  color: #0069ed;
+  text-decoration: none;
+}
+
+.post-content h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Post meta details */
+.post-meta,
+.post-categories,
+.post-read-time {
   font-size: 0.85rem;
   color: #666;
-  margin-bottom: 0.75rem;
+  margin: 0.25rem 0;
+  font-style: italic;
 }
 
-.post-categories {
-  font-size: 0.8rem;
-  margin-bottom: 0.75rem;
-  color: #555;
-}
-
+/* Category links */
 .category-link {
   color: #007acc;
   text-decoration: none;
@@ -469,15 +482,43 @@ header.site-header {
   text-decoration: underline;
 }
 
-.post-read-time {
-  font-size: 0.8rem;
-  color: #999;
-  margin-bottom: 0.75rem;
+/* Read more link */
+.read-more {
+  margin-top: auto;
+  font-weight: 600;
+  color: #0069ed;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
-.read-more {
-  font-weight: bold;
-  color: #007acc;
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* View all posts link styling */
+.view-all-posts {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: #0069ed;
   text-decoration: none;
 }
+
+.view-all-posts:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-image {
+    height: 160px;
+  }
+}
+
+
 
