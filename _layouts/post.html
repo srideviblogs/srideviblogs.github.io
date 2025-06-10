@@ -45,28 +45,11 @@ layout: default
       {% endfor %}
     </p>
   {% endif %}
-
-  <!-- View Count -->
-  <p id="view-count">👁️ Views: Loading...</p>
-  <script>
-    // Format page key by removing leading slash and replacing remaining slashes with dashes
-    const pageKey = "{{ page.url | remove: '/' | replace: '/', '-' }}";
-    const namespace = "srideviblogs";
-    const url = `https://api.countapi.xyz/hit/${namespace}/${pageKey}`;
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        if (data && data.value !== undefined) {
-          document.getElementById("view-count").textContent = `👁️ Views: ${data.value}`;
-        } else {
-          document.getElementById("view-count").textContent = "👁️ Views: Unavailable";
-        }
-      })
-      .catch(() => {
-        document.getElementById("view-count").textContent = "👁️ Views: Unavailable";
-      });
-  </script>
+    
+  <!-- View Counter Badge -->
+  <p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=srideviblogs.github.io{{ page.url | uri_escape }}" alt="View count badge" />
+  </p>
 
   <!-- Next / Previous Post Navigation -->
   <nav class="post-navigation">
