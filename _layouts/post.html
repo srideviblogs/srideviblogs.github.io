@@ -46,6 +46,17 @@ layout: default
     </p>
   {% endif %}
 
+  <!-- View Count -->
+  <p id="view-count">👁️ Views: Loading...</p>
+  <script>
+    const pagePath = "{{ page.url }}";
+    fetch(`https://api.counter.dev/get/c9193d11-3ce4-47c1-987d-d945b7997796${pagePath}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("view-count").textContent = "👁️ Views: " + data.count;
+      });
+  </script>
+
   <!-- Next / Previous Post Navigation -->
   <nav class="post-navigation">
     {% if page.previous %}
