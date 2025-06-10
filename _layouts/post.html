@@ -49,25 +49,22 @@ layout: default
   <!-- View Count -->
   <p id="view-count">👁️ Views: Loading...</p>
   <script>
-    const viewCountElement = document.getElementById("view-count");
-    const pagePath = "{{ page.url }}";
-    const apiURL = `https://api.counter.dev/get/c9193d11-3ce4-47c1-987d-d945b7997796${pagePath}`;
+    // Format page key by removing leading slash and replacing remaining slashes with dashes
+    const pageKey = "{{ page.url | remove: '/' | replace: '/', '-' }}";
+    const namespace = "srideviblogs";
+    const url = `https://api.countapi.xyz/hit/${namespace}/${pageKey}`;
 
-    console.log("🔍 Fetching view count from:", apiURL);
-
-    fetch(apiURL)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
+    fetch(url)
+      .then(response => response.json())
       .then(data => {
-        viewCountElement.textContent = "👁️ Views: " + data.count;
+        if (data && data.value !== undefined) {
+          document.getElementById("view-count").textContent = `👁️ Views: ${data.value}`;
+        } else {
+          document.getElementById("view-count").textContent = "👁️ Views: Unavailable";
+        }
       })
-      .catch(error => {
-        console.error("❌ Failed to load view count:", error);
-        viewCountElement.textContent = "👁️ Views: Unavailable";
+      .catch(() => {
+        document.getElementById("view-count").textContent = "👁️ Views: Unavailable";
       });
   </script>
 
