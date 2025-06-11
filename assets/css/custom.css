@@ -525,56 +525,58 @@ header.site-header {
   margin-top: 10px;
 }
 
-<style>
 .share-button {
   position: relative;
   display: inline-block;
-  margin-top: 1rem;
+  margin: 1em 0;
 }
+
 .share-button button {
-  background: #eee;
-  border: 1px solid #ccc;
+  background-color: #007bff;
+  color: #fff;
   padding: 6px 12px;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
+
+.share-button button:hover {
+  background-color: #0056b3;
+}
+
 .share-menu {
   display: none;
   position: absolute;
-  bottom: 40px;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  list-style: none;
-  padding: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  width: 200px;
-  z-index: 999;
+  padding: 8px;
+  z-index: 1000;
+  width: 220px;
 }
+
 .share-menu li {
-  padding: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  list-style: none;
+  padding: 4px 0;
 }
+
 .share-menu li a {
-  text-decoration: none;
-  color: #333;
   display: flex;
   align-items: center;
-  width: 100%;
+  gap: 8px;
+  color: #333;
+  text-decoration: none;
 }
-.share-menu li:hover {
-  background-color: #f9f9f9;
+
+.share-menu li a:hover {
+  text-decoration: underline;
 }
-.share-menu svg {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  flex-shrink: 0;
-}
-</style>
+
 
 
 
