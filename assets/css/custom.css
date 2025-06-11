@@ -577,6 +577,13 @@ header.site-header {
   text-decoration: underline;
 }
 
+.share-menu li {
+  font-weight: normal; /* Ensure regular font weight */
+}
+
+.share-button button {
+  font-weight: normal; /* Ensure the Share button is not bold */
+}
 
 
 
