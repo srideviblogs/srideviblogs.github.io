@@ -45,11 +45,33 @@ layout: default
       {% endfor %}
     </p>
   {% endif %}
-    
+
   <!-- View Counter Badge -->
   <p>
     <img src="https://visitor-badge.laobi.icu/badge?page_id=srideviblogs.github.io{{ page.url | uri_escape }}&label=Views&_={{ site.time | date: '%s' }}" alt="Views count" />
   </p>
+
+  <!-- Social Sharing Buttons -->
+  <div class="social-share">
+    <p><strong>Share this post:</strong></p>
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" target="_blank">🐦 Twitter</a> |
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank">🔗 LinkedIn</a> |
+    <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this blog post: {{ site.url }}{{ page.url }}">📧 Email</a>
+  </div>
+
+  <!-- Comment Section using Utterances -->
+  <hr />
+  <h3>Comments</h3>
+  <div id="comments">
+    <script src="https://utteranc.es/client.js"
+            repo="srideviblogs/srideviblogs.github.io"
+            issue-term="pathname"
+            label="💬 comment"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
 
   <!-- Next / Previous Post Navigation -->
   <nav class="post-navigation">
