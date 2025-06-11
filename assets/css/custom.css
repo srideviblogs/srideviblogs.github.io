@@ -585,5 +585,11 @@ header.site-header {
   font-weight: normal; /* Ensure the Share button is not bold */
 }
 
+.share-menu a {
+  font-weight: normal !important;
+  font-size: 14px;
+  font-family: inherit;
+}
+
 
 
