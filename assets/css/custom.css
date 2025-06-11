@@ -525,5 +525,21 @@ header.site-header {
   margin-top: 10px;
 }
 
+.social-share {
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.social-share a {
+  margin-right: 10px;
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.social-share a:hover {
+  text-decoration: underline;
+}
 
 
