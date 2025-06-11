@@ -55,27 +55,37 @@ layout: default
   <div class="share-button" style="position: relative; display: inline-block;">
     <button id="shareBtn">Share 🔗</button>
     <ul id="shareMenu" class="share-menu" style="display:none; position: absolute; top: 110%; left: 0; background: white; border: 1px solid #ccc; box-shadow: 0 2px 6px rgba(0,0,0,0.15); padding: 8px 0; margin: 0; list-style: none; width: 180px; z-index: 1000;">
-      <li><a href="#" id="copy-link" role="menuitem" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#333;">
-        🔗 Copy Link
-      </a></li>
-      <li><a href="#" id="share-twitter" role="menuitem" target="_blank" rel="noopener" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#1DA1F2;">
-        <img src="https://www.svgrepo.com/show/183608/twitter.svg" alt="Twitter" width="16" height="16" style="margin-right:8px;" /> Twitter
-      </a></li>
-      <li><a href="#" id="share-linkedin" role="menuitem" target="_blank" rel="noopener" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#0077B5;">
-        <img src="https://www.svgrepo.com/show/138936/linkedin.svg" alt="LinkedIn" width="16" height="16" style="margin-right:8px;" /> LinkedIn
-      </a></li>
-      <li><a href="#" id="share-facebook" role="menuitem" target="_blank" rel="noopener" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#1877F2;">
-        <!-- Inline Facebook SVG icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#1877F2" aria-hidden="true" style="margin-right:8px;">
-          <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.333C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.588l-.467 3.622h-3.121V24h6.116c.728 0 1.325-.597 1.325-1.334V1.333C24 .597 23.403 0 22.675 0z"/>
-        </svg> Facebook
-      </a></li>
-      <li><a href="#" id="share-email" role="menuitem" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#D44638;">
-        <!-- Inline Email SVG icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#D44638" aria-hidden="true" style="margin-right:8px;">
-          <path d="M20 4H4c-1.104 0-2 .9-2 2v12c0 1.1.896 2 2 2h16c1.104 0 2-.9 2-2V6c0-1.1-.896-2-2-2zM4 8.999l7.99 5.022a1.25 1.25 0 001.02 0L20 8.999V6l-8 5-8-5v2.999z"/>
-        </svg> Email
-      </a></li>
+      <li>
+        <a href="#" id="copy-link" role="menuitem" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#333;">
+          <span style="margin-right:6px;">🔗</span> Copy Link
+        </a>
+      </li>
+      <li>
+        <a href="#" id="share-twitter" role="menuitem" target="_blank" rel="noopener" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#1DA1F2;">
+          <img src="https://www.svgrepo.com/show/183608/twitter.svg" alt="Twitter" width="16" height="16" style="margin-right:8px;" /> Twitter
+        </a>
+      </li>
+      <li>
+        <a href="#" id="share-linkedin" role="menuitem" target="_blank" rel="noopener" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#0077B5;">
+          <img src="https://www.svgrepo.com/show/138936/linkedin.svg" alt="LinkedIn" width="16" height="16" style="margin-right:8px;" /> LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="#" id="share-facebook" role="menuitem" target="_blank" rel="noopener" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#1877F2;">
+          <!-- Inline Facebook SVG icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#1877F2" aria-hidden="true" style="margin-right:8px;">
+            <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.333C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.588l-.467 3.622h-3.121V24h6.116c.728 0 1.325-.597 1.325-1.334V1.333C24 .597 23.403 0 22.675 0z"/>
+          </svg> Facebook
+        </a>
+      </li>
+      <li>
+        <a href="#" id="share-email" role="menuitem" style="display:flex; align-items:center; padding: 6px 12px; text-decoration:none; color:#D44638;">
+          <!-- Inline Email SVG icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#D44638" aria-hidden="true" style="margin-right:8px;">
+            <path d="M20 4H4c-1.104 0-2 .9-2 2v12c0 1.1.896 2 2 2h16c1.104 0 2-.9 2-2V6c0-1.1-.896-2-2-2zM4 8.999l7.99 5.022a1.25 1.25 0 001.02 0L20 8.999V6l-8 5-8-5v2.999z"/>
+          </svg> Email
+        </a>
+      </li>
     </ul>
   </div>
 
