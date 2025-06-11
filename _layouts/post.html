@@ -45,33 +45,40 @@ layout: default
       {% endfor %}
     </p>
   {% endif %}
-  
+    
   <!-- View Counter Badge -->
   <p>
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=srideviblogs.github.io{{ page.url | uri_escape }}&label=Views&_={{ site.time | date: '%s' }}" alt="Views count" />
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=srideviblogs.github.io{{ page.url | uri_escape }}&label=Visitors&_={{ site.time | date: '%s' }}" alt="Visitors count" />
   </p>
 
-  <!-- Share Buttons -->
-  <div class="share-buttons">
-    <strong>Share this post:</strong>
-    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}" target="_blank" rel="noopener" title="Share on Twitter">🐦 Twitter</a>
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url | uri_escape }}&title={{ page.title | uri_escape }}" target="_blank" rel="noopener" title="Share on LinkedIn">💼 LinkedIn</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | uri_escape }}" target="_blank" rel="noopener" title="Share on Facebook">📘 Facebook</a>
-    <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ site.url }}{{ page.url | uri_escape }}" title="Share via Email">✉️ Email</a>
-    
-    <button id="copy-link-btn" type="button" title="Copy post link">🔗 Copy Link</button>
+  <!-- Share Button -->
+  <div class="share-button">
+    <button onclick="toggleShareMenu()">🔗 Share</button>
+    <ul class="share-menu" id="shareMenu">
+      <li onclick="copyLink()">
+        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M12.293 7.293a1 1 0 011.414 0L17 10.586a2 2 0 010 2.828l-4.293 4.293a1 1 0 01-1.414-1.414L15.586 12 12.293 8.707a1 1 0 010-1.414z"></path><path d="M7.707 12.707a1 1 0 01-1.414 0L3 9.414a2 2 0 010-2.828L7.293 2.293a1 1 0 011.414 1.414L4.414 8 7.707 11.293a1 1 0 010 1.414z"></path></svg>
+        Copy Link
+      </li>
+      <li>
+        <a href="#" id="share-twitter" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.29 20c7.547 0 11.675-6.155 11.675-11.49 0-.175 0-.349-.012-.522A8.18 8.18 0 0022 5.92a8.19 8.19 0 01-2.357.637 4.077 4.077 0 001.804-2.23 8.224 8.224 0 01-2.605.975 4.107 4.107 0 00-6.993 3.743A11.65 11.65 0 013.179 4.89a4.067 4.067 0 001.27 5.482 4.093 4.093 0 01-1.858-.512v.05a4.106 4.106 0 003.292 4.024 4.1 4.1 0 01-1.852.07 4.109 4.109 0 003.834 2.82A8.233 8.233 0 012 18.408 11.616 11.616 0 008.29 20z"></path></svg>
+          Twitter
+        </a>
+      </li>
+      <li>
+        <a href="#" id="share-linkedin" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C3.34 3.5 2 4.84 2 6.48c0 1.64 1.34 2.98 2.98 2.98 1.64 0 2.98-1.34 2.98-2.98 0-1.64-1.34-2.98-2.98-2.98zM2.4 21h5.17V9H2.4v12zM9.88 21h5.18v-6.35c0-3.38-4.07-3.13-4.07 0V21zM17.82 21H23V14.3c0-4.7-5.08-4.51-5.18 0V21z"></path></svg>
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="#" id="share-email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.104 0 2 .896 2 2v12c0 1.104-.896 2-2 2H4c-1.105 0-2-.896-2-2V6c0-1.104.895-2 2-2zm8 7L4 6h16l-8 5zm-8 1v7h16v-7l-8 5-8-5z"></path></svg>
+          Email
+        </a>
+      </li>
+    </ul>
   </div>
-
-  <script>
-    document.getElementById('copy-link-btn').addEventListener('click', function() {
-      const url = window.location.href;
-      navigator.clipboard.writeText(url).then(() => {
-        alert('Post URL copied to clipboard!');
-      }, () => {
-        alert('Failed to copy URL. Please copy manually.');
-      });
-    });
-  </script>
 
   <!-- Next / Previous Post Navigation -->
   <nav class="post-navigation">
@@ -88,3 +95,23 @@ layout: default
   </nav>
 
 </article>
+
+<!-- Share script -->
+<script>
+function toggleShareMenu() {
+  const menu = document.getElementById("shareMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    alert("Link copied to clipboard!");
+  });
+}
+document.getElementById("share-twitter").href =
+  `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`;
+document.getElementById("share-linkedin").href =
+  `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}`;
+document.getElementById("share-email").href =
+  `mailto:?subject=Check out this blog post&body=${encodeURIComponent(window.location.href)}`;
+</script>
+
