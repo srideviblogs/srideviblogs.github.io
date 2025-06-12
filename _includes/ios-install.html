@@ -1,73 +1,88 @@
-<!-- Unified iOS & Android PWA Prompt -->
-<div id="install-prompt" style="display: none; position: fixed; bottom: 20px; left: 10px; right: 10px; padding: 16px; background: #fdf6e3; border: 1px solid #e0e0e0; border-radius: 10px; font-family: 'Fira Sans', sans-serif; color: #333; text-align: center; font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 9999;">
-  <button onclick="hidePrompt()" style="position: absolute; top: 4px; right: 8px; background: none; border: none; font-size: 18px; cursor: pointer;">×</button>
-  <div id="ios-message" style="display: none;">
-    <strong>Install this app:</strong><br>
-    Tap <span style="font-size: 18px;">🔗</span> then <strong>Add to Home Screen</strong>
-  </div>
-  <div id="android-message" style="display: none;">
-    <strong>Install this app for quick access:</strong><br>
-    <button id="install-btn" style="margin-top: 8px; padding: 6px 12px; font-weight: 600; background: #333; color: white; border: none; border-radius: 5px;">Install</button>
-  </div>
+<style>
+  .install-banner {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-family: 'Fira Sans', sans-serif;
+  }
+  .install-banner p {
+    margin: 0 0 0.5rem 0;
+    font-size: 14px;
+  }
+  .install-banner button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .install-banner .close-btn {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.6rem;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+</style>
+
+<div id="installBanner" class="install-banner" style="display:none;">
+  <button class="close-btn" onclick="hideInstallBanner()">×</button>
+  <p id="installText"></p>
+  <button id="installBtn" style="display:none;">Install</button>
 </div>
 
 <script>
-  const promptDelayDays = 3;
+  const bannerKey = 'pwa-install-dismissed';
+  const bannerCooldown = 3 * 24 * 60 * 60 * 1000; // 7 days
+  const lastDismissed = localStorage.getItem(bannerKey);
 
-  function hidePrompt() {
-    document.getElementById('install-prompt').style.display = 'none';
-    localStorage.setItem('pwaPromptDismissedAt', Date.now().toString());
-  }
+  if (!lastDismissed || (Date.now() - parseInt(lastDismissed, 10)) > bannerCooldown) {
+    const isIos = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
+    const isInStandaloneMode = ('standalone' in window.navigator) && window.navigator.standalone;
+    const isAndroid = /android/.test(navigator.userAgent.toLowerCase());
+    const installBanner = document.getElementById('installBanner');
+    const installText = document.getElementById('installText');
+    const installBtn = document.getElementById('installBtn');
 
-  function shouldShowPrompt() {
-    const dismissedAt = localStorage.getItem('pwaPromptDismissedAt');
-    if (!dismissedAt) return true;
-    const daysSince = (Date.now() - parseInt(dismissedAt)) / (1000 * 60 * 60 * 24);
-    return daysSince >= promptDelayDays;
-  }
+    if (isIos && !isInStandaloneMode) {
+      installText.innerHTML = 'Install this app: tap <span style="font-weight:bold;">Share</span> (<svg style="display:inline-block;height:1em;vertical-align:-0.15em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="black" d="M336 80h96v352h-352v-352h96v-48h-96c-26.51 0-48 21.49-48 48v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48v-352c0-26.51-21.49-48-48-48h-96v48zm-80-48v228.686l-67.313-67.314-33.374 33.374 128 128 128-128-33.374-33.374-67.313 67.314v-228.686h-48z"/></svg>) and choose <strong>Add to Home Screen</strong>.';
+      installBanner.style.display = 'block';
+    }
 
-  const isIOS = () => /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
-  const isInStandaloneMode = () => ('standalone' in window.navigator) && window.navigator.standalone;
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installText.textContent = 'Install this app on your Android device.';
+      installBtn.style.display = 'inline-block';
+      installBanner.style.display = 'block';
 
-  // Android logic
-  let deferredPrompt;
-  window.addEventListener('beforeinstallprompt', (e) => {
-    if (!shouldShowPrompt()) return;
-
-    e.preventDefault();
-    deferredPrompt = e;
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const promptEl = document.getElementById('install-prompt');
-      const androidMsg = document.getElementById('android-message');
-      if (promptEl && androidMsg) {
-        promptEl.style.display = 'block';
-        androidMsg.style.display = 'block';
-
-        document.getElementById('install-btn').addEventListener('click', async () => {
-          promptEl.style.display = 'none';
-          localStorage.setItem('pwaPromptDismissedAt', Date.now().toString());
-          deferredPrompt.prompt();
-          const choiceResult = await deferredPrompt.userChoice;
-          console.log('User choice:', choiceResult.outcome);
+      installBtn.addEventListener('click', () => {
+        installBanner.style.display = 'none';
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome !== 'accepted') {
+            console.log('User dismissed the install prompt');
+          }
           deferredPrompt = null;
         });
-
-        setTimeout(hidePrompt, 15000); // auto-close after 15 sec
-      }
+      });
     });
-  });
+  }
 
-  // iOS logic
-  if (isIOS() && !isInStandaloneMode() && shouldShowPrompt()) {
-    document.addEventListener('DOMContentLoaded', () => {
-      const promptEl = document.getElementById('install-prompt');
-      const iosMsg = document.getElementById('ios-message');
-      if (promptEl && iosMsg) {
-        promptEl.style.display = 'block';
-        iosMsg.style.display = 'block';
-        setTimeout(hidePrompt, 15000);
-      }
-    });
+  function hideInstallBanner() {
+    document.getElementById('installBanner').style.display = 'none';
+    localStorage.setItem('pwa-install-dismissed', Date.now().toString());
   }
 </script>
