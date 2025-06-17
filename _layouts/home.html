@@ -2,18 +2,22 @@
 layout: default
 ---
 
-<section class="welcome-intro" style="margin-bottom: 2rem;">
-  <h1>Welcome to Sridevi Blogs!</h1>
-  <p>Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
+<!-- ✅ Philosophy-like HERO (uses your text) -->
+<section class="hero-header">
+  <div class="hero-content">
+    <h1>Welcome to Sridevi Blogs!</h1>
+    <p>Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
+  </div>
 </section>
 
+<!-- ✅ LATEST POSTS (unchanged loop) -->
 <section class="latest-posts">
   <h2>Latest Posts</h2>
   <div class="post-grid">
     {% for post in site.posts limit:6 %}
       <div class="post-card">
         {% if post.image %}
-          <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
+          <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
         {% endif %}
         <div class="post-content">
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
@@ -21,7 +25,7 @@ layout: default
 
           {% if post.categories %}
             <p class="post-categories">
-              Categories: 
+              Categories:
               {% for cat in post.categories %}
                 <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
               {% endfor %}
