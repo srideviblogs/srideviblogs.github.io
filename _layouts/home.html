@@ -2,37 +2,34 @@
 layout: default
 ---
 
-<!-- ✅ HERO SECTION -->
-<section class="hero">
-  <h1>Welcome to Sridevi Blogs</h1>
-  <p>Real-world DevOps tutorials, interview questions, and practical career tips — by Sridevi Velpula.</p>
+<section class="welcome-intro" style="margin-bottom: 2rem;">
+  <h1>Welcome to Sridevi Blogs!</h1>
+  <p>Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
 </section>
 
-<!-- ✅ LATEST POSTS GRID -->
 <section class="latest-posts">
   <h2>Latest Posts</h2>
   <div class="post-grid">
     {% for post in site.posts limit:6 %}
       <div class="post-card">
         {% if post.image %}
-          <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+          <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
         {% endif %}
         <div class="post-content">
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">
-            {{ post.date | date: "%B %d, %Y" }}
-            {% assign words = post.content | number_of_words %}
-            {% assign minutes = words | divided_by:200 | plus:1 %}
-            • {{ minutes }} min read
-          </p>
+          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
 
           {% if post.categories %}
             <p class="post-categories">
-              Categories:
+              Categories: 
               {% for cat in post.categories %}
                 <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
               {% endfor %}
             </p>
+          {% endif %}
+
+          {% if post.read_time %}
+            <p class="post-read-time">{{ post.read_time }}</p>
           {% endif %}
 
           <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
