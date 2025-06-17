@@ -1,32 +1,86 @@
-<header class="site-header">
-  <div class="container">
-    <!-- Site title and mobile toggle -->
-    <div class="header-row">
-      <h1 class="site-title">
-        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+<header class="site-header" style="background-color: #fff; border-bottom: 1px solid #e0e0e0;">
+  <div class="container" style="max-width: 1200px; margin: auto; padding: 1rem 2rem;">
+    
+    <div class="header-row" style="display: flex; justify-content: space-between; align-items: center;">
+      
+      <h1 class="site-title" style="margin: 0; font-size: 1.6rem; font-weight: bold;">
+        <a href="{{ site.baseurl }}/" style="color: #333; text-decoration: none;">
+          {{ site.title }}
+        </a>
       </h1>
 
-      <!-- Mobile Hamburger Toggle (replaces old button) -->
-      <div class="hamburger" onclick="openNav()">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="hamburger" onclick="openNav()" style="display: none; flex-direction: column; gap: 5px; cursor: pointer;">
+        <span style="width: 25px; height: 3px; background-color: #333; display: block;"></span>
+        <span style="width: 25px; height: 3px; background-color: #333; display: block;"></span>
+        <span style="width: 25px; height: 3px; background-color: #333; display: block;"></span>
       </div>
     </div>
 
-    <!-- Desktop Navigation -->
-    <nav class="site-nav" id="site-nav">
+    <nav class="site-nav" id="site-nav" style="margin-top: 1rem; display: flex; gap: 2rem;">
       {% for item in site.nav %}
-        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+        <a href="{{ site.baseurl }}{{ item.url }}" style="color: #555; text-decoration: none; font-weight: 500;">
+          {{ item.title }}
+        </a>
       {% endfor %}
     </nav>
   </div>
 
-  <!-- Slide-in Side Menu for Mobile -->
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    {% for item in site.nav %}
-      <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-    {% endfor %}
+  <div id="mySidenav" class="sidenav" style="
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    z-index: 1000;">
+    
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+      text-decoration: none;
+      color: #333;">&times;</a>
+    
+    <div style="display: flex; flex-direction: column; padding: 2rem;">
+      {% for item in site.nav %}
+        <a href="{{ site.baseurl }}{{ item.url }}" style="
+          padding: 1rem 0;
+          font-size: 18px;
+          color: #333;
+          text-decoration: none;">
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </div>
   </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    function toggleNavDisplay() {
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.getElementById('site-nav');
+      if (window.innerWidth <= 768) {
+        hamburger.style.display = 'flex';
+        nav.style.display = 'none';
+      } else {
+        hamburger.style.display = 'none';
+        nav.style.display = 'flex';
+        closeNav();
+      }
+    }
+
+    window.addEventListener('resize', toggleNavDisplay);
+    window.addEventListener('load', toggleNavDisplay);
+  </script>
 </header>
