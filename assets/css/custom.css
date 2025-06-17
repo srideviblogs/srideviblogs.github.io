@@ -411,92 +411,102 @@ header.site-header {
   text-decoration: none;
 }
 
-/* HERO HEADER (Philosophy style) */
-.hero-header {
-  background: #f8f8f8;
-  padding: 6rem 1rem;
-  text-align: center;
-}
-
-.hero-header h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-header p {
-  font-size: 1.2rem;
-  color: #666;
-}
-
-/* POSTS GRID (Philosophy-like) */
-.latest-posts {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-}
-
+/* Container grid for post cards */
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
+/* Individual post card */
 .post-card {
   border: 1px solid #eee;
-  border-radius: 6px;
-  overflow: hidden;
-  background: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.post-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.post-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.post-content {
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
   padding: 1rem;
 }
 
-.post-meta {
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 0.5rem;
+.post-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-.post-categories {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+/* Post image */
+.post-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
-.category-link {
+/* Post content inside card */
+.post-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.post-content h3 a {
+  color: #0069ed;
   text-decoration: none;
-  color: teal;
 }
 
+.post-content h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Post meta details */
+.post-meta,
+.post-categories,
+.post-read-time {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.25rem 0;
+  font-style: italic;
+}
+
+/* Category links */
+.category-link {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.category-link:hover {
+  text-decoration: underline;
+}
+
+/* Read more link */
 .read-more {
+  margin-top: auto;
+  font-weight: 600;
+  color: #0069ed;
+  text-decoration: none;
   display: inline-block;
   margin-top: 1rem;
-  color: teal;
-  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* View all posts link styling */
+.view-all-posts {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: #0069ed;
   text-decoration: none;
 }
 
-.view-all-posts {
-  display: block;
-  text-align: center;
-  margin: 3rem auto 0;
-  background: teal;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
+.view-all-posts:hover {
+  text-decoration: underline;
 }
 
 /* Responsive adjustments */
