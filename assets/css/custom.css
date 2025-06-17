@@ -411,6 +411,14 @@ header.site-header {
   text-decoration: none;
 }
 
+/* Container grid for post cards */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
 /* Individual post card */
 .post-card {
   border: 1px solid #eee;
@@ -582,6 +590,3 @@ header.site-header {
   font-size: 14px;
   font-family: inherit;
 }
-
-
-
