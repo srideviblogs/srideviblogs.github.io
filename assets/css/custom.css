@@ -65,6 +65,7 @@ html, body {
   width: 100vw;
   margin: 0;
   padding: 0.5rem 0;
+  padding-bottom: 1rem; /* ✅ Add some space below header */
   position: relative;
   left: 0;
   right: 0;
@@ -128,8 +129,9 @@ html, body {
 }
 
 /* Sidenav fix */
-.sidenav {
-  background-color: #007bff;
+.site-nav {
+  background-color: white !important; /* ✅ Makes mobile menu white */
+  color: black;
 }
 
 .menu-toggle {
