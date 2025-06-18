@@ -53,6 +53,11 @@ a:hover {
 
 /* Header */
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .site-header {
   background-color: #2563eb;
   padding: 0.75rem 1rem;
@@ -64,6 +69,7 @@ a:hover {
   margin-right: -50vw;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   margin-bottom: 1rem; /* space between header and content */
 }
 
 .site-header .container {
