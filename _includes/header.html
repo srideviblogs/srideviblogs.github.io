@@ -1,9 +1,11 @@
 <header class="site-header">
   <div class="container">
     <!-- Site title and mobile toggle -->
-    <div class="header-row">
-      <h1 class="site-title">
-        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div class="header-row" style="display: flex; justify-content: space-between; align-items: center;">
+      <h1 class="site-title" style="margin: 0; font-size: 1.6rem; font-weight: bold;">
+        <a href="{{ site.baseurl }}/" style="color: #333; text-decoration: none;">
+          {{ site.title }}
+        </a>
       </h1>
 
       <!-- Mobile Hamburger Toggle (replaces old button) -->
@@ -15,9 +17,26 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="site-nav" id="site-nav">
+    <nav class="site-nav" id="site-nav" style="display: flex; gap: 1rem; margin-top: 1rem;">
       {% for item in site.nav %}
-        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+        <a
+          href="{{ site.baseurl }}{{ item.url }}"
+          style="
+            padding: 0.5rem 1rem;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-family: 'Fira Sans', sans-serif;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+          "
+          onmouseover="this.style.backgroundColor='#1d4ed8'"
+          onmouseout="this.style.backgroundColor='#2563eb'"
+        >
+          {{ item.title }}
+        </a>
       {% endfor %}
     </nav>
   </div>
