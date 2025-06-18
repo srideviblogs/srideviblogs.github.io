@@ -51,6 +51,42 @@ a:hover {
   text-decoration: underline;
 }
 
+
+/* Make the header bar full-width edge-to-edge */
+
+.site-header {
+    background-color: #003366 !important; /* Deep blue */
+    color: white !important;
+    width: 100vw;
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Let the header contents stay centered */
+.site-header .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the header links */
+.site-header a {
+    color: white !important;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.site-header a:hover {
+    text-decoration: underline;
+}
+
 /* Header */
 header.site-header {
   border-bottom: 1px solid #eee;
@@ -221,6 +257,12 @@ header.site-header {
 .mobile-search-container {
   display: none;
 }
+
+/* Avoid blue fill in mobile toggle menu */
+.navbar-toggleable-sm {
+    background-color: white !important;
+}
+
 
 /* Responsive Mobile Fixes */
 
