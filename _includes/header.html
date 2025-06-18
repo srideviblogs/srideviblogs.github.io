@@ -1,47 +1,44 @@
-<header class="site-header">
-  <div class="container">
-    <!-- Site title and mobile toggle -->
-    <div class="header-row" style="display: flex; justify-content: space-between; align-items: center;">
-      <h1 class="site-title" style="margin: 0; font-size: 1.6rem; font-weight: bold;">
-        <a href="{{ site.baseurl }}/" style="color: #333; text-decoration: none;">
-          {{ site.title }}
-        </a>
-      </h1>
+<header class="site-header" style="background-color: #2563eb; padding: 0.75rem 2rem;">
+  <div class="container" style="max-width: 1200px; margin: auto; display: flex; align-items: center; justify-content: space-between;">
+    
+    <!-- Site Title -->
+    <h1 class="site-title" style="margin: 0; font-size: 1.6rem; font-weight: bold;">
+      <a href="{{ site.baseurl }}/" style="color: white; text-decoration: none;">
+        {{ site.title }}
+      </a>
+    </h1>
 
-      <!-- Mobile Hamburger Toggle (replaces old button) -->
-      <div class="hamburger" onclick="openNav()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-    <!-- Desktop Navigation -->
-    <nav class="site-nav" id="site-nav" style="display: flex; gap: 1rem; margin-top: 1rem;">
+    <!-- Navigation -->
+    <nav class="site-nav" id="site-nav" style="display: flex; gap: 1rem;">
       {% for item in site.nav %}
-        <a
-          href="{{ site.baseurl }}{{ item.url }}"
+        <a 
+          href="{{ site.baseurl }}{{ item.url }}" 
           style="
-            padding: 0.5rem 1rem;
-            background-color: #2563eb;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
             font-weight: 600;
             font-family: 'Fira Sans', sans-serif;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
             transition: background-color 0.3s ease;
-            display: inline-block;
           "
-          onmouseover="this.style.backgroundColor='#1d4ed8'"
-          onmouseout="this.style.backgroundColor='#2563eb'"
+          onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.2)'"
+          onmouseout="this.style.backgroundColor='transparent'"
         >
           {{ item.title }}
         </a>
       {% endfor %}
     </nav>
+
+    <!-- Mobile Hamburger Toggle -->
+    <div class="hamburger" onclick="openNav()" style="display: none; cursor: pointer; flex-direction: column; gap: 5px;">
+      <span style="display: block; width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+      <span style="display: block; width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+      <span style="display: block; width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+    </div>
   </div>
 
-  <!-- Slide-in Side Menu for Mobile -->
+  <!-- Mobile Slide-in Menu -->
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     {% for item in site.nav %}
