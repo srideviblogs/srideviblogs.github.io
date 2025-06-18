@@ -54,10 +54,11 @@ a:hover {
 
 /* Make the header bar full-width edge-to-edge */
 
-/* Reset default margin/padding */
+/* Reset default margin/padding and prevent horizontal scroll */
 html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Blue background spans full width */
@@ -65,9 +66,12 @@ html, body {
     background-color: #003366 !important;
     color: white !important;
     padding: 10px 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-/* Keep header content centered */
+/* Keep header content centered with max width */
 .site-header .wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -75,7 +79,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;  /* prevent overflow when screen is small */
+    flex-wrap: wrap;
     box-sizing: border-box;
 }
 
