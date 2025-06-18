@@ -59,10 +59,25 @@ html, body {
 }
 
 /* Header styling */
+
 .site-header {
-  background-color: #007bff; /* Blue */
-  padding: 1rem 2rem;
-  margin-bottom: 1.5rem;
+  background-color: #007bff; /* your blue */
+  width: 100vw;
+  margin: 0;
+  padding: 0.5rem 0;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.site-header .wrapper {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Fix container layout */
