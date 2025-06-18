@@ -53,29 +53,33 @@ a:hover {
 
 
 /* Make the header bar full-width edge-to-edge */
-
-.site-header {
-    background-color: #003366 !important; /* Deep blue */
-    color: white !important;
-    width: 100vw;
+/* Remove unwanted space above the header */
+html, body {
     margin: 0;
+    padding: 0;
+}
+
+/* Full-width background but centered content */
+.site-header {
+    background-color: #003366 !important;
+    color: white !important;
+    width: 100%;
     padding: 10px 0;
-    position: relative;
-    left: 0;
     box-sizing: border-box;
 }
 
-/* Let the header contents stay centered */
-.site-header .wrapper {
-    max-width: 1200px;
+/* Keep content inside site-header centered */
+.site-header > .wrapper {
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* allows nav items to wrap on smaller screens */
 }
 
-/* Style the header links */
+/* Navigation links */
 .site-header a {
     color: white !important;
     text-decoration: none;
