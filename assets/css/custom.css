@@ -128,12 +128,6 @@ html, body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Sidenav fix */
-.site-nav {
-  background-color: white !important; /* ✅ Makes mobile menu white */
-  color: black;
-}
-
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
