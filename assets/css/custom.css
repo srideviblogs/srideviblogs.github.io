@@ -58,26 +58,22 @@ html, body {
   padding: 0;
 }
 
+/* Header styling */
 .site-header {
-  background-color: #2563eb;
-  padding: 0.75rem 1rem;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  box-sizing: border-box;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-   margin-bottom: 1rem; /* space between header and content */
+  background-color: #007bff; /* Blue */
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
 }
 
+/* Fix container layout */
 .site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .site-title {
@@ -114,6 +110,11 @@ html, body {
 
 .site-nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sidenav fix */
+.sidenav {
+  background-color: #007bff;
 }
 
 .menu-toggle {
@@ -322,7 +323,7 @@ html, body {
     z-index: 1000;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #007bff;
     overflow-x: hidden;
     transition: 0.3s ease;
     padding-top: 60px;
