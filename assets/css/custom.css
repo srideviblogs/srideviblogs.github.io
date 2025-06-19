@@ -591,11 +591,17 @@ header.site-header {
   font-family: inherit;
 }
 
-/* Hero Section with Full Background */
+/* Ensure header and search bar are above hero section */
+.header, .site-search {
+  position: relative;
+  z-index: 100;
+}
+
+/* Hero Section with background image */
 .hero-section {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 50vh; /* Half screen height */
   margin: 0;
   padding: 0;
   background: url('/assets/images/hero-bg.jpg') no-repeat center center / cover;
@@ -605,32 +611,21 @@ header.site-header {
   overflow: hidden;
 }
 
-.hero-overlay {
+.hero-section::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
   z-index: 1;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: #fff;
+/* Welcome section font updates */
+.welcome-intro h1 {
+  font-size: 2.5rem;
   text-align: center;
-  padding: 0 1rem;
-  max-width: 800px;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.25rem;
-  font-weight: 400;
+.welcome-intro p {
+  font-size: 1.5rem;
+  text-align: center;
 }
