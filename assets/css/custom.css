@@ -51,49 +51,12 @@ a:hover {
   text-decoration: underline;
 }
 
-
-/* Make the header bar full-width edge-to-edge */
-
-/* Reset margin and padding for full width */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* prevent horizontal scroll */
-}
-
-/* Blue full-width header bar */
+/* Header */
 header.site-header {
-  background-color: #003366 !important;
-  color: white !important;
-  width: 100%;
-  padding: 10px 0;
-  margin: 0 0 2rem 0;
-  box-sizing: border-box;
-  border-bottom: 1px solid #002244; /* subtle darker blue border */
-}
-
-/* Center the content inside header */
-header.site-header .wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-
-/* Header links style */
-header.site-header a {
-  color: white !important;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-}
-
-header.site-header a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+  background: #fff;
 }
 
 .site-header .container {
@@ -258,12 +221,6 @@ header.site-header a:hover {
 .mobile-search-container {
   display: none;
 }
-
-/* Avoid blue fill in mobile toggle menu */
-.navbar-toggleable-sm {
-    background-color: white !important;
-}
-
 
 /* Responsive Mobile Fixes */
 
