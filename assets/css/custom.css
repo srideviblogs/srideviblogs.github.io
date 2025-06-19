@@ -54,61 +54,46 @@ a:hover {
 
 /* Make the header bar full-width edge-to-edge */
 
-/* Reset default margin/padding and prevent horizontal scroll */
+/* Reset margin and padding for full width */
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
-/* Blue background spans full width */
-.site-header {
-    background-color: #003366 !important;
-    color: white !important;
-    padding: 10px 0;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* Keep header content centered with max width */
-.site-header .wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-}
-
-/* Style header links */
-.site-header a {
-    color: white !important;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-}
-
-.site-header a:hover {
-    text-decoration: underline;
-}
-
-/* Ensure overall page content stays centered */
-.wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* Header */
+/* Blue full-width header bar */
 header.site-header {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 2rem;
-  padding: 0.5rem 0;
-  background: #fff;
+  background-color: #003366 !important;
+  color: white !important;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 0 2rem 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #002244; /* subtle darker blue border */
+}
+
+/* Center the content inside header */
+header.site-header .wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* Header links style */
+header.site-header a {
+  color: white !important;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+header.site-header a:hover {
+  text-decoration: underline;
 }
 
 .site-header .container {
