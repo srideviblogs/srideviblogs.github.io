@@ -592,25 +592,27 @@ header.site-header {
 }
 
 /* Hero Section with Full Background */
-
-/* Ensure hero section truly fills screen width */
+/* Fullscreen hero section */
 .hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('/assets/images/hero-bg.jpg') no-repeat center center;
+  background-image: url('/assets/images/hero-bg.jpg');
   background-size: cover;
-  background-attachment: scroll;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
   overflow: hidden;
   margin-top: 3rem; /* pushes hero below sticky header/search bar */
 }
 
-/* Overlay for darkening image */
+/* Dark overlay on background */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -621,14 +623,20 @@ header.site-header {
   z-index: 1;
 }
 
-/* Centered text content */
+/* Text content on top */
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 800px;
-  padding: 1rem;
   color: #fff;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 .hero-btn {
@@ -639,8 +647,6 @@ header.site-header {
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
-  margin-top: 1rem;
-  display: inline-block;
 }
 
 .hero-btn:hover {
