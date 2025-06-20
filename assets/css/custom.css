@@ -595,45 +595,49 @@ header.site-header {
 
 /* Hero Section with full background stretch */
 
-.hero-section {
-  position: relative;
+/* Full-bleed section to break out of layout */
+.full-bleed {
   width: 100vw;
-  height: 100vh;
-  background: url('/assets/images/hero-bg.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 0;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+}
 
-  /* BREAK OUT of centered body layout */
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 0;
+/* Optional: Keep hero-section full-screen */
+.hero-section {
+  background: url('/assets/images/your-bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 100px 20px;
+  position: relative;
+  text-align: center;
   margin-top: 3rem; /* adjust if you want space after header */
 }
 
+/* Overlay */
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
+/* Hero content */
 .hero-content {
   position: relative;
   z-index: 2;
+  max-width: 800px;
   color: #fff;
   text-align: center;
   padding: 0 1rem;
-  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Keep rest of page within site width */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .hero-content p {
@@ -654,13 +658,4 @@ header.site-header {
 
 .hero-btn:hover {
   background-color: #e68900;
-}
-
-.hero-section-wrapper {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
