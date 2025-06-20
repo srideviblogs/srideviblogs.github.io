@@ -593,73 +593,66 @@ header.site-header {
 
 /* Hero Section with Full Background */
 
-.hero-wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
+/* Force full-width hero section */
 .hero-section {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: url('/assets/images/hero-bg.jpg') no-repeat center center;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
   margin: 0;
+  padding: 0;
   position: relative;
-  z-index: 1;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
   margin-top: 3rem; /* pushes hero below sticky header/search bar */
 }
 
+/* Optional dark overlay */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
-.hero-content {
+/* Wrap text content so it's not full-width */
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 2;
+  padding: 0 1rem;
+}
+
+/* Text styles */
+.hero-content {
   color: #fff;
   text-align: center;
-  padding: 0 1rem;
   max-width: 800px;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.5rem;
-  font-weight: 400;
 }
 
 .hero-btn {
   background-color: #ff9800;
   color: #fff;
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 1.5rem;
   font-size: 1.125rem;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-block;
 }
 
 .hero-btn:hover {
   background-color: #e68900;
 }
-
-/* Remove any default body or container padding/margin */
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
