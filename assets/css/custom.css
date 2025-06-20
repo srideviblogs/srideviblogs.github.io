@@ -593,37 +593,34 @@ header.site-header {
 
 /* Hero Section with Full Background */
 
-/* CSS */
-body, html {
-  margin: 0; padding: 0;
-  width: 100vw;
-  max-width: 100vw !important;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
+/* Override body max-width and padding ONLY for hero-section */
 .hero-section {
   position: relative;
-  width: 100vw !important;
-  height: 100vh;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: url('/assets/images/hero-bg.jpg') no-repeat center center / cover;
+  width: 100vw !important;        /* full viewport width */
+  max-width: 100vw !important;    /* override any max-width */
+  height: 100vh;                  /* full viewport height */
+  margin: 0 !important;           /* remove margin */
+  padding: 0 !important;          /* remove padding */
+  background: url('/assets/images/hero-bg.jpg') no-repeat center center;
+  background-size: cover;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
+  overflow: hidden;
   z-index: 0;
   margin-top: 3rem; 
 }
 
+/* Hero overlay stays full */
 .hero-overlay {
   position: absolute;
-  inset: 0;
-  background-color: rgba(0,0,0,0.4);
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
   z-index: 1;
 }
 
+/* Hero content styling */
 .hero-content {
   position: relative;
   z-index: 2;
