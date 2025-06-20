@@ -592,18 +592,21 @@ header.site-header {
 }
 
 /* Hero Section with Full Background */
+
 .hero-section {
   position: relative;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: url('/assets/images/hero-bg.jpg') no-repeat center center / cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+  right: 0;
+  padding: 0 !important;
+  background: url('/assets/images/hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-color: #000; /* fallback color */
   overflow: hidden;
-  margin-top: 4rem; /* pushes hero below sticky header/search bar */
+  margin-top: 3rem; /* pushes hero below sticky header/search bar */
 }
 
 .hero-overlay {
