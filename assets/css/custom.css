@@ -591,23 +591,28 @@ header.site-header {
   font-family: inherit;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .hero-section {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
-  /* margin-top:3rem; */
 }
 
 .hero-bg-image {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  object-fit: fill; /* stretches the image */
+  object-fit: fill;
+  object-position: center center;
   z-index: 0;
 }
 
