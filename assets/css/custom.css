@@ -655,5 +655,10 @@ html, body {
   background-color: #e68900;
 }
 
-
+.wrapper, .page-content, .site-main, #main {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
