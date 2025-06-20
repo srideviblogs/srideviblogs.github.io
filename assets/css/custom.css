@@ -592,57 +592,47 @@ header.site-header {
 }
 
 /* Hero Section with Full Background */
-
-/* Ensure body and html fill entire viewport width */
+/* Remove default spacing and fix full-width */
 html, body {
-  width: 100vw;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* prevent horizontal scroll */
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* Override any max-width or padding for the hero's ancestors */
-.hero-section,
-.hero-section * {
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* Force hero-section to span full viewport width */
+/* Hero Section */
 .hero-section {
   position: relative;
-  width: 100vw !important;
+  width: 100%;
   height: 100vh;
-  margin: 0 !important;
-  padding: 0 !important;
   background: url('/assets/images/hero-bg.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
   z-index: 0;
 }
 
-/* Overlay and content remain same */
+/* Dark overlay */
 .hero-overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
+/* Hero text */
 .hero-content {
   position: relative;
   z-index: 2;
   color: #fff;
-  max-width: 900px;
-  padding: 0 1rem;
   text-align: center;
+  max-width: 800px;
+  padding: 1rem;
 }
 
 .hero-content p {
