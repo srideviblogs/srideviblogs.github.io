@@ -593,19 +593,24 @@ header.site-header {
 
 /* Hero Section with Full Background */
 
-.hero-section {
+.hero-wrapper {
+  width: 100%;
+  overflow: hidden;
   position: relative;
-  width: 100vw;
+}
+
+.hero-section {
+  width: 100%;
   height: 100vh;
-  margin-left: calc(-50vw + 50%);
-  left: 0;
-  right: 0;
-  padding: 0 !important;
   background: url('/assets/images/hero-bg.jpg') no-repeat center center;
   background-size: cover;
-  background-attachment: scroll;
-  background-color: #000; /* fallback color */
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
   margin-top: 3rem; /* pushes hero below sticky header/search bar */
 }
 
