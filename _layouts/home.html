@@ -2,15 +2,15 @@
 layout: default
 ---
 
-<!-- Hero Section: Outside Wrapper -->
-<div class="full-hero">
-  <div class="hero-inner">
+<!-- FULLSCREEN HERO SECTION -->
+<section id="hero-section">
+  <div class="hero-content">
     <p>Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
     <a href="/blogs" class="hero-btn">Explore Posts</a>
   </div>
-</div>
+</section>
 
-<!-- Latest Posts -->
+<!-- LATEST POSTS SECTION -->
 <section class="latest-posts">
   <h2>Latest Posts</h2>
   <div class="post-grid">
@@ -25,7 +25,7 @@ layout: default
 
           {% if post.categories %}
             <p class="post-categories">
-              Categories: 
+              Categories:
               {% for cat in post.categories %}
                 <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
               {% endfor %}
