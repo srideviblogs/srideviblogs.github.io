@@ -594,7 +594,7 @@ header.site-header {
 .hero-section {
   width: 100vw;
   height: 100vh;
-  background-image: url('/assets/images/your-background.jpg'); /* Adjust path if needed */
+  background-image: url('/assets/images/hero-bg.jpg'); /* Adjust path if needed */
   background-size: 100% 100%;  /* Stretches image to cover screen exactly */
   background-position: center; /* Keeps image centered */
   background-repeat: no-repeat; /* Prevents image from repeating */
