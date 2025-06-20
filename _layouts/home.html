@@ -5,44 +5,47 @@ layout: default
 <!-- FULL-SCREEN HERO SECTION -->
 <section class="hero-section">
   <div class="hero-overlay"></div>
-  <div class="hero-container">
-    <div class="hero-content">
-      <p>Explore real‑world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
-      <a href="/blogs/" class="hero-btn">Explore Blogs</a>
-    </div>
+  <div class="hero-content">
+    <p>Explore real‑world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
+    <a href="/blogs/" class="hero-btn">Explore Blogs</a>
   </div>
 </section>
 
-<!-- Latest Posts -->
-<section class="latest-posts">
-  <h2>Latest Posts</h2>
-  <div class="post-grid">
-    {% for post in site.posts limit:6 %}
-      <div class="post-card">
-        {% if post.image %}
-          <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
-        {% endif %}
-        <div class="post-content">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+<!-- WRAPPER FOR REST OF PAGE CONTENT -->
+<div class="wrapper">
 
-          {% if post.categories %}
-            <p class="post-categories">
-              Categories: 
-              {% for cat in post.categories %}
-                <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
-              {% endfor %}
-            </p>
+  <!-- Latest Posts -->
+  <section class="latest-posts">
+    <h2>Latest Posts</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:6 %}
+        <div class="post-card">
+          {% if post.image %}
+            <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
           {% endif %}
+          <div class="post-content">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
 
-          {% if post.read_time %}
-            <p class="post-read-time">{{ post.read_time }}</p>
-          {% endif %}
+            {% if post.categories %}
+              <p class="post-categories">
+                Categories: 
+                {% for cat in post.categories %}
+                  <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+              </p>
+            {% endif %}
 
-          <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
+            {% if post.read_time %}
+              <p class="post-read-time">{{ post.read_time }}</p>
+            {% endif %}
+
+            <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
+          </div>
         </div>
-      </div>
-    {% endfor %}
-  </div>
-  <a href="/blogs/" class="view-all-posts">View all posts</a>
-</section>
+      {% endfor %}
+    </div>
+    <a href="/blogs/" class="view-all-posts">View all posts</a>
+  </section>
+
+</div> <!-- /.wrapper -->
