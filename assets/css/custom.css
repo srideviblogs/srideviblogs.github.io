@@ -604,11 +604,19 @@ header.site-header {
 
 /* Optional: Keep hero-section full-screen */
 .hero-section {
-  background: url('/assets/images/your-bg.jpg') no-repeat center center;
-  background-size: cover;
-  color: white;
-  padding: 100px 20px;
-  position: relative;
+  position: relative !important;
+  display: block !important;
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
+  height: 100vh !important;
+  background-image: url('/assets/images/hero-bg.jpg'); /* Use correct path */
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  z-index: 0;
   text-align: center;
   margin-top: 3rem; /* adjust if you want space after header */
 }
