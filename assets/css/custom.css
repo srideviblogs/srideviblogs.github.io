@@ -596,8 +596,8 @@ header.site-header {
   width: 100%; /* Use 100% instead of 100vw */
   height: 100vh;
   background-image: url('/assets/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center; /* Explicit center */
+  background-size: 100% 100%;;
+  background-position: center center; /* Explicit center */
   background-repeat: no-repeat;
   overflow: hidden;
   margin: 0; /* Just in case */
