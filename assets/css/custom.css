@@ -593,20 +593,25 @@ header.site-header {
 
 /* Hero Section with Full Background */
 
+/* Hero Section with full background stretch */
 .hero-section {
   position: relative;
   width: 100vw;
   height: 100vh;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background: url('/assets/images/hero-bg.jpg') no-repeat center center;
   background-size: cover;
-  margin: 0;
-  padding: 0;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   z-index: 0;
-  margin-top: 3rem; /* pushes hero below sticky header/search bar */
+  margin-top: 3rem; /* keep as-is if needed for header offset */
+  padding: 0;
 }
 
 .hero-overlay {
