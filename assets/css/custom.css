@@ -592,35 +592,40 @@ header.site-header {
 }
 
 /* HERO SECTION - CLEAN SLATE */
-/* Fullscreen Hero Layout */
-.full-hero {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('/assets/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+/* RESET BODY AND HTML */
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION FULL SCREEN */
+#hero-section {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/assets/images/hero-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   overflow: hidden;
   z-index: 0;
-  margin-top: 3rem;
 }
 
-/* Inner Content Centered */
-.hero-inner {
-  z-index: 1;
-  text-align: center;
+/* HERO TEXT */
+.hero-content {
   color: white;
+  text-align: center;
   padding: 2rem;
   max-width: 90%;
+  z-index: 1;
 }
 
-/* Button Styling */
+/* HERO BUTTON */
 .hero-btn {
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
@@ -628,7 +633,7 @@ header.site-header {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
@@ -636,11 +641,12 @@ header.site-header {
   background-color: #e68900;
 }
 
-/* Global Reset */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+/* OPTIONAL: Remove max-width from containers that might restrict width */
+.wrapper, .page-content, .site-main, #main {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
 
