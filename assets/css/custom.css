@@ -597,7 +597,7 @@ header.site-header {
   height: 100vh;
   background-image: url('/assets/images/hero-bg.jpg');
   background-size: cover;
-  background-position: center center; /* Explicit center */
+  background-position: center; /* Explicit center */
   background-repeat: no-repeat;
   overflow: hidden;
   margin: 0; /* Just in case */
@@ -627,6 +627,16 @@ header.site-header {
   text-align: center;
   padding: 2rem;
   box-sizing: border-box;
+}
+
+.hero-btn {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .hero-btn:hover {
