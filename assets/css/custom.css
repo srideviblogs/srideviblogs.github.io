@@ -655,3 +655,12 @@ header.site-header {
 .hero-btn:hover {
   background-color: #e68900;
 }
+
+.hero-section-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
