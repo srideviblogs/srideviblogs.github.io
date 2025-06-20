@@ -593,13 +593,16 @@ header.site-header {
 
 .hero-section {
   position: relative;
-  width: 100vw;
+  width: 100%; /* Use 100% instead of 100vw */
   height: 100vh;
-  background-image: url('/assets/images/hero-bg.jpg'); /* Make sure this path is correct */
-  background-size: cover; /* cover ensures it fills without distortion */
-  background-position: center;
+  background-image: url('/assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center center; /* Explicit center */
   background-repeat: no-repeat;
   overflow: hidden;
+  margin: 0; /* Just in case */
+  padding: 0;
+  margin-top: 3rem;
 }
 
 .hero-section::before {
