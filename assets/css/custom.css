@@ -591,114 +591,88 @@ header.site-header {
   font-family: inherit;
 }
 
-/* Diagnostic: Outline everything to find gaps */
-* {
-  outline: 1px solid rgba(255, 0, 0, 0.2);
-  box-sizing: border-box;
-}
-
-/* Force full width and no padding/margin on html and body */
+/* Reset html and body for full width */
 html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100vw !important;
-  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-/* Reset all ancestors of hero-banner to full width/no padding/margin */
-.hero-banner, 
-.hero-banner * , 
-.hero-banner :where(*) {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100vw !important;
+/* Container fix ONLY inside hero banner */
+.hero-banner > .container {
   max-width: 100vw !important;
-  box-sizing: border-box !important;
-}
-
-/* Force parent containers of hero-banner to full width too */
-.hero-banner-parent, /* if you have a parent wrapper, replace with actual selector */
-.container, 
-.wrapper,
-.site-wrapper {
-  margin: 0 !important;
-  padding: 0 !important;
   width: 100vw !important;
-  max-width: 100vw !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 /* Hero banner styles */
 .hero-banner {
-  position: relative !important;
-  width: 100vw !important;
-  height: 100vh !important;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 
-  background-image: url('/assets/images/hero-bg.jpg') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+  background-image: url('/assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-
-  color: white !important;
-  overflow: hidden !important;
-  z-index: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 3rem;
 }
 
 /* Dark overlay */
 .hero-banner::before {
   content: "";
-  position: absolute !important;
-  inset: 0 !important;
-  background-color: rgba(0,0,0,0.4) !important;
-  z-index: 1 !important;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
 }
 
-/* Content */
-.hero-banner-content {
-  position: relative !important;
-  z-index: 2 !important;
-  max-width: 90vw !important;
-  padding: 1rem 2rem !important;
-  background-color: rgba(0,0,0,0.3) !important;
-  border-radius: 8px !important;
+/* Hero container content */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 90vw;  /* controls width of text area */
+  padding: 1rem 2rem;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  text-align: center;
 }
 
-/* Text & button */
-.hero-banner-content h1,
-.hero-banner-content p,
-.hero-button {
-  margin: 0 !important;
-  display: block !important;
-}
-
+/* Text & button styling */
 .hero-banner-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem) !important;
-  margin-bottom: 1rem !important;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
 }
 
 .hero-banner-content p {
-  font-size: clamp(1.25rem, 3vw, 1.75rem) !important;
-  margin-bottom: 1.5rem !important;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: 1.5rem;
 }
 
 .hero-button {
-  font-size: 1rem !important;
-  padding: 0.75rem 1.5rem !important;
-  background-color: #007BFF !important;
-  border-radius: 6px !important;
-  color: white !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
-  text-align: center !important;
-  transition: background-color 0.3s ease !important;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #007BFF;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
 }
 
 .hero-button:hover {
-  background-color: #0056b3 !important;
+  background-color: #0056b3;
 }
-
-
