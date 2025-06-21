@@ -591,30 +591,38 @@ header.site-header {
   font-family: inherit;
 }
 
-/* Force full width ignoring container */
-.hero-banner, .hero-banner * {
-  all: unset; /* reset all styles inherited */
+/* Reset margin/padding and prevent horizontal scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
+/* Hero banner fills viewport and scrolls normally */
 .hero-banner {
-  position: fixed !important;
-  top: 0; left: 0;
-  width: 100vw !important;
-  height: 100vh !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background-image: url('/assets/images/hero-bg.jpg') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  color: #fff !important;
-  z-index: 9999 !important;
-  overflow: hidden !important;
+  position: relative;          /* Normal document flow */
+  width: 100vw;                /* Full viewport width */
+  height: 100vh;               /* Full viewport height */
+  margin: 0;
+  padding: 0;
+
+  background-image: url('/assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fff;
+  overflow: hidden;
+  z-index: 0;
 }
 
+/* Dark overlay */
 .hero-banner::before {
   content: "";
   position: absolute;
@@ -623,18 +631,32 @@ header.site-header {
   z-index: 1;
 }
 
+/* Content container */
 .hero-banner-content {
-  position: relative !important;
-  z-index: 2 !important;
-  max-width: 90vw !important;
-  padding: 1rem 2rem !important;
-  background-color: rgba(0, 0, 0, 0.3) !important;
-  border-radius: 8px !important;
+  position: relative;
+  z-index: 2;
+  max-width: 90vw;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
 
-.hero-banner-content h1, .hero-banner-content p, .hero-button {
-  all: unset;
+/* Headings and button styling */
+.hero-banner-content h1,
+.hero-banner-content p,
+.hero-button {
   display: block;
+  margin: 0;
+}
+
+.hero-banner-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.hero-banner-content p {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: 1.5rem;
 }
 
 .hero-button {
@@ -646,6 +668,7 @@ header.site-header {
   text-decoration: none;
   transition: background-color 0.3s ease;
   text-align: center;
+  cursor: pointer;
 }
 
 .hero-button:hover {
