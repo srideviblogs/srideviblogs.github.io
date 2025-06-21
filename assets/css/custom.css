@@ -595,41 +595,34 @@ header.site-header {
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
   overflow-x: hidden;
+  width: 100vw;
 }
 
-/* Container fix ONLY inside hero banner */
-.hero-banner > .container {
-  max-width: 100vw !important;
-  width: 100vw !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* Hero banner styles */
+/* Hero banner fills viewport height */
 .hero-banner {
   position: relative;
-  width: 100vw;
   height: 100vh;
-
   background-image: url('/assets/images/hero-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 
+  /* Pull hero out of container’s padding by offsetting left and right */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   color: white;
   overflow: hidden;
   z-index: 0;
-  margin-top: 3rem;
 }
 
-/* Dark overlay */
+/* Overlay */
 .hero-banner::before {
   content: "";
   position: absolute;
@@ -642,14 +635,14 @@ html, body {
 .hero-container {
   position: relative;
   z-index: 2;
-  max-width: 90vw;  /* controls width of text area */
+  max-width: 900px; /* or 90vw */
   padding: 1rem 2rem;
   background-color: rgba(0,0,0,0.3);
   border-radius: 8px;
   text-align: center;
 }
 
-/* Text & button styling */
+/* Text */
 .hero-banner-content h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: 1rem;
@@ -660,6 +653,7 @@ html, body {
   margin-bottom: 1.5rem;
 }
 
+/* Button */
 .hero-button {
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
