@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<!-- Hero Section OUTSIDE the container -->
 <section class="hero-banner">
   <div class="hero-banner-content">
     <p>Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
@@ -9,35 +10,38 @@ layout: default
   </div>
 </section>
 
-<section class="latest-posts">
-  <h2>Latest Posts</h2>
-  <div class="post-grid">
-    {% for post in site.posts limit:6 %}
-      <div class="post-card">
-        {% if post.image %}
-          <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
-        {% endif %}
-        <div class="post-content">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-
-          {% if post.categories %}
-            <p class="post-categories">
-              Categories: 
-              {% for cat in post.categories %}
-                <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
-              {% endfor %}
-            </p>
+<!-- Main Content INSIDE the container -->
+<div class="container">
+  <section class="latest-posts">
+    <h2>Latest Posts</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:6 %}
+        <div class="post-card">
+          {% if post.image %}
+            <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
           {% endif %}
+          <div class="post-content">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
 
-          {% if post.read_time %}
-            <p class="post-read-time">{{ post.read_time }}</p>
-          {% endif %}
+            {% if post.categories %}
+              <p class="post-categories">
+                Categories: 
+                {% for cat in post.categories %}
+                  <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+              </p>
+            {% endif %}
 
-          <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
+            {% if post.read_time %}
+              <p class="post-read-time">{{ post.read_time }}</p>
+            {% endif %}
+
+            <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
+          </div>
         </div>
-      </div>
-    {% endfor %}
-  </div>
-  <a href="/blogs/" class="view-all-posts">View all posts</a>
-</section>
+      {% endfor %}
+    </div>
+    <a href="/blogs/" class="view-all-posts">View all posts</a>
+  </section>
+</div>
