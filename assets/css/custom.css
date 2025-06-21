@@ -594,14 +594,19 @@ header.site-header {
 /* ─────────────────────────────────────
    Hero banner covering full screen
 ───────────────────────────────────── */
-.hero-banner {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+
+body, html {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 
-  background-image: url('/assets/images/tech-bg.jpg'); /* ✅ Update path and filename */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/assets/images/hero-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -611,14 +616,13 @@ header.site-header {
   align-items: center;
   text-align: center;
   color: #fff;
-  overflow: hidden;
 }
 
 .hero-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Optional semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -627,7 +631,7 @@ header.site-header {
   z-index: 2;
   max-width: 90%;
   padding: 1rem 2rem;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
 }
 
