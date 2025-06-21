@@ -106,12 +106,13 @@ header.site-header {
 }
 
 /* welcome intro */
+
 .welcome-intro {
   position: relative;
   max-width: 900px;
   margin: 3rem auto;
   padding: 50px 40px;
-  border-left: 6px solid #0077b6; /* brand blue accent */
+  border-left: 6px solid #0077b6;
   color: #222222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   cursor: default;
@@ -124,17 +125,25 @@ header.site-header {
   transform: translateY(-3px);
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px 0;
+  }
+}
+
 .welcome-intro h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 18px;
-  color: #0077b6; /* exact logo blue */
-  letter-spacing: 0.03em;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 0;
-  text-transform: none;
-  text-shadow: none;
+  background: linear-gradient(90deg, #0077b6 25%, #00aaff 50%, #0077b6 75%);
+  background-size: 600% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+  letter-spacing: 0.04em;
   cursor: default;
 }
 
@@ -146,7 +155,9 @@ header.site-header {
   color: #444444;
 }
 
+
 /* Post list styling */
+
 .post-list article {
   border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
