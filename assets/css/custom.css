@@ -591,38 +591,29 @@ header.site-header {
   font-family: inherit;
 }
 
-/* Reset html and body for full width */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100vw;
-}
+/* ======= Hero Banner ======= */
 
-/* Hero banner fills viewport height */
 .hero-banner {
   position: relative;
+  width: 100vw;
   height: 100vh;
-  background-image: url('/assets/images/hero-bg.jpg');
+  background-image: url('/assets/images/hero-bg.jpg'); /* Update your image path */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 
-  /* Pull hero out of container’s padding by offsetting left and right */
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: white;
+  text-align: center;
+
   overflow: hidden;
   z-index: 0;
+  margin: 0 auto;
 }
 
-/* Overlay */
+/* Overlay for readability */
 .hero-banner::before {
   content: "";
   position: absolute;
@@ -631,40 +622,34 @@ html, body {
   z-index: 1;
 }
 
-/* Hero container content */
-.hero-container {
+/* Content container inside hero */
+.hero-banner-content {
   position: relative;
   z-index: 2;
-  max-width: 900px; /* or 90vw */
-  padding: 1rem 2rem;
+  max-width: 90vw;
   background-color: rgba(0,0,0,0.3);
+  padding: 1rem 2rem;
   border-radius: 8px;
-  text-align: center;
 }
 
-.hero-banner .container {
-  max-width: 100% !important;
-  width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-
-/* Text */
+/* Hero text styles */
 .hero-banner-content h1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
   font-size: clamp(2.5rem, 6vw, 4rem);
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .hero-banner-content p {
+  font-family: 'PT Serif', serif;
   font-size: clamp(1.25rem, 3vw, 1.75rem);
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
 }
 
-/* Button */
+/* Hero button styles */
 .hero-button {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: #007BFF;
@@ -674,9 +659,22 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: inline-block;
-  text-align: center;
 }
 
 .hero-button:hover {
   background-color: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .hero-banner-content {
+    max-width: 95vw;
+    padding: 1rem;
+  }
+  .hero-banner-content h1 {
+    font-size: 2rem;
+  }
+  .hero-banner-content p {
+    font-size: 1.1rem;
+  }
 }
