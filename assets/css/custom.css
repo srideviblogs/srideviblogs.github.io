@@ -110,44 +110,31 @@ header.site-header {
   position: relative;
   max-width: 900px;
   margin: 3rem auto;
-  padding: 40px 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 50px 40px;
+  border-left: 6px solid #0077b6; /* brand blue accent */
   color: #222222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   cursor: default;
-  background-clip: padding-box;
+  background: transparent;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .welcome-intro:hover {
-  box-shadow: 0 12px 40px rgba(0, 119, 182, 0.3);
-  transform: translateY(-5px);
-}
-
-.welcome-intro::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 6px;
-  height: 100%;
-  background: linear-gradient(180deg, #0077b6, #00aaff);
-  border-radius: 16px 0 0 16px;
+  box-shadow: 0 8px 30px rgba(0, 119, 182, 0.2);
+  transform: translateY(-3px);
 }
 
 .welcome-intro h1 {
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #005f99; /* deep blue */
+  color: #005f99; /* deep brand blue */
   letter-spacing: 0.05em;
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 3px rgba(0, 95, 153, 0.4);
+  text-shadow: 1px 1px 3px rgba(0, 95, 153, 0.2);
   cursor: default;
 }
 
