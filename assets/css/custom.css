@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 /* ============================
    Media Queries for Navigation
    ============================ */
@@ -593,57 +605,51 @@ header.site-header {
 
 /* ======= Hero Banner ======= */
 
-.hero-banner {
+.hero-section {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('/assets/images/hero-bg.jpg'); /* Update your image path */
+  margin: 0;
+  padding: 0;
+  background-image: url('/assets/images/hero-bg.jpg'); /* 🔁 Use your actual image path */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-align: center;
-
+  z-index: 1;
   overflow: hidden;
-  z-index: 0;
-  margin: 0 auto;
+  margin-top: 3rem;
 }
 
-/* Overlay for readability */
-.hero-banner::before {
+.hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0,0,0,0.4);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
+  z-index: 0;
 }
 
-/* Content container inside hero */
-.hero-banner-content {
+.hero-content {
   position: relative;
   z-index: 2;
-  max-width: 90vw;
-  background-color: rgba(0,0,0,0.3);
-  padding: 1rem 2rem;
-  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  max-width: 90%;
+  margin: auto;
 }
 
-/* Hero text styles */
-.hero-banner-content h1 {
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
   font-family: 'Fira Sans', sans-serif;
-  font-weight: 600;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  margin: 0 0 1rem 0;
 }
 
-.hero-banner-content p {
+.hero-content p {
+  font-size: 1.5rem;
   font-family: 'PT Serif', serif;
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  margin: 0 0 1.5rem 0;
 }
 
 /* Hero button styles */
@@ -665,16 +671,4 @@ header.site-header {
   background-color: #0056b3;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .hero-banner-content {
-    max-width: 95vw;
-    padding: 1rem;
-  }
-  .hero-banner-content h1 {
-    font-size: 2rem;
-  }
-  .hero-banner-content p {
-    font-size: 1.1rem;
-  }
-}
+
