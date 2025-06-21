@@ -48,6 +48,10 @@
 <body>
   {% include header.html %}
 
+  {% if page.url == "/" %}
+    {% include hero.html %}
+  {% endif %}
+
   <!-- Mobile search bar (only visible on mobile) -->
   <div class="mobile-search-container">
     <div class="search-box">
