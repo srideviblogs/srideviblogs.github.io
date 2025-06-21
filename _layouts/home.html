@@ -3,37 +3,14 @@ layout: default
 ---
 
 <!-- Fullscreen Hero Section -->
-<section style="
-  width: 100vw;
-  height: 100vh;
-  background: url('/assets/images/hero-bg.jpg') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  box-sizing: border-box;
-  margin: 0;">
-  <div>
-    <p style="font-size: 1.5rem; max-width: 700px; margin: 0 auto;">
-      Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.
-    </p>
-    <a href="/blogs" style="
-      margin-top: 1.5rem;
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #ff9900;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;">
-      Explore Posts
-    </a>
+<section class="hero-true-full">
+  <div class="hero-inner">
+    <p>Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
+    <a href="/blogs" class="hero-btn">Explore Posts</a>
   </div>
 </section>
 
-<!-- Content Below -->
+<!-- Latest Posts Section -->
 <div class="wrapper">
   <section class="latest-posts">
     <h2>Latest Posts</h2>
@@ -46,6 +23,7 @@ layout: default
           <div class="post-content">
             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
             <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+
             {% if post.categories %}
               <p class="post-categories">
                 Categories:
@@ -54,9 +32,11 @@ layout: default
                 {% endfor %}
               </p>
             {% endif %}
+
             {% if post.read_time %}
               <p class="post-read-time">{{ post.read_time }}</p>
             {% endif %}
+
             <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
           </div>
         </div>
