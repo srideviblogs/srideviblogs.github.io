@@ -1,15 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-}
-
 /* ============================
    Media Queries for Navigation
    ============================ */
@@ -605,70 +593,63 @@ header.site-header {
 
 /* ======= Hero Banner ======= */
 
-.hero-section {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.hero-banner {
   position: relative;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-image: url('/assets/images/hero-bg.jpg'); /* 🔁 Use your actual image path */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: url('/assets/images/hero-bg.jpg') center center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  color: #fff;
+  text-align: center;
   overflow: hidden;
-  margin-top: 3rem;
 }
 
-.hero-section::before {
+.hero-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
+  background: rgba(0,0,0,0.4);
   z-index: 0;
 }
 
-.hero-content {
+.hero-banner-content {
   position: relative;
-  z-index: 2;
-  text-align: center;
-  color: #fff;
+  z-index: 1;
   padding: 2rem;
-  max-width: 90%;
-  margin: auto;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
+.hero-banner-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: 1rem;
-  font-family: 'Fira Sans', sans-serif;
 }
 
-.hero-content p {
-  font-size: 1.5rem;
-  font-family: 'PT Serif', serif;
+.hero-banner-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Hero button styles */
 .hero-button {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 600;
+  display: inline-block;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #007BFF;
-  border-radius: 6px;
+  background: #007BFF;
   color: white;
+  border-radius: 6px;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: inline-block;
+  transition: background 0.3s;
 }
-
 .hero-button:hover {
-  background-color: #0056b3;
+  background: #0056b3;
 }
-
 
