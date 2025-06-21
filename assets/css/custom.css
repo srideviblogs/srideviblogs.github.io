@@ -591,35 +591,50 @@ header.site-header {
   font-family: inherit;
 }
 
-.hero-gradient {
-  height: 100vh; /* full viewport height */
+.hero-combo {
+  position: relative;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
-  /* Beautiful blue gradient background */
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-
   color: white;
   padding: 20px;
+  overflow: hidden;
 }
 
-.hero-content {
+.hero-combo .hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  /* Background image with dark gradient overlay */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('/assets/images/hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.hero-combo .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 700px;
-  background-color: rgba(0, 0, 0, 0.4); /* subtle transparent overlay */
   padding: 40px;
   border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
-.hero-content h1 {
+.hero-combo .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.hero-content p {
+.hero-combo .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 30px;
   line-height: 1.5;
@@ -639,4 +654,3 @@ header.site-header {
 .btn-primary:hover {
   background-color: #0077b6;
 }
-
