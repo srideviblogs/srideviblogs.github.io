@@ -2,44 +2,66 @@
 layout: default
 ---
 
-<!-- FULLSCREEN HERO SECTION -->
-<section id="hero">
-  <div class="hero-content">
-    <p>Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
-    <a href="/blogs" class="hero-btn">Explore Posts</a>
+<!-- Fullscreen Hero Section -->
+<section style="
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin: 0;">
+  <div>
+    <p style="font-size: 1.5rem; max-width: 700px; margin: 0 auto;">
+      Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.
+    </p>
+    <a href="/blogs" style="
+      margin-top: 1.5rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #ff9900;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;">
+      Explore Posts
+    </a>
   </div>
 </section>
 
-<!-- LATEST POSTS SECTION -->
-<section class="latest-posts">
-  <h2>Latest Posts</h2>
-  <div class="post-grid">
-    {% for post in site.posts limit:6 %}
-      <div class="post-card">
-        {% if post.image %}
-          <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
-        {% endif %}
-        <div class="post-content">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-
-          {% if post.categories %}
-            <p class="post-categories">
-              Categories:
-              {% for cat in post.categories %}
-                <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
-              {% endfor %}
-            </p>
+<!-- Content Below -->
+<div class="wrapper">
+  <section class="latest-posts">
+    <h2>Latest Posts</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:6 %}
+        <div class="post-card">
+          {% if post.image %}
+            <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
           {% endif %}
-
-          {% if post.read_time %}
-            <p class="post-read-time">{{ post.read_time }}</p>
-          {% endif %}
-
-          <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
+          <div class="post-content">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+            {% if post.categories %}
+              <p class="post-categories">
+                Categories:
+                {% for cat in post.categories %}
+                  <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+              </p>
+            {% endif %}
+            {% if post.read_time %}
+              <p class="post-read-time">{{ post.read_time }}</p>
+            {% endif %}
+            <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
+          </div>
         </div>
-      </div>
-    {% endfor %}
-  </div>
-  <a href="/blogs/" class="view-all-posts">View all posts</a>
-</section>
+      {% endfor %}
+    </div>
+    <a href="/blogs/" class="view-all-posts">View all posts</a>
+  </section>
+</div>
