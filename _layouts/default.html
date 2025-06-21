@@ -48,10 +48,6 @@
 <body>
   {% include header.html %}
 
-  {% if page.url == "/" %}
-    {% include hero.html %}
-  {% endif %}
-
   <!-- Mobile search bar (only visible on mobile) -->
   <div class="mobile-search-container">
     <div class="search-box">
@@ -73,9 +69,6 @@
     <!-- Main blog content -->
     <main class="site-main main-content">
       {{ content | replace: '<img', '<img loading="lazy"' }}
-      {% if page.url == "/" %}
-         {% include home.html %}
-      {% endif %}
     </main>
 
     <!-- Right sidebar with search bar -->
