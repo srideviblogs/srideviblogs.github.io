@@ -73,6 +73,9 @@
     <!-- Main blog content -->
     <main class="site-main main-content">
       {{ content | replace: '<img', '<img loading="lazy"' }}
+      {% if page.url == "/" %}
+         {% include home.html %}
+      {% endif %}
     </main>
 
     <!-- Right sidebar with search bar -->
