@@ -600,12 +600,28 @@ html, body {
 }
 
 /* Hero banner fills viewport and scrolls normally */
-.hero-banner {
-  position: relative;          /* Normal document flow */
-  width: 100vw;                /* Full viewport width */
-  height: 100vh;               /* Full viewport height */
+/* Reset for html and body */
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;  /* prevent horizontal scroll */
+}
+
+/* Remove any container width constraints on body children */
+body > * {
+  max-width: 100vw !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Hero banner styles */
+.hero-banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 
   background-image: url('/assets/images/hero-bg.jpg');
   background-size: cover;
@@ -617,31 +633,31 @@ html, body {
   align-items: center;
   text-align: center;
 
-  color: #fff;
+  color: white;
   overflow: hidden;
   z-index: 0;
 }
 
-/* Dark overlay */
+/* Dark overlay for readability */
 .hero-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0,0,0,0.4);
   z-index: 1;
 }
 
-/* Content container */
+/* Content container on top of overlay */
 .hero-banner-content {
   position: relative;
   z-index: 2;
   max-width: 90vw;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0,0,0,0.3);
   border-radius: 8px;
 }
 
-/* Headings and button styling */
+/* Text elements */
 .hero-banner-content h1,
 .hero-banner-content p,
 .hero-button {
@@ -659,18 +675,22 @@ html, body {
   margin-bottom: 1.5rem;
 }
 
+/* Button styling */
 .hero-button {
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: #007BFF;
   border-radius: 6px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  text-align: center;
   cursor: pointer;
+  text-align: center;
 }
 
 .hero-button:hover {
   background-color: #0056b3;
 }
+
+
+
