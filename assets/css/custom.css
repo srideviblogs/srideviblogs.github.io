@@ -105,6 +105,63 @@ header.site-header {
   border: none;
 }
 
+.welcome-intro {
+  position: relative;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  color: #222222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: default;
+
+  /* For smooth hover effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  /* Padding clip so the pseudo border won't overlap */
+  background-clip: padding-box;
+}
+
+.welcome-intro:hover {
+  box-shadow: 0 12px 40px rgba(0, 119, 182, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Gradient vertical accent bar */
+.welcome-intro::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #0077b6, #00aaff);
+  border-radius: 16px 0 0 16px;
+}
+
+/* Heading styles */
+.welcome-intro h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0077b6;
+  display: inline-block;
+  padding-bottom: 6px;
+  letter-spacing: 0.04em;
+  color: #222222;
+}
+
+/* Paragraph styles */
+.welcome-intro p {
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin-top: 0;
+  line-height: 1.8;
+  color: #444444;
+}
+
 /* Post list styling */
 .post-list article {
   border-bottom: 1px solid #eee;
@@ -590,3 +647,5 @@ header.site-header {
   font-size: 14px;
   font-family: inherit;
 }
+
+
