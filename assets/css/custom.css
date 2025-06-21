@@ -17,6 +17,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
 /* Body styling */
+
 body {
   font-family: 'PT Serif', serif;
   font-size: 19px;
@@ -24,11 +25,12 @@ body {
   font-weight: 400;
   color: #333;
   background-color: #fff;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 20px;
+  margin: 0;       /* Remove auto centering */
+  padding: 0;      /* Remove padding */
+  /* Remove max-width */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 /* Headings */
@@ -409,6 +411,13 @@ header.site-header {
 
 .social-links a {
   text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Container grid for post cards */
