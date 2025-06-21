@@ -590,3 +590,53 @@ header.site-header {
   font-size: 14px;
   font-family: inherit;
 }
+
+.hero-gradient {
+  height: 100vh; /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* Beautiful blue gradient background */
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+  color: white;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+  background-color: rgba(0, 0, 0, 0.4); /* subtle transparent overlay */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background-color: #00aaff;
+  color: white;
+  padding: 14px 32px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #0077b6;
+}
+
