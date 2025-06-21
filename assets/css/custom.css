@@ -590,31 +590,3 @@ header.site-header {
   font-size: 14px;
   font-family: inherit;
 }
-
-.welcome-intro {
-  background: linear-gradient(135deg, #0077b6, #00aaff);
-  color: white;
-  padding: 60px 30px;
-  border-radius: 15px;
-  max-width: 900px;
-  margin: 2rem auto 3rem auto;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 118, 255, 0.4);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-}
-
-.welcome-intro h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-}
-
-.welcome-intro p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
