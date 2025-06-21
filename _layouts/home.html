@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<!-- Latest Posts Section -->
+<section class="welcome-intro" style="margin-bottom: 2rem;">
+  <h1>Welcome to Sridevi Blogs!</h1>
+  <p>Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
+</section>
+
 <section class="latest-posts">
   <h2>Latest Posts</h2>
   <div class="post-grid">
@@ -14,17 +18,20 @@ layout: default
         <div class="post-content">
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
           <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+
           {% if post.categories %}
             <p class="post-categories">
-              Categories:
+              Categories: 
               {% for cat in post.categories %}
                 <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
               {% endfor %}
             </p>
           {% endif %}
+
           {% if post.read_time %}
             <p class="post-read-time">{{ post.read_time }}</p>
           {% endif %}
+
           <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
         </div>
       </div>
