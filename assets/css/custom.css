@@ -580,42 +580,35 @@ header.site-header {
   text-decoration: underline;
 }
 
-.read-more-btn {
-  /* keeping your read-more-btn for the pill button style */
-  align-self: flex-start;
-  background-color: #007acc;
-  color: white;
-  font-weight: 600;
-  padding: 0.5rem 1.25rem;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.read-more-btn:hover {
-  background-color: #005ea6;
-}
-
 /* View all posts button */
 .view-all-posts-wrapper {
   text-align: center;
   margin-top: 3rem;
 }
 
+/* Shared Button Style */
+.read-more-btn,
 .view-all-posts-btn {
+  position: relative;
   display: inline-block;
-  background-color: transparent;
-  border: 2px solid #007acc;
-  color: #007acc;
+  padding: 0.5rem 1.25rem;
+  background-color: #007acc;
+  color: white;
   font-weight: 600;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
+  border: none;
+  border-radius: 0; /* Flat edges */
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Hover effect */
+.read-more-btn:hover,
 .view-all-posts-btn:hover {
-  background-color: #007acc;
+  background-color: #005ea6;
   color: white;
 }
 
