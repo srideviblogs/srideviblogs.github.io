@@ -106,34 +106,70 @@ header.site-header {
 }
 
 /* welcome intro */
+/* ============ Welcome Intro Styling ============ */
 .welcome-intro {
-  padding: 40px 20px;
-  background-color: #f9f9f9; /* Light background to stand out */
-  display: flex;
-  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
-.welcome-content {
-  border-left: 4px solid #0c4da2; /* Accent bar in brand blue */
-  padding-left: 20px;
-  max-width: 800px;
-}
-
-.welcome-content h1 {
-  font-family: 'Poppins', sans-serif;
+/* Typewriter heading */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #007acc;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end infinite;
   font-size: 2rem;
-  color: #0c4da2; /* Match your logo */
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  color: #007acc;
+  font-weight: 700;
+  max-width: 100%;
 }
 
-.welcome-content p {
-  font-family: 'Poppins', sans-serif;
+/* Paragraph fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out 2.7s forwards;
+  color: #333;
   font-size: 1.1rem;
-  line-height: 1.7;
-  color: #333; /* Dark gray for readability */
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 1.5rem auto 0 auto;
 }
 
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #007acc; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ Responsive for Mobile ============ */
+@media (max-width: 600px) {
+  .typewriter {
+    font-size: 1.5rem;
+  }
+
+  .fade-in {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
 
 /* Post list styling */
 
