@@ -545,26 +545,21 @@ header.site-header {
 
 .view-all-box {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-  border: 2px solid #007acc;  /* or your accent color */
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  transition: background 0.3s, color 0.3s;
-  font-weight: bold;
+  margin-top: 1.5rem;
 }
 
 .view-all-box a {
-  text-decoration: none;
-  color: #007acc;  /* same accent color */
-}
-
-.view-all-box:hover {
-  background-color: #007acc;
-}
-
-.view-all-box:hover a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff9900;
   color: #fff;
+  text-decoration: none;
+  border-radius: 0;           
+  transition: background-color 0.3s ease;
+}
+
+.view-all-box a:hover {
+  background-color: #e68900;  
 }
 
 /* Responsive adjustments */
