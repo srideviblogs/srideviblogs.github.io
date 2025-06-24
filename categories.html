@@ -1,20 +1,17 @@
 ---
 layout: default
+title: Categories
 ---
 
-<h1>Posts in category: "{{ page.title }}"</h1>
-
-<ul>
-  {% assign posts_in_category = site.categories[page.title] %}
-  {% if posts_in_category %}
-    {% for post in posts_in_category %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%b %-d, %Y" }}
-      </li>
+<section class="categories-page">
+  <h1>Categories</h1>
+  <div class="post-grid">
+    {% for category in site.categories %}
+      <div class="post-card category-card">
+        <h2>{{ category[0] }}</h2>
+        <p>{{ category[1] | size }} posts</p>
+        <a href="/categories/{{ category[0] | slugify }}/" class="view-posts-link">View Posts →</a>
+      </div>
     {% endfor %}
-  {% else %}
-    <li>No posts found in this category.</li>
-  {% endif %}
-</ul>
-
-<a href="{{ site.baseurl }}/categories/" class="btn-back">Back to Categories</a>
+  </div>
+</section>
