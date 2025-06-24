@@ -643,3 +643,33 @@ header.site-header {
   font-size: 14px;
   font-family: inherit;
 }
+
+/* === Categories Page Enhancements === */
+
+/* Page heading */
+.categories-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Make each category card reuse .post-card style but adjust if needed */
+.category-card {
+  text-align: center;
+}
+
+/* Button inside each card */
+.view-posts-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff9900; /* same as .hero-btn */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0; /* no rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.view-posts-link:hover {
+  background-color: #e68900;
+}
+
