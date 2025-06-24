@@ -646,9 +646,11 @@ header.site-header {
 
 /* === Categories Page Enhancements === */
 
+/* === Categories Page Grid === */
+
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
 }
 
@@ -656,6 +658,7 @@ header.site-header {
   border: 1px solid #ddd;
   padding: 1.5rem;
   text-align: center;
+  background: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
