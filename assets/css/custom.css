@@ -646,23 +646,34 @@ header.site-header {
 
 /* === Categories Page Enhancements === */
 
-/* Page heading */
-.categories-page h1 {
-  text-align: center;
-  margin-bottom: 2rem;
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-/* Make each category card reuse .post-card style but adjust if needed */
 .category-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Button inside each card */
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.category-card h2 {
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
 .view-posts-link {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #ff9900; /* same as .hero-btn */
+  background-color: #ff9900; /* match hero-btn */
   color: #fff;
   text-decoration: none;
   border-radius: 0; /* no rounded corners */
@@ -672,11 +683,3 @@ header.site-header {
 .view-posts-link:hover {
   background-color: #e68900;
 }
-
-.post-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  justify-content: start; /* ensures grid aligns left */
-}
-
