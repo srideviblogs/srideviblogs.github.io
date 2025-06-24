@@ -5,10 +5,10 @@ title: Categories
 
 <section class="categories-page">
   <h1>Categories</h1>
-  <div class="post-grid">
+  <div class="category-grid">
     {% for category in site.categories %}
-      <div class="post-card category-card">
-        <h2>{{ category[0] }}</h2>
+      <div class="category-card">
+        <h2>{{ category[0] | capitalize }}</h2>
         <p>{{ category[1] | size }} posts</p>
         <a href="/categories/{{ category[0] | slugify }}/" class="view-posts-link">View Posts →</a>
       </div>
