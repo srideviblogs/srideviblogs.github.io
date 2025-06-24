@@ -458,7 +458,9 @@ header.site-header {
   text-decoration: none;
 }
 
-/* Container grid for post cards */
+/* ================================
+   Container grid for post cards
+================================ */
 .post-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -466,32 +468,71 @@ header.site-header {
   margin-top: 1rem;
 }
 
-/* Individual post card */
+/* ================================
+   Individual post card
+================================ */
 .post-card {
+  position: relative; /* Required for clickable overlay */
   border: 1px solid #eee;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 1rem;
+  overflow: hidden;
 }
 
+/* Hover effect: lift + scale + shadow */
 .post-card:hover {
+  transform: translateY(-5px) scale(1.02);
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-/* Post image */
-.post-image {
+/* Smooth link color change inside card */
+.post-card a {
+  transition: color 0.3s ease;
+}
+
+.post-card:hover a {
+  color: #007acc;
+}
+
+/* ================================
+   Clickable card overlay
+================================ */
+.post-card .card-link {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 10;
+  text-indent: -9999px; /* hides any text for accessibility */
+}
+
+/* ================================
+   Post image (with aspect ratio)
+================================ */
+/* Use a wrapper for strict aspect ratio */
+.post-thumbnail {
+  position: relative;
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  padding-top: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
   border-radius: 5px;
   margin-bottom: 1rem;
 }
 
-/* Post content inside card */
+.post-thumbnail img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================================
+   Post content inside card
+================================ */
 .post-content h3 {
   margin: 0 0 0.5rem 0;
   font-weight: 700;
@@ -509,7 +550,9 @@ header.site-header {
   text-decoration: underline;
 }
 
-/* Post meta details */
+/* ================================
+   Post meta details
+================================ */
 .post-meta,
 .post-categories,
 .post-read-time {
@@ -556,14 +599,16 @@ header.site-header {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* ================================
+   Responsive adjustments
+================================ */
 @media (max-width: 480px) {
   .post-grid {
     grid-template-columns: 1fr;
   }
 
-  .post-image {
-    height: 160px;
+  .post-thumbnail {
+    padding-top: 56.25%; /* keep same ratio on mobile */
   }
 }
 
