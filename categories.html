@@ -9,7 +9,7 @@ title: Categories
   {% assign sorted_categories = site.categories | sort %}
   {% for category in sorted_categories %}
     <div class="category-box">
-      <a href="/categories/{{ category[0] | slugify }}/" class="category-title">
+      <a href="/categories/{{ category[0] | slugify }}/" class="category-box-link">
         {{ category[0] }}
       </a>
       <p class="category-count">{{ category[1].size }} post{{ category[1].size > 1 ? 's' : '' }}</p>
