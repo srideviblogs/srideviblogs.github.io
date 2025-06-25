@@ -690,3 +690,11 @@ header.site-header {
 .view-posts-link:hover {
   background-color: #e68900;
 }
+
+.category-grid {
+  outline: 3px dashed lime !important;
+  display: grid !important;
+}
+.category-card {
+  outline: 3px dotted red !important;
+}
