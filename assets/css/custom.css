@@ -644,3 +644,41 @@ header.site-header {
   font-size: 14px;
   font-family: inherit;
 }
+
+/* ===== Categories Page Styling ===== */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.category-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.category-card:hover {
+  background-color: #e2e8f0;
+  border-color: #bbb;
+}
+
+.category-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.category-count {
+  font-size: 14px;
+  color: #666;
+}
+
