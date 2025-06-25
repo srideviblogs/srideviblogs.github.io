@@ -678,7 +678,8 @@ header.site-header {
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
-  display: inline;
+  display: block;
+  width: 100%;
 }
 
 .category-card p {
@@ -686,6 +687,12 @@ header.site-header {
   font-size: 14px;
   color: #e0e0e0;
   margin-left: 6px;
+}
+
+.category-box-link:focus,
+.category-box-link:active {
+  color: #ffffff;
+  outline: none;
 }
 
 
