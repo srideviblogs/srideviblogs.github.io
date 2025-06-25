@@ -5,14 +5,14 @@ title: Categories
 
 <h2>Browse Posts by Category</h2>
 
-<div class="category-list">
+<div class="category-list-vertical">
   {% assign sorted_categories = site.categories | sort %}
   {% for category in sorted_categories %}
-    <div class="category-card">
-      <a href="/categories/{{ category[0] | slugify }}/" class="category-link">
+    <div class="category-box">
+      <a href="/categories/{{ category[0] | slugify }}/" class="category-title">
         {{ category[0] }}
       </a>
-      <span class="category-count">{{ category[1].size }} post{{ category[1].size > 1 ? 's' : '' }}</span>
+      <p class="category-count">{{ category[1].size }} post{{ category[1].size > 1 ? 's' : '' }}</p>
     </div>
   {% endfor %}
 </div>
