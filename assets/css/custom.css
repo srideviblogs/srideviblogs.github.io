@@ -674,7 +674,7 @@ header.site-header {
   transform: translateY(-2px);
 }
 
-.category-link {
+.category-box-link {
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
