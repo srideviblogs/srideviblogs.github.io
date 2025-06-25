@@ -652,26 +652,21 @@ header.site-header {
   gap: 2rem !important;
   margin-top: 2rem;
 }
-
 .categories-page .category-card {
   border: 1px solid #ddd;
   padding: 1.5rem;
   text-align: center;
   background: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
-  outline: none !important; /* remove red test */
 }
-
 .categories-page .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 .categories-page .category-card h2 {
   margin-top: 0;
   text-transform: capitalize;
 }
-
 .categories-page .view-posts-link {
   display: inline-block;
   margin-top: 1rem;
@@ -682,8 +677,6 @@ header.site-header {
   border-radius: 0;
   transition: background-color 0.3s ease;
 }
-
 .categories-page .view-posts-link:hover {
   background-color: #e68900;
 }
-
