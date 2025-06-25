@@ -9,7 +9,7 @@ title: Categories
     {% for category in site.categories %}
       <div class="category-card">
         <h2>{{ category[0] | capitalize }}</h2>
-        <p>{{ category[1] | size }} posts</p>
+        <p>{{ category[1] | size }} post{% if category[1].size > 1 %}s{% endif %}</p>
         <a href="/categories/{{ category[0] | slugify }}/" class="view-posts-link">View Posts →</a>
       </div>
     {% endfor %}
