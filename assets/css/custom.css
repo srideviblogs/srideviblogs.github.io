@@ -645,45 +645,6 @@ header.site-header {
   font-family: inherit;
 }
 
-/* ===== Categories Page Styling ===== */
-
-.category-list-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.category-box {
-  padding: 10px 16px;
-  background-color: #007acc;
-  border-radius: 4px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.category-box:hover {
-  background-color: #005f99;
-  transform: translateY(-2px);
-}
-
-.category-box-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  display: block;
-}
-
-.category-count {
-  font-size: 14px;
-  color: #e0e0e0;
-  margin-top: 4px;
-}
-
-
 
 
 
