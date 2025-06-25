@@ -1,3 +1,4 @@
+
 /* ============================
    Media Queries for Navigation
    ============================ */
@@ -643,40 +644,3 @@ header.site-header {
   font-size: 14px;
   font-family: inherit;
 }
-
-/* === Categories Page Enhancements === */
-.categories-page .category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.categories-page .category-card {
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  text-align: center;
-  background: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.categories-page .category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.categories-page .view-posts-link {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ff9900;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 0;
-  transition: background-color 0.3s ease;
-}
-
-.categories-page .view-posts-link:hover {
-  background-color: #e68900;
-}
-
