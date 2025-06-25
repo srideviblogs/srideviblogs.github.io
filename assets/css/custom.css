@@ -647,8 +647,6 @@ header.site-header {
 
 /* ===== Categories Page Styling ===== */
 
-/* ===== Clean Vertical Category Layout with Blue Theme ===== */
-
 .category-list-vertical {
   display: flex;
   flex-direction: column;
