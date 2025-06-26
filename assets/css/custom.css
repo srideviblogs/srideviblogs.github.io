@@ -736,7 +736,18 @@ header.site-header {
   border-color: #555;
 }
 
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s ease;
+}
 
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
 
 
 
