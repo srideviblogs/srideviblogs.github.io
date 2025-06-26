@@ -52,14 +52,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header 
-header.site-header {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 2rem;
-  padding: 0.5rem 0;
-  background: #f5f7fa; /* clean soft blue-gray */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
-} */
+/* Header */
 
 header.site-header {
   border-bottom: 1px solid #ccc;
