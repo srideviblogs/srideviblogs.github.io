@@ -692,61 +692,65 @@ header.site-header {
 }
 
 /* ======== Dark Mode Styles ======== */
+/* Apply full dark background to entire page */
 .dark-mode {
   background-color: #121212;
   color: #e0e0e0;
 }
 
+/* Make sure body also gets the dark background */
+.dark-mode body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Optional: smoother transition */
+body, .dark-mode body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Update links for better contrast */
+.dark-mode a {
+  color: #82aaff;
+}
+
+.dark-mode a:hover {
+  color: #a4cafe;
+  text-decoration: underline;
+}
+
+/* Site header */
 .dark-mode header.site-header {
   background-color: #1e1e1e;
   border-color: #333;
 }
 
-.dark-mode a {
-  color: #82aaff;
-}
-
-.dark-mode .blog-title a,
-.dark-mode .category-link,
-.dark-mode .read-more {
-  color: #82aaff;
-}
-
-.dark-mode .simple-blog-item,
+/* Post cards / blog boxes */
 .dark-mode .post-card,
+.dark-mode .simple-blog-item,
 .dark-mode .sidebar-right {
   background-color: #1a1a1a;
   border-color: #333;
 }
 
+/* Meta and excerpt */
 .dark-mode .blog-meta,
 .dark-mode .blog-excerpt,
 .dark-mode .post-meta {
   color: #ccc;
 }
 
+/* Footer */
 .dark-mode .site-footer {
   background-color: #1a1a1a;
   color: #888;
 }
 
+/* Inputs */
 .dark-mode .search-input {
-  background-color: #333;
+  background-color: #222;
   color: #fff;
-  border-color: #555;
-}
-
-#theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #333;
-  transition: transform 0.2s ease;
-}
-
-#theme-toggle:hover {
-  transform: scale(1.2);
+  border-color: #444;
 }
 
 
