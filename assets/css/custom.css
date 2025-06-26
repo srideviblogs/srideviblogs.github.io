@@ -57,7 +57,8 @@ header.site-header {
   border-bottom: 1px solid #eee;
   margin-bottom: 2rem;
   padding: 0.5rem 0;
-  background: #fff;
+  background: #f5f7fa; /* clean soft blue-gray */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
 }
 
 .site-header .container {
@@ -171,7 +172,7 @@ header.site-header {
   font-size: 1rem;
 }
 
-/* Footer */
+/* Footer 
 .site-footer {
   margin-top: 3rem;
   border-top: 1px solid #eee;
@@ -179,6 +180,16 @@ header.site-header {
   font-size: 0.9rem;
   color: #999;
   text-align: center;
+} */
+
+.site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+  background: #f5f7fa; /* match header */
 }
 
 .reading-time {
