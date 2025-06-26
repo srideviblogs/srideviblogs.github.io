@@ -658,9 +658,18 @@ header.site-header {
 }
 
 .simple-blog-item {
-  margin-bottom: 40px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 30px;
+  background-color: #f5f7fa; /* Matches light nav/footer */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.simple-blog-item:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
 }
 
 .blog-meta {
