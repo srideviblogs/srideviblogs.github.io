@@ -691,6 +691,51 @@ header.site-header {
   line-height: 1.6;
 }
 
+/* ======== Dark Mode Styles ======== */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header.site-header {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode a {
+  color: #82aaff;
+}
+
+.dark-mode .blog-title a,
+.dark-mode .category-link,
+.dark-mode .read-more {
+  color: #82aaff;
+}
+
+.dark-mode .simple-blog-item,
+.dark-mode .post-card,
+.dark-mode .sidebar-right {
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+.dark-mode .blog-meta,
+.dark-mode .blog-excerpt,
+.dark-mode .post-meta {
+  color: #ccc;
+}
+
+.dark-mode .site-footer {
+  background-color: #1a1a1a;
+  color: #888;
+}
+
+.dark-mode .search-input {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
 
 
 
