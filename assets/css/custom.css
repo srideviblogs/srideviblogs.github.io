@@ -111,20 +111,23 @@ header.site-header {
 
 /* welcome intro */
 
+/* Force full-width stretch */
 .welcome-banner {
   background-color: #007acc;
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   padding: 3rem 1rem;
   color: white;
 }
 
 .welcome-intro {
-  padding: 3rem 1rem;
-  text-align: center;
   max-width: 1000px;
   margin: 0 auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 1.5rem; /* Added to reduce space before Latest Posts */
+  text-align: center;
 }
 
 .welcome-intro h1,
