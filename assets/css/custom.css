@@ -474,6 +474,7 @@ header.site-header {
   opacity: 0;
   transform: translateY(40px);
   animation: fadeSlideIn 1.2s ease forwards;
+  animation-delay: 1.2s; /* Delay after intro heading */
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 2rem;
