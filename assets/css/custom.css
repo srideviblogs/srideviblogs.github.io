@@ -117,30 +117,25 @@ header.site-header {
 
 /* welcome intro */
 
-
-/* ✅ Force full-width blue banner */
-.full-width-banner {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+/* Force banner to full width */
+.welcome-banner-wrapper {
   width: 100vw;
   background-color: #007acc;
-  color: white;
+  margin-left: calc(-50vw + 50%);
   padding: 3rem 1rem;
   box-sizing: border-box;
 }
 
-/* Inner content stays centered */
-.welcome-intro {
+/* Center inner content */
+.welcome-banner-inner {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  color: white;
 }
 
-.welcome-intro h1,
-.welcome-intro p {
+.welcome-banner-inner h1,
+.welcome-banner-inner p {
   color: white;
 }
 
