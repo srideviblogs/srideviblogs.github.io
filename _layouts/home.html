@@ -7,38 +7,39 @@ layout: default
   <p class="animate-paragraph">Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
 </section>
 
-<section class="latest-posts">
+
+<section class="alt-posts-section">
   <h2>Latest Posts</h2>
-  <div class="post-grid">
-    {% for post in site.posts limit:6 %}
-      <div class="post-card">
-        {% if post.image %}
-          <img class="post-image" src="{{ post.image }}" alt="{{ post.title }}">
-        {% endif %}
-        <div class="post-content">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
 
-          {% if post.categories %}
-            <p class="post-categories">
-              Categories: 
-              {% for cat in post.categories %}
-                <a href="/categories/{{ cat | slugify }}/" class="category-link">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
-              {% endfor %}
-            </p>
-          {% endif %}
-
-          {% if post.read_time %}
-            <p class="post-read-time">{{ post.read_time }}</p>
-          {% endif %}
-
-          <p><a class="read-more" href="{{ post.url }}">Read More →</a></p>
+  {% for post in site.posts limit:6 %}
+    <div class="alt-post-row {% if forloop.index0 modulo 2 == 0 %}normal{% else %}reverse{% endif %}">
+      {% if post.image %}
+        <div class="alt-post-image">
+          <a href="{{ post.url }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+          </a>
         </div>
+      {% endif %}
+      <div class="alt-post-content">
+        <p class="alt-post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+        <h3 class="alt-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="alt-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+
+        {% if post.categories %}
+          <div class="post-tags">
+            {% for category in post.categories %}
+              <a href="/categories/{{ category | slugify }}/" class="tag">{{ category }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <a class="read-more" href="{{ post.url }}">Read more →</a>
       </div>
-    {% endfor %}
-  </div>
-  
+    </div>
+  {% endfor %}
+
   <div class="view-all-box">
     <a href="/blogs/">View All Posts</a>
   </div>
 </section>
+
