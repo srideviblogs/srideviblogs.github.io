@@ -78,12 +78,6 @@ header.site-header {
   margin: 0;
 }
 
-.site-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .site-nav {
   display: flex;
   gap: 1rem;
@@ -117,25 +111,23 @@ header.site-header {
 
 /* welcome intro */
 
-/* Force banner to full width */
-.welcome-banner-wrapper {
+.full-width-banner {
   width: 100vw;
-  background-color: #007acc;
   margin-left: calc(-50vw + 50%);
+  background-color: #007acc;
   padding: 3rem 1rem;
   box-sizing: border-box;
 }
 
-/* Center inner content */
-.welcome-banner-inner {
-  max-width: 1000px;
+.banner-content {
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
   color: white;
 }
 
-.welcome-banner-inner h1,
-.welcome-banner-inner p {
+.banner-content h1,
+.banner-content p {
   color: white;
 }
 
