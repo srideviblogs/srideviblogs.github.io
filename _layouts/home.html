@@ -11,8 +11,10 @@ layout: default
 <section class="alt-posts-section">
   <h2>Latest Posts</h2>
 
+  {% assign layout_flip = "normal" %}
   {% for post in site.posts limit:6 %}
-    <div class="alt-post-row {% if forloop.index0 modulo 2 == 0 %}normal{% else %}reverse{% endif %}">
+    {% cycle 'layout_flip': 'normal', 'reverse' %}
+    <div class="alt-post-row {{ layout_flip }}">
       {% if post.image %}
         <div class="alt-post-image">
           <a href="{{ post.url }}">
@@ -42,4 +44,5 @@ layout: default
     <a href="/blogs/">View All Posts</a>
   </div>
 </section>
+
 
