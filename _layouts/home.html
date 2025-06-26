@@ -7,14 +7,17 @@ layout: default
   <p class="animate-paragraph">Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.</p>
 </section>
 
-
 <section class="alt-posts-section">
   <h2>Latest Posts</h2>
 
-  {% assign layout_flip = "normal" %}
+  {% assign counter = 0 %}
   {% for post in site.posts limit:6 %}
-    {% cycle 'layout_flip': 'normal', 'reverse' %}
-    <div class="alt-post-row {{ layout_flip }}">
+    {% assign class_name = 'normal' %}
+    {% if counter | modulo: 2 == 1 %}
+      {% assign class_name = 'reverse' %}
+    {% endif %}
+
+    <div class="alt-post-row {{ class_name }}">
       {% if post.image %}
         <div class="alt-post-image">
           <a href="{{ post.url }}">
@@ -38,11 +41,14 @@ layout: default
         <a class="read-more" href="{{ post.url }}">Read more →</a>
       </div>
     </div>
+
+    {% assign counter = counter | plus: 1 %}
   {% endfor %}
 
   <div class="view-all-box">
     <a href="/blogs/">View All Posts</a>
   </div>
 </section>
+
 
 
