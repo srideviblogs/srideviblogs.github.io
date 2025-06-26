@@ -114,10 +114,15 @@ header.site-header {
 
 .full-width-banner {
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background-color: #007acc;
   padding: 3rem 1rem;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .banner-content {
