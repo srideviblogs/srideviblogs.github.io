@@ -116,6 +116,7 @@ header.site-header {
   max-width: 800px;
   margin: 0 auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1.5rem; /* Added to reduce space before Latest Posts */
 }
 
 .animate-heading {
@@ -476,7 +477,7 @@ header.site-header {
   animation: fadeSlideIn 1.2s ease forwards;
   animation-delay: 1.2s; /* Delay after intro heading */
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
