@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<!-- Full-width wrapper -->
-<div class="welcome-banner-wrapper">
-  <div class="welcome-banner-inner">
+<!-- Full-width Welcome Banner -->
+<div class="full-width-banner">
+  <div class="banner-content">
     <h1 class="animate-heading">Welcome to Sridevi Blogs!</h1>
     <p class="animate-paragraph">
       Explore real-world DevOps tutorials, interview questions, career tips, and more — by Sridevi Velpula.
@@ -12,12 +12,12 @@ layout: default
   </div>
 </div>
 
-<!-- Page content -->
-<div class="site-wrapper">
+<!-- Latest Posts Section -->
+<section class="alt-posts-section">
   <h2 class="animate-subheading">Latest Posts</h2>
 
   {% for post in site.posts limit:6 %}
-    <div class="alt-post-row">
+    <div class="alt-post-row {% if forloop.index0 modulo 2 == 1 %}reverse{% endif %}">
       {% if post.image %}
         <div class="alt-post-image">
           <a href="{{ post.url }}">
@@ -46,4 +46,4 @@ layout: default
   <div class="view-all-box">
     <a href="/blogs/">View All Posts</a>
   </div>
-</div>
+</section>
