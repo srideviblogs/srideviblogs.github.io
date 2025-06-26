@@ -117,17 +117,22 @@ header.site-header {
 
 /* welcome intro */
 
-/* Force full-width stretch */
 
-/* Override max-width on welcome section */
-.welcome-banner-fixed {
+/* ✅ Force full-width blue banner */
+.full-width-banner {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
   background-color: #007acc;
   color: white;
   padding: 3rem 1rem;
+  box-sizing: border-box;
 }
 
+/* Inner content stays centered */
 .welcome-intro {
   max-width: 1000px;
   margin: 0 auto;
