@@ -1,20 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("theme-toggle");
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const savedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  // Initialize theme
-  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+  // Determine initial theme
+  const shouldUseDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+
+  if (shouldUseDark) {
     document.documentElement.classList.add("dark-mode");
-    toggleBtn.textContent = "☀️"; // Light icon for dark mode
+    toggleBtn.textContent = "🌙"; // Currently in dark mode, show moon
   } else {
-    toggleBtn.textContent = "🌙"; // Dark icon for light mode
+    document.documentElement.classList.remove("dark-mode");
+    toggleBtn.textContent = "☀️"; // Currently in light mode, show sun
   }
 
-  // Toggle logic
   toggleBtn.addEventListener("click", function () {
     const isDark = document.documentElement.classList.toggle("dark-mode");
     localStorage.setItem("theme", isDark ? "dark" : "light");
-    toggleBtn.textContent = isDark ? "☀️" : "🌙";
+    toggleBtn.textContent = isDark ? "🌙" : "☀️"; // 🌙 = dark, ☀️ = light
   });
 });
