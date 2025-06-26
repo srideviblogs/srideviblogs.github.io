@@ -12,12 +12,12 @@ layout: default
   </div>
 </div>
 
-<!-- Latest Posts Section -->
 <section class="alt-posts-section">
+ 
   <h2 class="animate-subheading">Latest Posts</h2>
 
   {% for post in site.posts limit:6 %}
-    <div class="alt-post-row {% if forloop.index0 modulo 2 == 1 %}reverse{% endif %}">
+    <div class="alt-post-row">
       {% if post.image %}
         <div class="alt-post-image">
           <a href="{{ post.url }}">
