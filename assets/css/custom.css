@@ -118,14 +118,19 @@ header.site-header {
 /* welcome intro */
 
 /* Force full-width stretch */
-.welcome-banner {
-  background-color: #007acc;
+/* This breaks out of the centered layout */
+.welcome-banner-outer {
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+/* Banner styling */
+.welcome-banner {
+  background-color: #007acc;
   padding: 3rem 1rem;
   color: white;
 }
