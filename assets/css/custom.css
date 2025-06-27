@@ -478,7 +478,7 @@ header.site-header {
   animation: fadeSlideIn 1.2s ease forwards;
   animation-delay: 1.2s; /* Delay after intro heading */
   text-align: center;
-  margin-top: 1rem;  /* tighter spacing after intro */
+  margin-top: 0 !important;       /* 👈 Key fix */
   margin-bottom: 1.5rem;
 }
 
