@@ -111,7 +111,7 @@ header.site-header {
 
 /* welcome intro */
 .welcome-intro {
-  padding: 3rem 1rem;
+  padding: 2.5rem 1rem 1rem; /* reduce bottom padding */
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
@@ -477,8 +477,8 @@ header.site-header {
   animation: fadeSlideIn 1.2s ease forwards;
   animation-delay: 1.2s; /* Delay after intro heading */
   text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;  /* tighter spacing after intro */
+  margin-bottom: 1.5rem;
 }
 
 .alt-posts-section {
