@@ -18,7 +18,6 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
 /* Body styling */
-
 body {
   font-family: 'PT Serif', serif;
   font-size: 16px;
@@ -26,9 +25,9 @@ body {
   font-weight: 400;
   color: #333;
   background-color: #fff;
-  margin: 0;
-  padding: 0;
-  max-width: none;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -111,30 +110,13 @@ header.site-header {
 }
 
 /* welcome intro */
-
-.full-width-banner {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background-color: #007acc;
+.welcome-intro {
   padding: 3rem 1rem;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.banner-content {
-  max-width: 1200px;
-  margin: 0 auto;
   text-align: center;
-  color: white;
-}
-
-.banner-content h1,
-.banner-content p {
-  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1.5rem; /* Added to reduce space before Latest Posts */
 }
 
 .animate-heading {
@@ -743,6 +725,3 @@ header.site-header {
   color: #333;
   line-height: 1.6;
 }
-
-
-
