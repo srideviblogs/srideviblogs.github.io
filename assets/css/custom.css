@@ -488,8 +488,8 @@ header.site-header {
   animation: fadeSlideIn 1.2s ease forwards;
   animation-delay: 1.2s; /* Delay after intro heading */
   text-align: center;
-  margin-top: 0 !important;       /* 👈 Key fix */
-  margin-bottom: 1.5rem;
+  margin-top: 1 !important;       /* 👈 Key fix */
+  margin-bottom: 2rem;
 }
 
 .alt-posts-section {
