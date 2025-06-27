@@ -150,11 +150,11 @@ header.site-header {
 @media (max-width: 600px) {
   .animate-heading {
     font-size: 2rem;
+    margin-top: 0 !important;
   }
 
   .animate-paragraph {
     font-size: 1rem;
-    margin-bottom: 0 !important;
   }
 
    .welcome-intro {
