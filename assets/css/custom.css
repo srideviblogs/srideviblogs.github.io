@@ -736,3 +736,12 @@ header.site-header {
   color: #333;
   line-height: 1.6;
 }
+
+.social-badges a img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-badges a:hover img {
+  filter: brightness(1.2);  /* slightly brighten on hover */
+  transform: scale(1.05);   /* subtle zoom effect */
+}
