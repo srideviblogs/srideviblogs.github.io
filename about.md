@@ -28,9 +28,8 @@ permalink: /about/
     <a href="https://instagram.com/everydayjournalblog" target="_blank" rel="noopener">
       <img src="https://img.shields.io/badge/Instagram-%23833AB4.svg?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
     </a>
-    <a href="https://linkedin.com/in/sandeep-pochu-27589b274" target="_blank" rel="noopener" style=" display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; background-color: #0077B5; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: bold; font-family: sans-serif;">
-      <img src="https://cdn.simpleicons.org/linkedin/FFFFFF" alt="LinkedIn" style="height: 24px;">
-      LinkedIn
+    <a href="https://www.linkedin.com/in/sandeep-pochu-27589b274/" target="_blank" rel="noopener">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
   </div>
 </section>
