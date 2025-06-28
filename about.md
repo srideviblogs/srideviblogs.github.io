@@ -23,13 +23,16 @@ permalink: /about/
 
   <div class="social-badges social-left">
     <a href="https://srideviblogs.github.io/" target="_blank" rel="noopener">
-      <img src="https://img.shields.io/badge/Blog-%23007a3e.svg?style=for-the-badge&logo=jekyll&logoColor=white" alt="Blog">
+      <i class="fas fa-blog"></i> Blog
     </a>
+    &nbsp;&nbsp;
     <a href="https://instagram.com/everydayjournalblog" target="_blank" rel="noopener">
-      <img src="https://img.shields.io/badge/Instagram-%23833AB4.svg?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+      <i class="fab fa-instagram"></i> Instagram
     </a>
+    &nbsp;&nbsp;
     <a href="https://www.linkedin.com/in/sandeep-pochu-27589b274/" target="_blank" rel="noopener">
-      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+      <i class="fab fa-linkedin"></i> LinkedIn
     </a>
   </div>
 </section>
+
