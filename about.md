@@ -29,7 +29,7 @@ permalink: /about/
       <img src="https://img.shields.io/badge/Instagram-%23833AB4.svg?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
     </a>
     <a href="https://www.linkedin.com/in/sandeep-pochu-27589b274/" target="_blank" rel="noopener">
-      <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
   </div>
 </section>
