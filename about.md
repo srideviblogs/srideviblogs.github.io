@@ -17,11 +17,11 @@ permalink: /about/
 <hr>
 
 <section class="about-follow">
-  <h2 class="animate-subheading">Follow Me</h2>
+  <h2>Follow Me</h2>
 
   <p>For the latest updates and more:</p>
 
-  <div class="social-badges">
+  <div class="social-badges social-left">
     <a href="https://srideviblogs.github.io/" target="_blank" rel="noopener">
       <img src="https://img.shields.io/badge/Blog-%23007a3e.svg?style=for-the-badge&logo=jekyll&logoColor=white" alt="Blog">
     </a>
