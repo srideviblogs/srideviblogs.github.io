@@ -737,11 +737,23 @@ header.site-header {
   line-height: 1.6;
 }
 
+.social-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2rem 0;
+}
+
 .social-badges a img {
+  max-width: 100%;
+  height: auto;
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-badges a:hover img {
-  filter: brightness(1.2);  /* slightly brighten on hover */
-  transform: scale(1.05);   /* subtle zoom effect */
+  filter: brightness(1.2);
+  transform: scale(1.05);
 }
+
