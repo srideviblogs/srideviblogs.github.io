@@ -737,10 +737,10 @@ header.site-header {
   line-height: 1.6;
 }
 
-.social-badges {
+.social-badges.social-left {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* aligns badges to the left */
   align-items: center;
   gap: 0.8rem;
   margin: 2rem 0;
