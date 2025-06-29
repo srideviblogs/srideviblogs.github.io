@@ -737,15 +737,17 @@ header.site-header {
   line-height: 1.6;
 }
 
-.social-buttons {
+.social-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
   margin: 2rem 0;
 }
 
-.social-buttons .btn {
-  display: inline-block;
+.social-badges a.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   color: white;
@@ -761,7 +763,7 @@ header.site-header {
 .linkedin-btn { background-color: #0077B5; }
 
 /* Hover effects */
-.social-buttons .btn:hover {
+.social-badges a.btn:hover {
   transform: scale(1.05);
   filter: brightness(1.2);
 }
