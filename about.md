@@ -21,17 +21,18 @@ permalink: /about/
 
   <p>For the latest updates and more:</p>
 
-  <div class="social-badges social-left">
-  <a href="https://srideviblogs.github.io/" class="btn blog-btn" target="_blank" rel="noopener">
-    <i class="fas fa-blog"></i> Blog
-  </a>
-  <a href="https://instagram.com/everydayjournalblog" class="btn instagram-btn" target="_blank" rel="noopener">
-    <i class="fab fa-instagram"></i> Instagram
-  </a>
-  <a href="https://www.linkedin.com/in/sandeep-pochu-27589b274/" class="btn linkedin-btn" target="_blank" rel="noopener">
-    <i class="fab fa-linkedin"></i> LinkedIn
-  </a>
-</div>
-
+<div class="social-badges social-left">
+    <a href="https://srideviblogs.github.io/" target="_blank" rel="noopener">Add commentMore actions
+      <i class="fas fa-blog"></i> Blog
+    </a>
+    &nbsp;&nbsp;
+    <a href="https://instagram.com/everydayjournalblog" target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    &nbsp;&nbsp;
+    <a href="https://www.linkedin.com/in/sandeep-pochu-27589b274/" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+  </div>
 </section>
 
