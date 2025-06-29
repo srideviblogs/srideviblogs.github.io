@@ -748,13 +748,13 @@ header.site-header {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 6px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-family: sans-serif;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 /* Button colors */
