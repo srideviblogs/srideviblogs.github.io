@@ -737,23 +737,31 @@ header.site-header {
   line-height: 1.6;
 }
 
-.social-badges.social-left {
+.social-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* aligns badges to the left */
-  align-items: center;
   gap: 0.8rem;
   margin: 2rem 0;
 }
 
-.social-badges a img {
-  max-width: 100%;
-  height: auto;
-  transition: filter 0.3s ease, transform 0.3s ease;
+.social-buttons .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.social-badges a:hover img {
-  filter: brightness(1.2);
+/* Button colors */
+.blog-btn { background-color: #007a3e; }
+.instagram-btn { background-color: #833AB4; }
+.linkedin-btn { background-color: #0077B5; }
+
+/* Hover effects */
+.social-buttons .btn:hover {
   transform: scale(1.05);
+  filter: brightness(1.2);
 }
-
