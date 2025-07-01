@@ -114,6 +114,7 @@ header.site-header {
 .welcome-intro {
   background: linear-gradient(to right, #007acc, #00c6ff);
   color: white;
+  text-align: center;
   padding: 3rem 1rem;
   border-radius: 12px;
   max-width: 1000px;
