@@ -14,6 +14,14 @@
   }
 }
 
+:root {
+  --primary-color: #007acc;   /* main blue */
+  --secondary-color: #005f99; /* darker blue */
+  --accent-color: #f78c6b;    /* coral accent */
+  --text-color: #333333;      /* dark grey text */
+  --background-color: #ffffff;/* white background */
+}
+
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Fira+Sans&display=swap');
 
@@ -788,4 +796,38 @@ header.site-header {
 .social-badges a.btn:hover {
   transform: scale(1.05);
   filter: brightness(1.2);
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-color);
+}
+
+button,
+.button,
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover {
+  background-color: var(--secondary-color);
 }
