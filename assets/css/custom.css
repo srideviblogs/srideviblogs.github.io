@@ -63,12 +63,6 @@ header.site-header {
   border-radius: 12px;
 }
 
-.header-accent {
-  height: 4px;
-  background-color: #007acc;
-  width: 100%;
-}
-
 .site-header .container {
   display: flex;
   justify-content: space-between;
