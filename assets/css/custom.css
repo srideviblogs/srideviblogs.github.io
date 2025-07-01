@@ -508,6 +508,16 @@ header.site-header {
   margin-bottom: 3rem;
   gap: 2rem;
   flex-wrap: wrap;
+  background: white;                        /* Card background */
+  border-radius: 12px;                      /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  padding: 1.5rem;                         /* Inner spacing */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alt-post-row:hover {
+  transform: translateY(-4px);              /* Subtle lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Deeper shadow on hover */
 }
 
 .alt-post-row.reverse {
