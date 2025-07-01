@@ -52,6 +52,12 @@ a:hover {
   text-decoration: underline;
 }
 
+a:focus,
+button:focus {
+  outline: 2px dashed #007acc;
+  outline-offset: 2px;
+}
+
 /* Header */
 
 header.site-header {
