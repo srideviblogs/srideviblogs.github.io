@@ -52,13 +52,6 @@ a:hover {
   text-decoration: underline;
 }
 
-a:focus,
-button:focus {
-  outline: 2px solid #007acc;     /* solid line in your primary blue */
-  outline-offset: 4px;            /* gives breathing space around the element */
-  border-radius: 4px;             /* optional: softens the box corners */
-}
-
 /* Header */
 
 header.site-header {
