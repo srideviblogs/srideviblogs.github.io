@@ -789,3 +789,31 @@ header.site-header {
   transform: scale(1.05);
   filter: brightness(1.2);
 }
+
+/* Links and Buttons */
+a,
+button {
+  color: #00bfa5;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+button:hover {
+  color: #009e88;
+}
+
+/* Category Boxes */
+.category-card {
+  background-color: #00bfa5;
+}
+
+.category-card:hover {
+  background-color: #009e88;
+}
+
+/* Focus outline for accessibility */
+a:focus,
+button:focus {
+  outline: 2px dashed #00bfa5;
+  outline-offset: 2px;
+}
