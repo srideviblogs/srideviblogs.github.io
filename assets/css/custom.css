@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Links */
 a {
-  color: #007acc;
+  color: #00bfa5;
   text-decoration: none;
   font-weight: 600;
 }
@@ -54,7 +54,7 @@ a:hover {
 
 a:focus,
 button:focus {
-  outline: 2px dashed #007acc;
+  outline: 2px dashed #00bfa5;
   outline-offset: 2px;
 }
 
@@ -100,7 +100,7 @@ header.site-header {
 }
 
 .site-nav a:hover {
-  color: #007acc;
+  color: #009e88;
 }
 
 .menu-toggle {
@@ -118,7 +118,7 @@ header.site-header {
 /* welcome intro */
 
 .welcome-intro {
-  background: linear-gradient(to right, #007acc, #00c6ff);
+  background: linear-gradient(to right, #00bfa5, #00c6ff);
   color: white;
   text-align: center;
   padding: 3rem 1rem;
@@ -283,7 +283,7 @@ header.site-header {
 }
 
 .search-results li a {
-  color: #007acc;
+  color: #00bfa5;
   text-decoration: none;
 }
 
@@ -412,7 +412,7 @@ header.site-header {
 }
 
 .breadcrumb a {
-  color: #007acc;
+  color: #00bfa5;
   text-decoration: none;
 }
 
@@ -434,7 +434,7 @@ header.site-header {
 .prev-post, .next-post {
   position: relative;
   padding: 0.5em 1em;
-  background-color: #007acc;
+  background-color: #00bfa5;
   color: white;
   border-radius: 4px;
   text-decoration: none;
@@ -449,7 +449,7 @@ header.site-header {
 }
 
 .prev-post:hover, .next-post:hover {
-  background-color: #005fa3;
+  background-color: #009e88;
   text-decoration: none;
 }
 
@@ -492,7 +492,7 @@ header.site-header {
 .animate-subheading {
   font-size: 2rem;
   font-weight: 700;
-  color: #007acc;
+  color: #00bfa5;
   opacity: 0;
   transform: translateY(40px);
   animation: fadeSlideIn 1.2s ease forwards;
@@ -559,7 +559,7 @@ header.site-header {
 }
 
 .alt-post-title a {
-  color: #007acc;
+  color: #00bfa5;
   text-decoration: none;
 }
 
@@ -577,7 +577,7 @@ header.site-header {
   display: inline-block;
   margin-top: 10px;
   font-weight: bold;
-  color: #007acc;
+  color: #00bfa5;
   text-decoration: none;
 }
 
@@ -591,7 +591,7 @@ header.site-header {
 
 .tag {
   display: inline-block;
-  background: #007acc;
+  background: #00bfa5;
   color: white;
   padding: 4px 10px;
   font-size: 0.75rem;
@@ -601,7 +601,7 @@ header.site-header {
 }
 
 .tag:hover {
-  background-color: #005f99;
+  background-color: #009e88;
 }
 
 @media (max-width: 768px) {
@@ -743,13 +743,13 @@ header.site-header {
 }
 
 .blog-title a {
-  color: #007acc;
+  color: #00bfa5;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .blog-title a:hover {
-  color: #005f99;
+  color: #009e88;
   text-decoration: underline;
 }
 
