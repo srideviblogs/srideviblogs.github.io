@@ -121,6 +121,7 @@ header.site-header {
   margin: 0 auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 0; /* Added to reduce space before Latest Posts */
+  margin-top: 2rem;
 }
 
 .animate-heading {
