@@ -1,91 +1,97 @@
 ---
 layout: post
-title: "Interactive vs Non-Interactive Shells in Linux — DevOps 100 Days Challenge"
+title: "Interactive vs Non-Interactive Shells in Linux - DevOps 100 Days Challenge"
 date: 2025-07-30 12:00:00 +0000
-categories: [devops, linux]
+categories: [100-days-devops]
 tags: [linux, shell, devops, security]
 excerpt: "Learn the difference between interactive and non-interactive shells in Linux, with a practical example for creating users with non-interactive shells."
 image: /assets/images/devops.jpg
 ---
 
-Understanding the difference between **interactive** and **non-interactive shells** is crucial for every DevOps engineer. In this post, I will explain what they are, when to use each, and provide a real-world example — creating a Linux user named `jim` with a non-interactive shell on App Server 1.
+<div style="background-color:#e2f4ff; color:#007acc; display:inline-block; padding:6px 12px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
+Day 1 of 100 — DevOps Challenge
+</div>
+
+As I kick off my **100 Days of DevOps** journey, I wanted to start with something simple but essential — the difference between **interactive** and **non-interactive shells** in Linux.
+
+It might sound simple, but this idea is actually a key part of how automation, security, and system management work smoothly in DevOps. Let’s break it down in a way that’s easy to understand and useful for everyday work. 
+---
+
+## What Exactly is a Shell?
+
+A shell is a program that lets you talk to your Linux system. You type commands — it executes them.
+
+It’s the interface between *you* and the *operating system*.
 
 ---
 
-## What is a Shell?
+## What is an Interactive Shell?
 
-A shell is a program that provides a command-line interface to interact with the operating system. It interprets and executes commands you type.
-
----
-
-## Interactive Shell
+An **interactive shell** is what you get when you open a terminal or SSH into a server. It:
 
 - Waits for your input.
-- Shows a prompt (e.g., `$` or `#`).
-- Supports command history, tab completion, and command editing.
-- Loads configuration files like `.bashrc` or `.zshrc`.
-- Used when you log into a system via terminal or SSH.
+- Shows a prompt (like `$` or `#`).
+- Supports handy features like tab completion and command history.
+- Loads your configs like `.bashrc` or `.zshrc`.
+
+Basically, if you’re typing commands in real time — you’re in an interactive shell.
 
 ---
 
-## Non-Interactive Shell
+## What is a Non-Interactive Shell?
 
-- Runs scripts or commands without user input.
-- No command prompt is shown.
-- Often used for running automated jobs like cron tasks or service accounts.
-- Does **not** load interactive shell configs.
-- Useful for security to prevent shell login.
+A **non-interactive shell**, on the other hand, runs commands without needing you to type anything. It:
 
----
+- Doesn't show a prompt.
+- Executes scripts or scheduled tasks (like cron jobs).
+- Doesn’t load interactive configs by default.
+- Often used for automation or restricting login access.
 
-## When to Use Each?
-
-| Shell Type           | When to Use                               |
-|----------------------|------------------------------------------|
-| Interactive Shell    | Day-to-day command line use and debugging |
-| Non-Interactive Shell | Automated scripts, cron jobs, restricted users |
+So when you run a shell script, that’s a non-interactive shell in action.
 
 ---
 
-## Practical Example: Creating User `jim` with Non-Interactive Shell on App Server 1
+## When Do You Use Each?
 
-Here’s a sample real SSH session showing how to create user `jim` with the `/usr/sbin/nologin` shell:
+| Shell Type           | When to Use It                               |
+|----------------------|----------------------------------------------|
+| **Interactive**      | Manual command-line work, debugging, admin tasks |
+| **Non-Interactive**  | Automation, cron jobs, service users, restricting login |
+
+---
+
+## Practical Example: Creating a Linux User with a Non-Interactive Shell
+
+Suppose you need to create a user account on a system, but you want to prevent that user from logging in interactively. Here’s how I did that on **App Server 1** by creating a user named `jim`:
 
 ```bash
 thor@jumphost ~$ ssh tony@stapp01
 The authenticity of host 'stapp01 (172.16.238.10)' can't be established.
 ED25519 key fingerprint is SHA256:n9qmJzWE91nIfTFwxJn13ELNuFWsgeGeSIlrU1fkU7I.
-This key is not known by any other names
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added 'stapp01' (ED25519) to the list of known hosts.
-tony@stapp01's password: 
+Warning: Permanently added 'stapp01' to the list of known hosts.
+tony@stapp01's password:
 
 [tony@stapp01 ~]$ sudo su -
 
-We trust you have received the usual lecture from the local System Administrator. It usually boils down to these three things:
+[sudo] password for tony:
 
-    #1) Respect the privacy of others.
-    #2) Think before you type.
-    #3) With great power comes great responsibility.
-
-[sudo] password for tony: 
-
-[root@stapp01 ~]# pwd
-/root
 [root@stapp01 ~]# useradd -s /usr/sbin/nologin jim
-[root@stapp01 ~]# cat /etc/passwd | grep jim
+[root@stapp01 ~]# grep jim /etc/passwd
 jim:x:1002:1002::/home/jim:/usr/sbin/nologin
+```
 
-## Explanation
+## What’s Happening Here?
 
-- useradd -s /usr/sbin/nologin jim creates user jim with the nologin shell.
-- This means jim cannot login interactively, which is ideal for service accounts or users restricted from shell access.
-- /usr/sbin/nologin prevents interactive shell login but allows running non-interactive tasks if needed.
+- The command useradd -s /usr/sbin/nologin jim creates a new user jim but assigns a non-interactive shell.
+- /usr/sbin/nologin is a special shell that simply denies login. When jim tries to log in, they’ll be politely rejected.
+- This is perfect for service accounts that don’t need shell access.
 
-## Why This Matters in DevOps
+## Why Does This Matter in DevOps?
 
--  Ensuring users or service accounts have appropriate shell access is a security best practice.
-- Prevents unauthorized access while allowing necessary automation.
-- Understanding shell types helps in scripting, automation, and managing user permissions effectively.
+- It’s a security best practice to disable interactive shells for system or automation users.
+- It ensures users can perform tasks (like running a backup job) without giving them full shell access.
+- Understanding this helps when writing scripts, designing user permissions, and automating Linux tasks responsibly.
 
-Stay tuned for more DevOps essentials in this 100 days challenge!
+Thanks for reading! This was Day 1 of my 100-day DevOps challenge.
+Stay tuned for the next topic, where I’ll explore more practical and foundational DevOps skills.
