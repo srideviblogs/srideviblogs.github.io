@@ -112,4 +112,4 @@ jim:x:1002:1002::/home/jim:/usr/sbin/nologin
 
 That’s Day 1 complete! More practical DevOps insights coming in Day 2.
 
-- Sridevi Velpula
+— *Sridevi Velpula*
