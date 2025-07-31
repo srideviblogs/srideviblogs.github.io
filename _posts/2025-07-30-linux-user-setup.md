@@ -8,22 +8,19 @@ excerpt: "Learn the difference between interactive and non-interactive shells in
 image: /assets/images/devops.jpg
 ---
 
-<div style="background-color:#e2f4ff; color:#007acc; display:inline-block; padding:6px 12px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
+<div style="background-color:#fff4e5; color:#d35400; display:inline-block; padding:6px 12px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
 Day 1 of 100 — DevOps Challenge
 </div>
 
-As I kick off my **100 Days of DevOps** journey, I wanted to start with something simple but essential — the difference between **interactive** and **non-interactive shells** in Linux.
+As I kick off my **100 Days of DevOps** journey, I wanted to start with something simple but essential: the difference between **interactive** and **non-interactive shells** in Linux.
 
-It might sound simple, but this idea is actually a key part of how automation, security, and system management work smoothly in DevOps. Let’s break it down in a way that’s easy to understand and useful for everyday work. 
----
+It might sound simple, but this idea is actually a key part of how automation, security, and system management work smoothly in DevOps. Let’s break it down in a way that’s easy to understand and useful for everyday work.
 
 ## What Exactly is a Shell?
 
 A shell is a program that lets you talk to your Linux system. You type commands — it executes them.
 
 It’s the interface between *you* and the *operating system*.
-
----
 
 ## What is an Interactive Shell?
 
@@ -36,7 +33,6 @@ An **interactive shell** is what you get when you open a terminal or SSH into a 
 
 Basically, if you’re typing commands in real time — you’re in an interactive shell.
 
----
 
 ## What is a Non-Interactive Shell?
 
@@ -49,16 +45,29 @@ A **non-interactive shell**, on the other hand, runs commands without needing yo
 
 So when you run a shell script, that’s a non-interactive shell in action.
 
----
+
 
 ## When Do You Use Each?
 
-| Shell Type           | When to Use It                               |
-|----------------------|----------------------------------------------|
-| **Interactive**      | Manual command-line work, debugging, admin tasks |
-| **Non-Interactive**  | Automation, cron jobs, service users, restricting login |
+<table style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color:#f2f2f2;">
+      <th style="text-align:left; padding:8px; border:1px solid #ddd;">Shell Type</th>
+      <th style="text-align:left; padding:8px; border:1px solid #ddd;">When to Use It</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px; border:1px solid #ddd;"><strong>Interactive</strong></td>
+      <td style="padding:8px; border:1px solid #ddd;">Manual command-line work, debugging, admin tasks</td>
+    </tr>
+    <tr>
+      <td style="padding:8px; border:1px solid #ddd;"><strong>Non-Interactive</strong></td>
+      <td style="padding:8px; border:1px solid #ddd;">Automation, cron jobs, service users, restricting login</td>
+    </tr>
+  </tbody>
+</table>
 
----
 
 ## Practical Example: Creating a Linux User with a Non-Interactive Shell
 
@@ -79,6 +88,7 @@ tony@stapp01's password:
 [root@stapp01 ~]# useradd -s /usr/sbin/nologin jim
 [root@stapp01 ~]# grep jim /etc/passwd
 jim:x:1002:1002::/home/jim:/usr/sbin/nologin
+
 ```
 
 ## What’s Happening Here?
