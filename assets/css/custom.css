@@ -788,15 +788,15 @@ header.site-header {
 /* Reduce font size for all code blocks */
 
 /* Global style for all code blocks */
-pre code, code {
+pre code {
   font-size: 13px;
-  font-family: 'Fira Code', monospace;
-  background-color: #f8f8f8;
-  padding: 8px 12px;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  padding: 12px;
   border-radius: 6px;
-  line-height: 1.5;
-  display: block;
   overflow-x: auto;
+  display: block;
+  font-family: monospace;
 }
 
 
