@@ -785,9 +785,4 @@ header.site-header {
   filter: brightness(1.2);
 }
 
-/* Reduce font size for all code blocks */
-.code-small {
-  font-size: 0.85em;
-  line-height: 1.4;
-}
 
