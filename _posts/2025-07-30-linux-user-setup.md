@@ -8,7 +8,7 @@ excerpt: "Learn the difference between interactive and non-interactive shells in
 image: /assets/images/devops.jpg
 ---
 
-<div style="background-color:#d4f4e4; color:#1b5e20; display:inline-block; padding:6px 14px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
+<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: #ffffff; display:inline-block; padding:6px 14px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
 Day 1 of 100 — DevOps Challenge
 </div>
 
@@ -31,7 +31,7 @@ An **interactive shell** is what you get when you open a terminal or SSH into a 
 - Supports handy features like tab completion and command history.
 - Loads your configs like `.bashrc` or `.zshrc`.
 
-Basically, if you’re typing commands in real time — you’re in an interactive shell.
+Basically, if you’re typing commands in real time, you’re in an interactive shell.
 
 
 ## What is a Non-Interactive Shell?
