@@ -8,7 +8,7 @@ excerpt: "Learn the difference between interactive and non-interactive shells in
 image: /assets/images/devops.jpg
 ---
 
-<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: #ffffff; display:inline-block; padding:6px 14px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
+<div style="background: linear-gradient(to right, #007acc, #3399ff); color: #ffffff; display:inline-block; padding:6px 14px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
 Day 1 of 100 — DevOps Challenge
 </div>
 
