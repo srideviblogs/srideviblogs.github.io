@@ -8,7 +8,7 @@ excerpt: "Learn the difference between interactive and non-interactive shells in
 image: /assets/images/devops.jpg
 ---
 
-<div style="background-color:#fff4e5; color:#d35400; display:inline-block; padding:6px 12px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
+<div style="background-color:#d4f4e4; color:#1b5e20; display:inline-block; padding:6px 14px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
 Day 1 of 100 — DevOps Challenge
 </div>
 
@@ -18,7 +18,7 @@ It might sound simple, but this idea is actually a key part of how automation, s
 
 ## What Exactly is a Shell?
 
-A shell is a program that lets you talk to your Linux system. You type commands — it executes them.
+A shell is a program that lets you talk to your Linux system. You type commands, it executes them.
 
 It’s the interface between *you* and the *operating system*.
 
@@ -45,8 +45,6 @@ A **non-interactive shell**, on the other hand, runs commands without needing yo
 
 So when you run a shell script, that’s a non-interactive shell in action.
 
-
-
 ## When Do You Use Each?
 
 <table style="width:100%; border-collapse: collapse;">
@@ -71,21 +69,29 @@ So when you run a shell script, that’s a non-interactive shell in action.
 
 ## Practical Example: Creating a Linux User with a Non-Interactive Shell
 
-Suppose you need to create a user account on a system, but you want to prevent that user from logging in interactively. Here’s how I did that on **App Server 1** by creating a user named `jim`:
+Suppose you need to create a user account on a system, but you want to prevent that user from logging in interactively. Here’s how I did that on **App Server 1** by creating a user named **`jim`**:
 
 ```bash
+# Connect from jumphost to the App Server 1 as user tony
 thor@jumphost ~$ ssh tony@stapp01
+
+# First-time SSH will show a host key warning — accept it
 The authenticity of host 'stapp01 (172.16.238.10)' can't be established.
 ED25519 key fingerprint is SHA256:n9qmJzWE91nIfTFwxJn13ELNuFWsgeGeSIlrU1fkU7I.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added 'stapp01' to the list of known hosts.
+
+# Enter password for user tony
 tony@stapp01's password:
 
+# Switch to superuser (root)
 [tony@stapp01 ~]$ sudo su -
-
 [sudo] password for tony:
 
+# Create a user 'jim' with a non-interactive shell (/usr/sbin/nologin)
 [root@stapp01 ~]# useradd -s /usr/sbin/nologin jim
+
+# Verify the user's shell in the /etc/passwd file
 [root@stapp01 ~]# grep jim /etc/passwd
 jim:x:1002:1002::/home/jim:/usr/sbin/nologin
 
@@ -103,5 +109,5 @@ jim:x:1002:1002::/home/jim:/usr/sbin/nologin
 - It ensures users can perform tasks (like running a backup job) without giving them full shell access.
 - Understanding this helps when writing scripts, designing user permissions, and automating Linux tasks responsibly.
 
-Thanks for reading! This was Day 1 of my 100-day DevOps challenge.
-Stay tuned for the next topic, where I’ll explore more practical and foundational DevOps skills.
+Thanks for reading Day 1 of my 100 Days of DevOps!
+Stay tuned for Day 2 — more hands-on, real-world DevOps insights coming up!
