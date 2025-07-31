@@ -72,7 +72,7 @@ So when you run a shell script, that’s a non-interactive shell in action.
 Suppose you need to create a user account on a system, but you want to prevent that user from logging in interactively. Here’s how I did that on **App Server 1** by creating a user named **`jim`**:
 
 ```bash
-{: .code-small }
+{.code-small }
 # Connect from jumphost to the App Server 1 as user tony
 thor@jumphost ~$ ssh tony@stapp01
 
