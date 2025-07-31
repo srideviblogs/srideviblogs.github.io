@@ -110,6 +110,7 @@ jim:x:1002:1002::/home/jim:/usr/sbin/nologin
 - It ensures users can perform tasks (like running a backup job) without giving them full shell access.
 - Understanding this helps when writing scripts, designing user permissions, and automating Linux tasks responsibly.
 
+
 That’s Day 1 complete! More practical DevOps insights coming in Day 2.
 
 — *Sridevi Velpula*
