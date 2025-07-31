@@ -784,3 +784,14 @@ header.site-header {
   transform: scale(1.05);
   filter: brightness(1.2);
 }
+
+.code-small {
+  font-size: 13px;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  display: block;
+  font-family: monospace;
+}
