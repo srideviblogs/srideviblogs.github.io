@@ -112,7 +112,7 @@ header.site-header {
 /* welcome intro */
 
 .welcome-intro {
-  background: linear-gradient(to right, #007acc, #00c6ff);
+  background: #007acc;
   color: white;
   text-align: center;
   padding: 3rem 1rem;
@@ -122,6 +122,7 @@ header.site-header {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 0; /* Added to reduce space before Latest Posts */
   margin-top: 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .animate-heading {
@@ -130,7 +131,10 @@ header.site-header {
   color: white;
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeSlideIn 1.2s ease forwards;
+  animation: fadeSlideIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0s;
+  letter-spacing: 0.03em;
+  will-change: opacity, transform;
 }
 
 .animate-paragraph {
@@ -140,8 +144,9 @@ header.site-header {
   margin-bottom: 0.5rem; /* NEW: reduce space after paragraph */
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeSlideIn 1.2s ease forwards;
-  animation-delay: 0.6s;
+  animation: fadeSlideIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.7s;
+  will-change: opacity, transform;
 }
 
 @keyframes fadeSlideIn {
