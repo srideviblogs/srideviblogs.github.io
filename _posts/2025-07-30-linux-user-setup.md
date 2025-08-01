@@ -5,7 +5,7 @@ date: 2025-07-30 12:00:00 +0000
 categories: [100-days-devops]
 tags: [linux, shell, devops, security]
 excerpt: "Learn the difference between interactive and non-interactive shells in Linux, with a practical example for creating users with non-interactive shells."
-image: /assets/images/devops.jpg
+image: /assets/images/devops1.jpg
 ---
 
 <div style="background: linear-gradient(to right, #007acc, #3399ff); color: #ffffff; display:inline-block; padding:6px 14px; border-radius:6px; font-weight:bold; font-size:14px; margin-bottom:20px;">
