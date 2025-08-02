@@ -533,8 +533,11 @@ header.site-header {
 
 .alt-post-image {
   flex: 1 1 45%;
-  height: 250px;
-  overflow: hidden;     /* Ensures image doesn't spill out */
+  height: 250px;         /* Fixed height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .alt-post-image img {
@@ -543,6 +546,7 @@ header.site-header {
   object-fit: cover;    /* Ensures image fills area without distortion */
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: block;
 }
 
 .alt-post-content {
