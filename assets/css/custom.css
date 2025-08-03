@@ -165,37 +165,6 @@ header.site-header {
   will-change: opacity, transform;
 }
 
-.tools-row {
-  font-size: 1rem;
-  color: white; /* a nice DevOps blue */
-  margin-bottom: 2rem;
-  font-weight: 600;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  animation-delay: 0.7s;
-  will-change: opacity, transform;
-}
-
-.cta-button {
-  background-color: #ff9900;
-  color: white;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  animation: fadeInUp 1.8s ease forwards;
-}
-
-.cta-button:hover {
-  background-color: #e68900;
-}
-
 @keyframes fadeSlideIn {
   to {
     opacity: 1;
