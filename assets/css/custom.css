@@ -511,9 +511,8 @@ header.site-header {
 
 .alt-post-row {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: stretch; /* ensures equal height columns */
+  align-items: stretch;
   margin-bottom: 3rem;
   gap: 2rem;
   background: white;
@@ -521,7 +520,6 @@ header.site-header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  min-height: 240px; /* force consistent height */
 }
 
 .alt-post-row:hover {
@@ -535,12 +533,12 @@ header.site-header {
 
 .alt-post-image {
   flex: 1 1 45%;
+  max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-radius: 8px;
-  height: 100%; /* stretch image container */
 }
 
 .alt-post-image img {
@@ -556,7 +554,6 @@ header.site-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* optional for better spacing */
-  height: 100%;
 }
 
 .alt-post-date {
