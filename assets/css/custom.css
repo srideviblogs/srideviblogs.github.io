@@ -550,7 +550,7 @@ header.site-header {
   align-items: stretch;
   margin-bottom: 3rem;
   gap: 2rem;
-  background: radial-gradient(circle at center, #4a90e2, #0b1c3f);
+  background: radial-gradient(circle at center, #00bcd4, #003344);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
@@ -597,6 +597,7 @@ header.site-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* optional for better spacing */
+  color: white;
 }
 
 .alt-post-date {
@@ -612,7 +613,7 @@ header.site-header {
 }
 
 .alt-post-title a {
-  color: #007acc;
+  color: #a0e7f7;;
   text-decoration: none;
 }
 
@@ -622,7 +623,7 @@ header.site-header {
 
 .alt-post-excerpt {
   font-size: 1rem;
-  color: #333;
+  color: #a0e7f7;
   line-height: 1.6;
 }
 
@@ -630,12 +631,8 @@ header.site-header {
   display: inline-block;
   margin-top: 10px;
   font-weight: bold;
-  color: #007acc;
+  color: #a0e7f7;
   text-decoration: none;
-}
-
-.read-more:hover {
-  text-decoration: underline;
 }
 
 .post-tags {
@@ -653,9 +650,13 @@ header.site-header {
   text-decoration: none;
 }
 
-.tag:hover {
-  background-color: #005f99;
+.alt-post-title a:hover,
+.post-tags .tag:hover,
+.read-more:hover {
+  color: #e0f7fa;
+  text-decoration: underline;
 }
+
 
 @media (max-width: 768px) {
   .alt-post-row {
