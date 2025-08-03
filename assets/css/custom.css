@@ -112,7 +112,7 @@ header.site-header {
 /* welcome intro */
 
 .welcome-intro {
-  background: #007acc;
+  background: radial-gradient(circle at center, #6c5ce7, #2c2c54);
   color: white;
   text-align: center;
   padding: 3rem 1rem;
