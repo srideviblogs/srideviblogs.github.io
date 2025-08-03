@@ -556,6 +556,7 @@ header.site-header {
   padding: 3px; /* Border thickness */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-height: 280px;
+  color: white;
 }
 
 .alt-post-row:hover {
@@ -566,14 +567,6 @@ header.site-header {
 .alt-post-row.reverse {
   flex-direction: row-reverse;
 }
-
-.alt-post-row > .alt-post-content {
-  background-color: #161647; /* softer dark, closer to your hero's 1e1e2f but lighter */
-  border-radius: 9px;
-  padding: 1rem;
-  color: white;
-}
-
 
 .alt-post-image {
   flex: 1 1 45%;
