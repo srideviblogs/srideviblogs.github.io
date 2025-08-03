@@ -140,6 +140,15 @@ header.site-header {
   will-change: opacity, transform;
 }
 
+.mini-intro {
+  font-size: 1rem;
+  font-style: italic;
+  color: #666666;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
 .animate-paragraph {
   font-size: 1.3rem;
   color: white;
@@ -150,6 +159,33 @@ header.site-header {
   animation: fadeSlideIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation-delay: 0.7s;
   will-change: opacity, transform;
+}
+
+.tools-row {
+  font-size: 1rem;
+  color: #007acc; /* a nice DevOps blue */
+  margin-bottom: 2rem;
+  font-weight: 600;
+  animation: fadeInUp 1.6s ease forwards;
+}
+
+.cta-button {
+  background-color: #007acc;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  animation: fadeInUp 1.8s ease forwards;
+}
+
+.cta-button:hover {
+  background-color: #005fa3;
 }
 
 @keyframes fadeSlideIn {
