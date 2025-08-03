@@ -112,9 +112,8 @@ header.site-header {
 /* welcome intro */
 
 .welcome-intro {
-  background: #2c2c54;
-  background-image: radial-gradient(#6c5ce7 1px, transparent 1px);
-  background-size: 20px 20px;
+  background: rgba(44, 44, 84, 0.75);
+  backdrop-filter: blur(8px);
   color: white;
   text-align: center;
   padding: 3rem 1rem;
