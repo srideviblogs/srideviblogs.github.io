@@ -511,7 +511,7 @@ header.site-header {
 
 .alt-post-row {
   display: flex;
-  align-items: center;
+  align-items: stretch; /* 👈 Ensures both image and text match height */
   margin-bottom: 3rem;
   gap: 2rem;
   flex-wrap: wrap;
@@ -552,6 +552,10 @@ header.site-header {
 
 .alt-post-content {
   flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* optional for better spacing */
+  height: 100%;
 }
 
 .alt-post-date {
@@ -620,6 +624,7 @@ header.site-header {
   .alt-post-image,
   .alt-post-content {
     flex: 1 1 100%;
+    height: auto; /* Let content decide height on mobile */
   }
 
   .alt-post-title {
