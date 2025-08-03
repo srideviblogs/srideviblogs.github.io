@@ -156,6 +156,7 @@ header.site-header {
   font-size: 1.2rem;
   color: white;
   margin-top: 1rem;
+  font-weight: 700;
   margin-bottom: 0.5rem; /* NEW: reduce space after paragraph */
   opacity: 0;
   transform: translateY(20px);
