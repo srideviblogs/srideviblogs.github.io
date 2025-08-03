@@ -6,6 +6,7 @@ layout: default
   <h1 class="animate-heading">My DevOps Journey - Sridevi’s Hub</h1>
   <p class="mini-intro">Engineer. Blogger. Always learning.</p>
   <p class="animate-paragraph">Practical tutorials, real projects, and interview prep — all in one place.</p>
+  <p class="typing-line"><span id="typed-text"></span><span class="cursor">|</span></p>
 </section>
 
 
@@ -44,3 +45,45 @@ layout: default
     <a href="/blogs/">View All Posts</a>
   </div>
 </section>
+
+<script>
+  const phrases = [
+    "AWS. Azure. Kubernetes. ArgoCD. Docker. Terraform. Python.",
+    "Real DevOps. Real Projects.",
+    "From commit to deploy - step by step.",
+    "CI/CD pipelines in action.",
+    "Learn as I learn."
+  ];
+
+  let index = 0;
+  let charIndex = 0;
+  let typingSpeed = 50;
+  let deleting = false;
+
+  function typeEffect() {
+    const element = document.getElementById("typed-text");
+    if (!element) return;
+
+    const current = phrases[index];
+    if (!deleting) {
+      element.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(typeEffect, 1500);
+        return;
+      }
+    } else {
+      element.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        index = (index + 1) % phrases.length;
+      }
+    }
+    setTimeout(typeEffect, deleting ? 40 : typingSpeed);
+  }
+
+  document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
