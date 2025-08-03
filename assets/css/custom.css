@@ -112,13 +112,9 @@ header.site-header {
 /* welcome intro */
 
 .welcome-intro {
-  background-image: repeating-linear-gradient(
-  45deg,
-  #6c5ce7,
-  #6c5ce7 10px,
-  #5b4dcf 10px,
-  #5b4dcf 20px
-  );
+  background: #2c2c54;
+  background-image: radial-gradient(#6c5ce7 1px, transparent 1px);
+  background-size: 20px 20px;
   color: white;
   text-align: center;
   padding: 3rem 1rem;
