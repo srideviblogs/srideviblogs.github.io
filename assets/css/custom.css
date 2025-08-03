@@ -550,9 +550,9 @@ header.site-header {
   align-items: stretch;
   margin-bottom: 3rem;
   gap: 2rem;
-  background: radial-gradient(circle at center, #007acc, #1e1e2f);
+  background: radial-gradient(circle at center, #4a90e2, #0b1c3f);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-height: 280px;
