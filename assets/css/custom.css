@@ -550,10 +550,10 @@ header.site-header {
   align-items: stretch;
   margin-bottom: 3rem;
   gap: 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
+  background: radial-gradient(circle at center, #007acc, #1e1e2f);
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 122, 204, 0.3);
+  padding: 3px; /* Border thickness */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-height: 280px;
 }
@@ -567,11 +567,22 @@ header.site-header {
   flex-direction: row-reverse;
 }
 
+/* Inner content with solid background to create the border effect */
+.alt-post-row > .alt-post-content,
+.alt-post-row > .alt-post-image {
+  background-color: #1e1e2f;
+  border-radius: 9px;
+  padding: 1rem;
+  color: white;
+}
+
 .alt-post-image {
   flex: 1 1 45%;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 9px;
+  max-width: 150px;
+  display: block;
 }
 
 .alt-post-image::before {
