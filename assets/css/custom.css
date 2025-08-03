@@ -607,6 +607,7 @@ header.site-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* optional for better spacing */
+  color: white;
 }
 
 .alt-post-date {
@@ -634,6 +635,7 @@ header.site-header {
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
+  color: white;
 }
 
 .read-more {
