@@ -511,7 +511,7 @@ header.site-header {
 
 .alt-post-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: stretch;
   margin-bottom: 3rem;
   gap: 2rem;
@@ -520,6 +520,7 @@ header.site-header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 280px;
 }
 
 .alt-post-row:hover {
@@ -533,20 +534,26 @@ header.site-header {
 
 .alt-post-image {
   flex: 1 1 45%;
-  max-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   overflow: hidden;
   border-radius: 8px;
 }
 
+.alt-post-image::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Forces square box if no height from content */
+}
+
 .alt-post-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
   display: block;
+  border-radius: 8px;
 }
 
 .alt-post-content {
