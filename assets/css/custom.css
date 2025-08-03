@@ -112,8 +112,7 @@ header.site-header {
 /* welcome intro */
 
 .welcome-intro {
-  background: rgba(0, 90, 170, 0.85);
-  backdrop-filter: blur(8px);
+  background: radial-gradient(circle at center, #007acc, #1e1e2f);
   color: white;
   text-align: center;
   padding: 3rem 1rem;
@@ -124,8 +123,6 @@ header.site-header {
   margin-bottom: 0; /* Added to reduce space before Latest Posts */
   margin-top: 2rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* optional for depth */
-  border: 1px solid rgba(0, 90, 170, 0.3);   /* subtle glass edge */
 }
 
 .animate-heading {
@@ -141,7 +138,7 @@ header.site-header {
 }
 
 .animate-paragraph {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: white;
   margin-top: 1rem;
   margin-bottom: 0.5rem; /* NEW: reduce space after paragraph */
