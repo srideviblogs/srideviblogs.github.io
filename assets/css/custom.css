@@ -568,7 +568,7 @@ header.site-header {
 }
 
 .alt-post-row > .alt-post-content {
-  background-color: #2a2a44; /* softer dark, closer to your hero's 1e1e2f but lighter */
+  background-color: #161647; /* softer dark, closer to your hero's 1e1e2f but lighter */
   border-radius: 9px;
   padding: 1rem;
   color: white;
@@ -579,9 +579,7 @@ header.site-header {
   flex: 1 1 45%;
   position: relative;
   overflow: hidden;
-  border-radius: 9px;
-  max-width: 150px;
-  display: block;
+  border-radius: 8px;
 }
 
 .alt-post-image::before {
