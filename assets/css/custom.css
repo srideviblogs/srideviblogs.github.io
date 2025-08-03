@@ -165,6 +165,25 @@ header.site-header {
   will-change: opacity, transform;
 }
 
+.typing-line {
+  font-size: 1.1rem;
+  color: #007acc;
+  font-weight: 600;
+  min-height: 1.4em; /* prevent layout shift */
+  animation: fadeSlideIn 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+  color: #007acc;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 @keyframes fadeSlideIn {
   to {
     opacity: 1;
