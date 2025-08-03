@@ -567,14 +567,13 @@ header.site-header {
   flex-direction: row-reverse;
 }
 
-/* Inner content with solid background to create the border effect */
-.alt-post-row > .alt-post-content,
-.alt-post-row > .alt-post-image {
-  background-color: #1e1e2f;
+.alt-post-row > .alt-post-content {
+  background-color: #2a2a44; /* softer dark, closer to your hero's 1e1e2f but lighter */
   border-radius: 9px;
   padding: 1rem;
   color: white;
 }
+
 
 .alt-post-image {
   flex: 1 1 45%;
@@ -599,7 +598,8 @@ header.site-header {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
+  border-radius: 9px;
+  max-width: 250px; /* increased from 150px *
 }
 
 .alt-post-content {
