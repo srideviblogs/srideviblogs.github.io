@@ -549,7 +549,7 @@ header.site-header {
   flex-wrap: nowrap;
   align-items: stretch;
   margin-bottom: 3rem;
-  gap: 2rem;
+  gap: 1rem;
   background: radial-gradient(circle at center, #007acc, #1e1e2f);
   border-radius: 14px;
   box-shadow: 0 4px 15px rgba(0, 122, 204, 0.3);
