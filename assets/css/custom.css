@@ -533,20 +533,21 @@ header.site-header {
 
 .alt-post-image {
   flex: 1 1 45%;
-  height: 250px;         /* Fixed height */
-  overflow: hidden;
+  height: 220px;              /* Fixed height for uniformity */
+  overflow: hidden;           /* Hide overflowed image parts */
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .alt-post-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* Ensures image fills area without distortion */
+  width: 100% !important;     /* Ensure full width */
+  height: 100% !important;    /* Ensure full height */
+  object-fit: cover !important; /* Crop to fill */
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .alt-post-content {
