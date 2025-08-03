@@ -115,9 +115,9 @@ header.site-header {
   background: radial-gradient(circle at center, #007acc, #1e1e2f);
   color: white;
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
   border-radius: 12px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 0; /* Added to reduce space before Latest Posts */
