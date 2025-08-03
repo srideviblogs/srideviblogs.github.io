@@ -112,7 +112,7 @@ header.site-header {
 /* welcome intro */
 
 .welcome-intro {
-  background: rgba(44, 44, 84, 0.75);
+  background: rgba(0, 122, 204, 0.75);
   backdrop-filter: blur(8px);
   color: white;
   text-align: center;
@@ -124,6 +124,8 @@ header.site-header {
   margin-bottom: 0; /* Added to reduce space before Latest Posts */
   margin-top: 2rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* optional for depth */
+  border: 1px solid rgba(0, 122, 204, 0.3);   /* subtle glass edge */
 }
 
 .animate-heading {
