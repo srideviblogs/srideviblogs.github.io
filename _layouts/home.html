@@ -83,7 +83,23 @@ layout: default
     }
     setTimeout(typeEffect, deleting ? 40 : typingSpeed);
   }
+  // Header scroll class toggle
+  function handleScroll() {
+    const header = document.querySelector('header.site-header');
+    if (!header) return;
 
-  document.addEventListener("DOMContentLoaded", typeEffect);
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+
+  // Run both after DOM is ready
+  document.addEventListener("DOMContentLoaded", () => {
+    typeEffect();
+    window.addEventListener("scroll", handleScroll);
+  });
+  
 </script>
 
