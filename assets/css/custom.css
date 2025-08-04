@@ -55,14 +55,15 @@ a:hover {
 /* Header */
 
 header.site-header {
-  background: linear-gradient(to right, #007acc, #1e1e2f);
-  color: white;
-  padding: 0.75rem 0;
-  margin-bottom: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+header.site-header.scrolled {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .site-header .container {
