@@ -5,7 +5,6 @@ permalink: /about/
 ---
 
 <section class="about-intro">
-  <h1>About Me</h1>
 
   <h2>Hey there, I’m Sridevi</h2>
   <p>Hello! I’m Sridevi Velpula, a DevOps Engineer who’s still learning, still figuring things out, and always curious about how things work behind the scenes.</p>
