@@ -55,12 +55,14 @@ a:hover {
 /* Header */
 
 header.site-header {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #2a2a40;
   margin-bottom: 2rem;
-  padding: 0.5rem 0;
-  background: #f5f7fa;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1rem;
+  background: radial-gradient(circle at center, #1f1f2e, #0e0e16);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .site-header .container {
