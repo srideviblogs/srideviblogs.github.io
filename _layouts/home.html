@@ -94,12 +94,8 @@ layout: default
       header.classList.remove('scrolled');
     }
   }
-
-  // Run both after DOM is ready
-  document.addEventListener("DOMContentLoaded", () => {
-    typeEffect();
-    window.addEventListener("scroll", handleScroll);
-  });
+  
+  document.addEventListener("DOMContentLoaded", typeEffect);
   
 </script>
 
