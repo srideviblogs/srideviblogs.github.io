@@ -55,15 +55,12 @@ a:hover {
 /* Header */
 
 header.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-header.site-header.scrolled {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+  background: #f5f7fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
 }
 
 .site-header .container {
