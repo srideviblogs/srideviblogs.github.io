@@ -55,12 +55,47 @@ a:hover {
 /* Header */
 
 header.site-header {
-  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
   margin-bottom: 2rem;
-  padding: 0.5rem 0;
-  background: #f5f7fa;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
+  background: linear-gradient(135deg, #e0f2ff, #f5f7fa);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Optional: Add branding/logo on left and nav or social links on right */
+.site-header .branding {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007acc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-header .branding span {
+  background: #007acc;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  margin-right: 0.4rem;
+}
+
+.site-header nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-header nav a:hover {
+  color: #007acc;
 }
 
 .site-header .container {
@@ -87,15 +122,6 @@ header.site-header {
   z-index: 1000;
 }
 
-.site-nav a {
-  font-size: 1rem;
-  color: #333;
-  padding: 0.5rem 1rem;
-}
-
-.site-nav a:hover {
-  color: #007acc;
-}
 
 .menu-toggle {
   display: none;
