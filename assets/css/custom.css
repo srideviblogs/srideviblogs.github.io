@@ -551,8 +551,9 @@ header.site-header {
   margin-bottom: 3rem;
   gap: 2rem;
   background-color: #ffffff;
-  border-left: 4px solid #007acc; /* blue accent */
-  border-radius: 12px;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, #007acc, #1e1e2f) 1;
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
