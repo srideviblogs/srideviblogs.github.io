@@ -556,13 +556,16 @@ header.site-header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   color: #1e1e2f;
   padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-height: 280px;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .alt-post-row:hover {
   transform: translateY(-4px);              /* Subtle lift on hover */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Deeper shadow on hover */
+  border-left-color: #005a99;
 }
 
 .alt-post-row.reverse {
