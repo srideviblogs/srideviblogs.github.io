@@ -869,3 +869,40 @@ code {
   font-family: monospace;
   font-size: 0.95em;
 }
+
+.grid-blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.grid-blog-item {
+  border-left: 4px solid #007acc;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.grid-blog-item:hover {
+  transform: translateY(-4px);
+}
+
+.grid-blog-item .blog-title {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.grid-blog-item .blog-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.grid-blog-item .blog-excerpt {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
