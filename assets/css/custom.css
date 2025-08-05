@@ -538,29 +538,34 @@ header.site-header {
   display: inline-block;            /* ADD this */
 }
 
+/* Container for all posts — center with max width, full width below that */
 .alt-posts-section {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
 
-  /* Masonry layout */
+  /* Masonry columns */
   column-count: 2;
   column-gap: 2rem;
+
+  /* Make sure it stretches full width up to max-width */
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Responsive: single column on small screens */
 @media (max-width: 768px) {
   .alt-posts-section {
     column-count: 1;
   }
 }
 
+/* Each post card — must be inline-block and full width of column */
 .alt-post-card {
-  display: inline-block;
-  width: 100%;
+  display: inline-block;      /* essential for CSS columns */
+  width: 100%;               /* fill the column width */
   margin-bottom: 2rem;
-
-  /* Avoid breaking inside columns */
-  break-inside: avoid;
+  break-inside: avoid;       /* avoid breaking inside column */
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
 
@@ -570,6 +575,7 @@ header.site-header {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   color: #1e1e2f;
   padding: 1.5rem;
+  box-sizing: border-box;     /* include padding in width */
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -579,22 +585,26 @@ header.site-header {
   border-left-color: #005a99;
 }
 
+/* Image container */
 .alt-post-image {
+  position: relative;
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 1rem;
-  width: 100%;
+  width: 100%;               /* full width */
+  height: auto;              /* adapt height */
 }
 
+/* Image itself */
 .alt-post-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  position: static; /* important: NOT absolute */
 }
 
+/* Date */
 .alt-post-date {
   font-size: 0.9rem;
   color: #666;
@@ -602,6 +612,7 @@ header.site-header {
   font-style: italic;
 }
 
+/* Title */
 .alt-post-title {
   font-size: 1.4rem;
   margin: 0.2rem 0 0.8rem;
@@ -616,12 +627,14 @@ header.site-header {
   text-decoration: underline;
 }
 
+/* Excerpt */
 .alt-post-excerpt {
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
 }
 
+/* Read More link */
 .read-more {
   display: inline-block;
   margin-top: 10px;
@@ -634,6 +647,7 @@ header.site-header {
   text-decoration: underline;
 }
 
+/* Post tags */
 .post-tags {
   margin-top: 10px;
 }
