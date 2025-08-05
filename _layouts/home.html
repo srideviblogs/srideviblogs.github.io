@@ -15,7 +15,7 @@ layout: default
   <h2 class="animate-subheading">Latest Posts</h2>
 
   {% for post in site.posts limit:6 %}
-    <div class="alt-post-row">
+    <div class="alt-post-card">
       {% if post.image %}
         <div class="alt-post-image">
           <a href="{{ post.url }}">
