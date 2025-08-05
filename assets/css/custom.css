@@ -768,55 +768,6 @@ header.site-header {
   font-family: inherit;
 }
 
-.simple-blog-list {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.simple-blog-item {
-  background-color: #ffffff; /* Matches light nav/footer */
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.simple-blog-item:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  transform: translateY(-3px);
-}
-
-.blog-meta {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 5px;
-}
-
-.blog-title {
-  font-size: 22px;
-  margin: 5px 0 10px 0;
-}
-
-.blog-title a {
-  color: #007acc;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.blog-title a:hover {
-  color: #005f99;
-  text-decoration: underline;
-}
-
-.blog-excerpt {
-  font-size: 16px;
-  color: #333;
-  line-height: 1.6;
-}
-
 .social-badges {
   display: flex;
   flex-wrap: wrap;
@@ -870,39 +821,54 @@ code {
   font-size: 0.95em;
 }
 
-.grid-blog-list {
+.simple-blog-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.grid-blog-item {
-  border-left: 4px solid #007acc;
-  padding: 1rem 1.5rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+.simple-blog-item {
+  background-color: #ffffff; /* Matches light nav/footer */
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #007acc; /* Highlight border like homepage */
   border-radius: 8px;
-  transition: transform 0.2s ease;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.grid-blog-item:hover {
-  transform: translateY(-4px);
+.simple-blog-item:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
 }
 
-.grid-blog-item .blog-title {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
+.blog-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
 }
 
-.grid-blog-item .blog-meta {
-  font-size: 0.9rem;
-  color: #666;
+.blog-title {
+  font-size: 22px;
+  margin: 5px 0 10px 0;
 }
 
-.grid-blog-item .blog-excerpt {
-  font-size: 1rem;
-  line-height: 1.6;
+.blog-title a {
+  color: #007acc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.blog-title a:hover {
+  color: #005f99;
+  text-decoration: underline;
+}
+
+.blog-excerpt {
+  font-size: 16px;
   color: #333;
+  line-height: 1.6;
 }
-
