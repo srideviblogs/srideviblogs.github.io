@@ -822,10 +822,7 @@ code {
 }
 
 .simple-blog-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -833,16 +830,18 @@ code {
 .simple-blog-item {
   background-color: #ffffff; /* Matches light nav/footer */
   border: 1px solid #e0e0e0;
-  border-left: 4px solid #007acc; /* Highlight border like homepage */
+  border-left: 4px solid #007acc; /* Added blue left border */
   border-radius: 8px;
   padding: 20px;
+  margin-bottom: 30px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.04);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-left-color 0.3s ease;
 }
 
 .simple-blog-item:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   transform: translateY(-3px);
+  border-left-color: #005f99; /* Darker blue on hover */
 }
 
 .blog-meta {
