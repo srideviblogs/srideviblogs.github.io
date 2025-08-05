@@ -13,7 +13,7 @@ permalink: /about/
   <p>When I first stepped into DevOps, I honestly didn’t know much. Everything felt new and a bit overwhelming pipelines, cloud, containers, YAML everywhere! I started with certifications based on what my projects needed. Slowly, with each new task, I got a chance to explore different tools and concepts: Azure, AWS, Kubernetes, Docker, Jenkins, Terraform, ArgoCD, Prometheus, Grafana, and more. That’s when things really started clicking.</p>
 
   <h2>Learning by Doing</h2>
-  <p>Most of what I know today comes from jumping in, trying to figure things out, running into issues, and spending hours troubleshooting until I finally got something to work. It wasn’t always easy, sometimes frustrating, but the process of working through real problems, even when it took time, helped me build confidence and truly understand what’s actually happening in the background. Those “finally got it!” moments made all the effort worth it.</p>
+  <p>Most of what I know today comes from jumping in, hitting roadblocks, running into issues, and spending hours troubleshooting until I finally got something to work. It wasn’t always easy, sometimes frustrating, but the process of working through real problems, even when it took time, helped me build confidence and truly understand what’s actually happening in the background. Those “finally got it!” moments made all the effort worth it.</p>
 
   <h2>Why I Started This Blog</h2>
   <p>I created this blog to document what I have learned in a practical, real way. While I write mostly about my hands-on experiences and real scenarios, I also include some theory to help explain the concepts better. This space is for anyone who feels stuck or wants a simpler, clearer way to learn DevOps.</p>
