@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }}
+    {% else %}
+      {{ page.title }} | {{ site.title }}
+    {% endif %}
+  </title>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4E4BEQPL1"></script>
@@ -15,9 +21,15 @@
   </script>
 
   <!-- Open Graph Meta Tags for social sharing (fixes LinkedIn image issue) -->
-  <meta property="og:title" content="Sridevi Blogs" />
-  <meta property="og:description" content="A DevOps blog focused on real-world learning, practical tutorials, and engineering insights - by Sridevi Velpula." />
-  <meta property="og:url" content="https://srideviblogs.github.io" />
+  <meta property="og:title" content="{% if page.title == 'Home' %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}" />
+  <meta property="og:description" content="{% if page.url == '/' %}
+    A DevOps blog focused on real-world learning, practical tutorials, and engineering insights - by Sridevi Velpula.
+  {% elsif page.excerpt %}
+    {{ page.excerpt | strip_html | strip_newlines }}
+  {% else %}
+    A DevOps blog focused on real-world learning, practical tutorials, and engineering insights - by Sridevi Velpula.
+  {% endif %}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:image" content="https://srideviblogs.github.io/assets/images/social-preview.png" />
 
   {% include head.html %}
