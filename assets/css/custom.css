@@ -543,6 +543,7 @@ header.site-header {
   margin: 0 auto;
   padding: 2rem 1rem;
 
+  /* Masonry layout */
   column-count: 2;
   column-gap: 2rem;
 }
@@ -558,8 +559,10 @@ header.site-header {
   width: 100%;
   margin-bottom: 2rem;
 
+  /* Avoid breaking inside columns */
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
 
   background-color: #fff;
   border-left: 4px solid #007acc;
@@ -589,7 +592,7 @@ header.site-header {
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  position: static;
+  position: static; /* important: NOT absolute */
 }
 
 .alt-post-date {
