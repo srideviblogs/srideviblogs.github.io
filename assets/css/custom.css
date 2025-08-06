@@ -118,8 +118,7 @@ header.site-header {
   background: radial-gradient(circle at center, #007acc, #1e1e2f);
   color: white;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 24px;
+  padding: 4rem 24px;
   border-radius: 12px;
   width: 100%;
   margin: 2rem 0;
@@ -266,8 +265,7 @@ header.site-header {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 24px;
+  padding: 0 24px;
   gap: 40px;
   box-sizing: border-box;
 }
@@ -276,8 +274,6 @@ header.site-header {
 .main-content {
   width: 100%;
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 24px;
 }
 
 /* Right sidebar */
@@ -551,8 +547,7 @@ header.site-header {
 .alt-posts-section {
   width: 100%;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 24px;
+  padding: 2rem 24px;
 
   /* Masonry columns */
   column-count: 2;
@@ -824,8 +819,7 @@ code {
 .simple-blog-list {
   width: 100%;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 24px;
+  padding: 20px 24px;
   box-sizing: border-box;
 }
 
@@ -873,14 +867,4 @@ code {
   font-size: 16px;
   color: #333;
   line-height: 1.6;
-}
-
-@media (min-width: 768px) {
-  .layout-container,
-  .welcome-intro,
-  .alt-posts-section,
-  .simple-blog-list {
-    padding-left: 20px;
-    padding-right: 24px;
-  }
 }
