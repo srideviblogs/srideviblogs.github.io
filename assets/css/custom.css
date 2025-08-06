@@ -17,6 +17,10 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 /* Body styling */
 body {
   font-family: 'Inter', sans-serif;
@@ -25,9 +29,8 @@ body {
   font-weight: 400;
   color: #333;
   background-color: #f9f9f9;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 20px;
+  margin: 0;
+  padding: 20px 24px; /* ✅ adds space left/right */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -115,16 +118,17 @@ header.site-header {
   background: radial-gradient(circle at center, #007acc, #1e1e2f);
   color: white;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 4rem 24px;
   border-radius: 12px;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 2rem 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 0; /* Added to reduce space before Latest Posts */
   margin-top: 2rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .animate-heading {
@@ -255,20 +259,21 @@ header.site-header {
 /* ===== New Layout Styles ===== */
 
 /* Layout wrapper for main content and sidebar */
+
 .layout-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+  padding: 0 24px;
   gap: 40px;
+  box-sizing: border-box;
 }
 
 /* Main content */
 .main-content {
-  flex: 1;
-  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Right sidebar */
@@ -540,9 +545,9 @@ header.site-header {
 
 /* Container for all posts — center with max width, full width below that */
 .alt-posts-section {
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 24px;
 
   /* Masonry columns */
   column-count: 2;
@@ -812,9 +817,10 @@ code {
 }
 
 .simple-blog-list {
-  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 24px;
+  box-sizing: border-box;
 }
 
 .simple-blog-item {
