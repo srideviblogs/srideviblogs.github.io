@@ -60,28 +60,22 @@ a:hover {
 
 /* FULL-WIDTH HEADER FIX */
 header.site-header {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  width: 100%;
   background: #f5f7fa;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
   padding: 0.5rem 0;
-  border-radius: 0; /* remove if unnecessary */
-  box-sizing: border-box;
-  position: relative;
-  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* Container inside header stays centered */
 .site-header .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 24px;
+  margin: 0 auto; /* centers the container */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 10px 24px;
   box-sizing: border-box;
 }
 
