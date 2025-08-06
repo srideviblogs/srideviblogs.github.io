@@ -58,29 +58,28 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header */
-/* Make header background stretch full width */
+/* FULL-WIDTH HEADER FIX */
 header.site-header {
-  width: 100vw;               /* full viewport width */
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background: #f5f7fa;        /* same background color */
-  border-bottom: 1px solid #eee;
+  width: 100vw;
+  background: #f5f7fa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 0;           /* remove border-radius for full width */
-  padding: 0.5rem 0;          /* vertical padding only */
-  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+  padding: 0.5rem 0;
   z-index: 10;
+  box-sizing: border-box;
 }
 
-/* Container inside header centers and limits content width with equal left/right padding */
+/* Container inside header stays centered */
 .site-header .container {
-  max-width: 1200px;          /* same as your site max width */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 24px;         /* equal left and right padding */
+  padding: 10px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
