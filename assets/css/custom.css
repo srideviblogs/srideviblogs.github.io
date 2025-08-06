@@ -59,30 +59,28 @@ a:hover {
 }
 
 header.site-header {
-  width: 100vw; /* full viewport width */
-  margin: 0;
-  padding: 0;
+  position: relative;
+  margin-left: -40px;   /* negative margin equals body's left padding */
+  margin-right: -12px;  /* negative margin equals body's right padding */
+  padding: 0.5rem 24px; /* internal padding */
+  width: calc(100% + 52px); /* 40 + 12 = 52px extra width to cover negative margins */
   background: #f5f7fa;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid #eee;
   border-radius: 0;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
 }
 
-/* Container inside header: equal left-right padding */
 .site-header .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.75rem 24px; /* equal padding left/right */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 0;
   box-sizing: border-box;
 }
 
