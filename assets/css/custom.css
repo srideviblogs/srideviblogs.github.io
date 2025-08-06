@@ -58,29 +58,33 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Stretch header full width */
 header.site-header {
-  width: 100vw; /* Full viewport width */
+  width: 100vw; /* full viewport width */
   margin: 0;
   padding: 0;
   background: #f5f7fa;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   border-bottom: 1px solid #eee;
-  border-radius: 0; /* Remove corner rounding */
+  border-radius: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
 }
 
-/* Inner container aligns content inside header */
+/* Container inside header: equal left-right padding */
 .site-header .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 24px; /* equal padding left/right */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
-
 
 .site-title {
   font-family: 'Fira Sans', sans-serif;
