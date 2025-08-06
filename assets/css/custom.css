@@ -58,23 +58,28 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Stretch the header and container to full width */
+/* Make header full-width */
 header.site-header {
   width: 100%;
-  background: #f5f7fa;
-  border-bottom: 1px solid #eee;
   margin-bottom: 2rem;
-  padding: 0.5rem 0;
+  padding: 0; /* Remove vertical padding */
+  background: #f5f7fa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 0; /* Ensure no curve if full-width */
+  border-bottom: 1px solid #eee;
+  border-radius: 0; /* Remove rounded corners */
 }
 
-/* Override the .container inside header only */
+/* Make .container inside header stretch edge to edge with equal padding */
 .site-header .container {
-  max-width: 100% !important;
   width: 100%;
-  padding: 0 40px; /* Equal padding left & right */
+  max-width: 100%;
+  padding: 0 40px;
   box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .site-title {
