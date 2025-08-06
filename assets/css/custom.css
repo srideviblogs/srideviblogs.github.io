@@ -268,7 +268,8 @@ header.site-header {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  padding: 0 24px;
+  padding-left: 40px;  /* More space on the left */
+  padding-right: 16px; /* Less space on the right */
   gap: 40px;
   box-sizing: border-box;
 }
