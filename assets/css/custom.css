@@ -60,19 +60,17 @@ a:hover {
 
 /* FULL-WIDTH HEADER FIX */
 header.site-header {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   background: #f5f7fa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid #eee;
-  border-radius: 0;
   padding: 0.5rem 0;
-  z-index: 10;
+  border-radius: 0; /* remove if unnecessary */
   box-sizing: border-box;
+  position: relative;
+  z-index: 10;
 }
 
 /* Container inside header stays centered */
