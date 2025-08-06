@@ -61,21 +61,23 @@ a:hover {
 /* FULL-WIDTH HEADER FIX */
 header.site-header {
   width: 100%;
-  background: #f5f7fa;
   border-bottom: 1px solid #eee;
   margin-bottom: 2rem;
   padding: 0.5rem 0;
+  background: #f5f7fa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 0; /* Remove if stretching full width */
 }
 
-/* Container inside header stays centered */
+/* Remove container constraint inside the header */
 .site-header .container {
-  max-width: 1200px;
-  margin: 0 auto; /* centers the container */
+  max-width: none;
+  width: 100%;
+  padding: 10px 40px; /* Balanced left-right padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 24px;
+  flex-wrap: wrap;
   box-sizing: border-box;
 }
 
