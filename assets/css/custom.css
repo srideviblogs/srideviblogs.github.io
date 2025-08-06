@@ -70,11 +70,19 @@ header.site-header {
 }
 
 .site-header .container {
-  padding: 10px 16px 10px 60px; /* top right bottom left */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.site-header .container,
+.site-footer .container {
+  max-width: none;
+  margin: 0;
+  padding-left: 60px;
+  padding-right: 16px;
   box-sizing: border-box;
 }
 
