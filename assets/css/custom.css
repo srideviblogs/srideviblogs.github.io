@@ -67,6 +67,7 @@ header.site-header {
   background: #f5f7fa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
+  padding: 0.5rem 40px;
 }
 
 .site-header .container {
@@ -75,15 +76,7 @@ header.site-header {
   align-items: center;
   flex-wrap: wrap;
   box-sizing: border-box;
-}
-
-.site-header .container,
-.site-footer .container {
-  max-width: none;
-  margin: 0;
-  padding-left: 60px;
-  padding-right: 16px;
-  box-sizing: border-box;
+  padding: 10px 0;
 }
 
 .site-title {
