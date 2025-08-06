@@ -30,8 +30,7 @@ body {
   color: #333;
   background-color: #f9f9f9;
   margin: 0;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 20px 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -119,7 +118,7 @@ header.site-header {
   background: radial-gradient(circle at center, #007acc, #1e1e2f);
   color: white;
   text-align: center;
-  padding-left: 24px;
+  padding-left: 20px;
   padding-right: 24px;
   border-radius: 12px;
   width: 100%;
@@ -267,7 +266,7 @@ header.site-header {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  padding-left: 24px;
+  padding-left: 20px;
   padding-right: 24px;
   gap: 40px;
   box-sizing: border-box;
@@ -277,6 +276,8 @@ header.site-header {
 .main-content {
   width: 100%;
   box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 24px;
 }
 
 /* Right sidebar */
@@ -550,7 +551,7 @@ header.site-header {
 .alt-posts-section {
   width: 100%;
   margin: 0 auto;
-  padding-left: 24px;
+  padding-left: 20px;
   padding-right: 24px;
 
   /* Masonry columns */
@@ -823,7 +824,7 @@ code {
 .simple-blog-list {
   width: 100%;
   margin: 0 auto;
-  padding-left: 24px;
+  padding-left: 20px;
   padding-right: 24px;
   box-sizing: border-box;
 }
@@ -879,7 +880,7 @@ code {
   .welcome-intro,
   .alt-posts-section,
   .simple-blog-list {
-    padding-left: 24px;
+    padding-left: 20px;
     padding-right: 24px;
   }
 }
