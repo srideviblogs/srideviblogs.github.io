@@ -551,7 +551,7 @@ header.site-header {
 .alt-posts-section {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 24px;
+  padding: 2rem 16px 2rem 60px;
 
   /* Masonry columns */
   column-count: 2;
@@ -823,7 +823,7 @@ code {
 .simple-blog-list {
   width: 100%;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 20px 16px 20px 60px;
   box-sizing: border-box;
 }
 
