@@ -61,25 +61,20 @@ a:hover {
 /* Header */
 
 header.site-header {
-  width: 100%;
-  background: #f5f7fa;
   border-bottom: 1px solid #eee;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  border-radius: 0; /* usually full-width headers have no border radius */
+  margin-bottom: 2rem;
   padding: 0.5rem 0;
-  box-sizing: border-box;
+  background: #f5f7fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
 }
 
-/* Add a container inside header to constrain content width and center */
 .site-header .container {
-  max-width: 1200px;   /* or whatever your main content width is */
-  margin: 0 auto;      /* center horizontally */
-  padding: 10px 20px;  /* equal left and right padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  box-sizing: border-box;
+  padding: 10px 20px;
 }
 
 .site-title {
