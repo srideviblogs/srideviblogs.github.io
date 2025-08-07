@@ -559,147 +559,133 @@ header.site-header {
   display: inline-block;            /* ADD this */
 }
 
- 
+ /* Container for all posts — center with max width, full width below that */
 .alt-posts-section {
-  max-width: 900px;          /* Reduced from 1100px to 900px */
-  margin: 2rem auto;         /* Some vertical margin */
-  padding: 1.5rem 1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 16px 2rem 60px;
+
+  /* Masonry columns */
+  column-count: 2;
+  column-gap: 2rem;
+
+  /* Make sure it stretches full width up to max-width */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.alt-post-row {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;       /* Align image & text vertically centered */
-  margin-bottom: 2rem;       /* Slightly less margin */
-  gap: 1.5rem;               /* Reduced gap */
+/* Responsive: single column on small screens */
+@media (max-width: 768px) {
+  .alt-posts-section {
+    column-count: 1;
+  }
+}
+
+/* Each post card — must be inline-block and full width of column */
+.alt-post-card {
+  display: inline-block;      /* essential for CSS columns */
+  width: 100%;               /* fill the column width */
+  margin-bottom: 1.5rem;
+  break-inside: avoid;       /* avoid breaking inside column */
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
   background-color: #fff;
   border-left: 4px solid #007acc;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   color: #1e1e2f;
-  padding: 1rem 1.5rem;      /* Adjusted padding */
-  min-height: 200px;         /* Reduced from 280px */
-  transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+  padding: 1rem 1.2rem; /* reduced padding */
+  box-sizing: border-box;     /* include padding in width */
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 
-.alt-post-row:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+.alt-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
   border-left-color: #005a99;
 }
 
+/* Image container */
 .alt-post-image {
-  flex: 0 0 35%;             /* Fixed width at 35% */
-  max-width: 35%;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  height: 160px;             /* Fixed height */
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  width: 100%;               /* full width */
+  height: auto;              /* adapt height */
 }
 
-.alt-post-image::before {
-  content: "";
-  display: block;
-  padding-top: 56.25%;       /* 16:9 aspect ratio for nicer images */
-}
-
+/* Image itself */
 .alt-post-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 
-.alt-post-content {
-  flex: 1 1 60%;             /* Use remaining width */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 160px;             /* Match image height */
-  padding-right: 10px;       /* Small right padding */
-}
-
+/* Date */
 .alt-post-date {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #666;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   font-style: italic;
 }
 
+/* Title */
 .alt-post-title {
-  font-size: 1.25rem;
-  margin: 0.1rem 0 0.5rem;
-  line-height: 1.2;
+  font-size: 1.4rem;
+  margin: 0.2rem 0 0.8rem;
 }
 
-.alt-post-excerpt {
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
-  flex-grow: 1;              /* Takes available vertical space */
-  overflow: hidden;          /* Prevent overflow */
-}
-
-.read-more {
-  font-weight: 600;
+.alt-post-title a {
   color: #007acc;
   text-decoration: none;
-  align-self: flex-start;
+}
+
+.alt-post-title a:hover {
+  text-decoration: underline;
+}
+
+/* Excerpt */
+.alt-post-excerpt {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Read More link */
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #007acc;
+  text-decoration: none;
 }
 
 .read-more:hover {
   text-decoration: underline;
 }
 
+/* Post tags */
 .post-tags {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .tag {
+  display: inline-block;
   background: #007acc;
-  color: #fff;
-  padding: 3px 8px;
-  font-size: 0.7rem;
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.75rem;
   border-radius: 4px;
-  margin-right: 5px;
+  margin-right: 6px;
   text-decoration: none;
 }
 
 .tag:hover {
   background-color: #005f99;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .alt-post-row {
-    flex-direction: column !important;
-    min-height: auto;
-  }
-
-  .alt-post-image {
-    width: 100%;
-    max-width: 100%;
-    height: 200px;
-  }
-
-  .alt-post-image::before {
-    padding-top: 56.25%;
-  }
-
-  .alt-post-content {
-    width: 100%;
-    height: auto;
-    padding-right: 0;
-    margin-top: 1rem;
-  }
-
-  .alt-post-title {
-    font-size: 1.3rem;
-  }
 }
 
 
