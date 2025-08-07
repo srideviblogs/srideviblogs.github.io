@@ -249,15 +249,20 @@ header.site-header {
 /* Footer */
 
 .site-footer {
-  margin-top: 3rem;
-  border-top: 1px solid #ddd;
-  padding: 1.5rem 0;
+  position: relative;
+  margin-left: -40px;   /* match body's left padding */
+  margin-right: -12px;  /* match body's right padding */
+  width: calc(100% + 52px); /* compensate for negative margins */
+  padding: 1.5rem 24px;
   font-size: 0.9rem;
   color: #777;
   text-align: center;
-  background: #f5f7fa; /* match header */
-  border-radius: 12px;
-} 
+  background: #f5f7fa;
+  border-top: 1px solid #ddd;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
   
 .reading-time {
   font-size: 0.9em;
