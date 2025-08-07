@@ -299,6 +299,7 @@ header.site-header {
 .main-content {
   width: 100%;
   box-sizing: border-box;
+  padding-left: 3rem;  /* Add more if needed */
 }
 
 /* Right sidebar */
