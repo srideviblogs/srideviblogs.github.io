@@ -302,6 +302,7 @@ header.site-header {
 .search-box {
   position: sticky;
   top: 80px;
+  padding: 0 12px;
 }
 
 /* Search input field */
