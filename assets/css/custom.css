@@ -89,6 +89,7 @@ header.site-header {
   font-weight: 700;
   font-size: 2rem;
   margin: 0;
+  margin-left: -8px;
 }
 
 .site-nav {
@@ -98,6 +99,7 @@ header.site-header {
   justify-content: flex-end;
   font-weight: 600;
   z-index: 1000;
+  margin-right: -8px; /* Optional tweak */
 }
 
 .site-nav a {
