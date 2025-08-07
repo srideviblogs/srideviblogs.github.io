@@ -559,72 +559,71 @@ header.site-header {
   display: inline-block;            /* ADD this */
 }
 
-/* Container for all posts — center with max width, full width below that */
-.alt-posts-section {
-  width: 100%;
+ .alt-posts-section {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem 16px 2rem 40px; /* ⬅️ reduced left padding */
-
-  /* Masonry columns */
-  column-count: 2;
-  column-gap: 1.5rem; /* ⬅️ slightly smaller gap between columns */
-  box-sizing: border-box;
+  padding: 2rem 1rem;
 }
 
-/* Responsive: single column on small screens */
-@media (max-width: 768px) {
-  .alt-posts-section {
-    column-count: 1;
-    padding-left: 20px; /* smaller padding for mobile */
-  }
-}
-
-/* Each post card — must be inline-block and full width of column */
-.alt-post-card {
-  display: inline-block;      /* essential for CSS columns */
-  width: 100%;               /* fill the column width */
-  break-inside: avoid;       /* avoid breaking inside column */
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-
-  margin-bottom: 1.5rem;     /* ⬅️ reduced vertical spacing */
-  padding: 1rem;             /* ⬅️ reduced internal spacing */
-  border-radius: 8px;        /* ⬅️ slightly smaller corners */
-
-  background-color: #fff;
-  border-left: 3px solid #007acc;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.alt-post-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  background-color: #ffffff;
+  border-left: 4px solid #007acc; /* blue accent */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   color: #1e1e2f;
-  box-sizing: border-box;     /* include padding in width */
-  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  padding: 1.5rem;
+  min-height: 280px;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.alt-post-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+.alt-post-row:hover {
+  transform: translateY(-4px);              /* Subtle lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Deeper shadow on hover */
   border-left-color: #005a99;
 }
 
-/* Image container */
+.alt-post-row.reverse {
+  flex-direction: row-reverse;
+}
+
 .alt-post-image {
+  flex: 1 1 45%;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  margin-bottom: 1rem;
-  width: 100%;               /* full width */
-  height: auto;              /* adapt height */
 }
 
-/* Image itself */
-.alt-post-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+.alt-post-image::before {
+  content: "";
   display: block;
+  padding-top: 100%; /* Forces square box if no height from content */
 }
 
-/* Date */
+.alt-post-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.alt-post-content {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* optional for better spacing */
+}
+
 .alt-post-date {
   font-size: 0.9rem;
   color: #666;
@@ -632,7 +631,6 @@ header.site-header {
   font-style: italic;
 }
 
-/* Title */
 .alt-post-title {
   font-size: 1.4rem;
   margin: 0.2rem 0 0.8rem;
@@ -647,14 +645,12 @@ header.site-header {
   text-decoration: underline;
 }
 
-/* Excerpt */
 .alt-post-excerpt {
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
 }
 
-/* Read More link */
 .read-more {
   display: inline-block;
   margin-top: 10px;
@@ -667,7 +663,6 @@ header.site-header {
   text-decoration: underline;
 }
 
-/* Post tags */
 .post-tags {
   margin-top: 10px;
 }
@@ -686,6 +681,23 @@ header.site-header {
 .tag:hover {
   background-color: #005f99;
 }
+
+@media (max-width: 768px) {
+  .alt-post-row {
+    flex-direction: column !important;
+  }
+
+  .alt-post-image,
+  .alt-post-content {
+    flex: 1 1 100%;
+    height: auto; /* Let content decide height on mobile */
+  }
+
+  .alt-post-title {
+    font-size: 1.3rem;
+  }
+}
+
 
 .view-all-box {
   display: inline-block;
