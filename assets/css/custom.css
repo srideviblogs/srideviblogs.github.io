@@ -128,12 +128,12 @@ header.site-header {
   background: radial-gradient(circle at center, #007acc, #1e1e2f);
   color: white;
   text-align: center;
-  padding: 4rem 24px;
+  padding: 6rem 24px;
   border-radius: 12px;
   width: 100%;
   margin: 2rem 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 0; /* Added to reduce space before Latest Posts */
+  margin-bottom: 3rem; /* space before Latest Posts */
   margin-top: 2rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   flex-direction: column;
