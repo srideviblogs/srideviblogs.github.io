@@ -20,6 +20,15 @@
   box-sizing: border-box;
 }
 
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
 /* Body styling */
 body {
   font-family: 'Inter', sans-serif;
@@ -309,6 +318,7 @@ header.site-header {
   width: 100%;
   box-sizing: border-box;
   padding-left: 3rem;  /* Add more if needed */
+  flex: 1;
 }
 
 /* Right sidebar */
