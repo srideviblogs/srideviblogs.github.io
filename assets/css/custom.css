@@ -288,6 +288,12 @@ header.site-header {
   box-sizing: border-box;
   flex-shrink: 0;
   margin-top: auto;  /* push footer to bottom */
+
+  /* Optional consistent height & vertical center */
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
   
@@ -319,7 +325,7 @@ header.site-header {
   width: 100%;
   box-sizing: border-box;
   padding-left: 3rem;  /* Add more if needed */
-  flex: 1;
+  flex-grow: 1;
 }
 
 /* Right sidebar */
