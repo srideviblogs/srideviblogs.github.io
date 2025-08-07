@@ -296,7 +296,7 @@ header.site-header {
 .sidebar-right {
   width: 250px;
   flex-shrink: 0;
-  padding-right: 24px; /* Add horizontal spacing */
+  padding-right: 32px; /* Add horizontal spacing */
   box-sizing: border-box; /* Ensures padding stays within the 250px width */
 }
 
