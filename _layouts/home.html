@@ -9,35 +9,37 @@ layout: default
   <p class="typing-line"><span id="typed-text"></span><span class="cursor">|</span></p>
 </section>
 
-<section class="timeline-section">
+
+<section class="alt-posts-section">
+ 
   <h2 class="animate-subheading">Latest Posts</h2>
 
-  <div class="timeline-container">
-    {% for post in site.posts limit:5 %}
-      <article class="timeline-item {% if forloop.index0 % 2 == 0 %}left{% else %}right{% endif %}">
-        <div class="timeline-content">
-          {% if post.image %}
-            <a href="{{ post.url }}">
-              <img src="{{ post.image }}" alt="{{ post.title }}" class="timeline-image" />
-            </a>
-          {% endif %}
-          <time class="timeline-date">{{ post.date | date: "%B %d, %Y" }}</time>
-          <h3 class="timeline-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p class="timeline-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-
-          {% if post.categories %}
-            <div class="post-tags">
-              {% for category in post.categories %}
-                <a href="/categories/{{ category | slugify }}/" class="tag">{{ category }}</a>
-              {% endfor %}
-            </div>
-          {% endif %}
-
-          <a class="read-more" href="{{ post.url }}">Read more →</a>
+  {% for post in site.posts limit:5 %}
+    <div class="alt-post-card">
+      {% if post.image %}
+        <div class="alt-post-image">
+          <a href="{{ post.url }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+          </a>
         </div>
-      </article>
-    {% endfor %}
-  </div>
+      {% endif %}
+      <div class="alt-post-content">
+        <p class="alt-post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+        <h3 class="alt-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="alt-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+
+        {% if post.categories %}
+          <div class="post-tags">
+            {% for category in post.categories %}
+              <a href="/categories/{{ category | slugify }}/" class="tag">{{ category }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <a class="read-more" href="{{ post.url }}">Read more →</a>
+      </div>
+    </div>
+  {% endfor %}
 
   <div class="view-all-box">
     <a href="/blogs/">View All Posts</a>
@@ -81,8 +83,7 @@ layout: default
     }
     setTimeout(typeEffect, deleting ? 40 : typingSpeed);
   }
-
-  / Header scroll class toggle
+  // Header scroll class toggle
   function handleScroll() {
     const header = document.querySelector('header.site-header');
     if (!header) return;
@@ -93,6 +94,7 @@ layout: default
       header.classList.remove('scrolled');
     }
   }
-
+  
   document.addEventListener("DOMContentLoaded", typeEffect);
+  
 </script>
