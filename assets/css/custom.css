@@ -296,6 +296,8 @@ header.site-header {
 .sidebar-right {
   width: 250px;
   flex-shrink: 0;
+  padding-right: 16px; /* Add horizontal spacing */
+  box-sizing: border-box; /* Ensures padding stays within the 250px width */
 }
 
 /* Search box in right sidebar */
