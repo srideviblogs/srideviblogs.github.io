@@ -833,27 +833,26 @@ code {
   font-size: 0.95em;
 }
 
-.simple-blog-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 20px;
-}
-
 .simple-blog-item {
-  position: relative;
-  max-width: 700px;
-  padding: 20px;
-  border-left: 4px solid #007acc;
-  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  align-items: center;
 }
 
-.simple-blog-item:nth-child(even) {
-  align-self: flex-end;
-  border-left: none;
-  border-right: 4px solid #007acc;
+.simple-blog-item img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.simple-blog-content {
+  flex: 1;
 }
 
 .simple-blog-item:hover {
