@@ -269,6 +269,7 @@ header.site-header {
   border-top: 1px solid #ddd;
   border-radius: 0;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
   
