@@ -291,7 +291,7 @@ header.site-header {
   border-radius: 0;
   box-sizing: border-box;
   flex-shrink: 0;
-  margin-top: 3rem; /* add space above footer */
+  margin-top: auto; /* add space above footer */
 
   /* Optional consistent height & vertical center */
   min-height: 60px;
