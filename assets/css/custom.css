@@ -254,6 +254,14 @@ header.site-header {
   font-size: 1rem;
 }
 
+.btn-back {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+
 /* Footer */
 
 .site-footer {
