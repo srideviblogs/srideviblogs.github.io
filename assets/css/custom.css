@@ -1,4 +1,3 @@
-
 /* ============================
    Media Queries for Navigation
    ============================ */
@@ -560,164 +559,133 @@ header.site-header {
   display: inline-block;            /* ADD this */
 }
 
-/* Timeline container */
-.timeline-container {
-  position: relative;
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: 900px;
-}
-
-/* Vertical line */
-.timeline-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 3px;
-  background: #007acc;
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-
-/* Timeline item */
-.timeline-item {
-  position: relative;
-  width: 45%;
-  padding: 1.5rem 2rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  margin-bottom: 3rem;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effect */
-.timeline-item:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  transform: translateY(-5px);
-}
-
-/* Timeline dots */
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 1.5rem;
-  width: 16px;
-  height: 16px;
-  background: #007acc;
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 6px #007accaa;
-  z-index: 1;
-}
-
-/* Left side items */
-.timeline-item.left {
-  left: 0;
-}
-
-.timeline-item.left::before {
-  right: -40px;
-}
-
-/* Right side items */
-.timeline-item.right {
-  left: 55%;
-}
-
-.timeline-item.right::before {
-  left: -40px;
-}
-
-/* Content inside timeline item */
-.timeline-content img.timeline-image {
+/* Container for all posts — center with max width, full width below that */
+.alt-posts-section {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  object-fit: cover;
+  margin: 0 auto;
+  padding: 2rem 16px 2rem 60px;
+
+  /* Masonry columns */
+  column-count: 2;
+  column-gap: 2rem;
+
+  /* Make sure it stretches full width up to max-width */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.timeline-date {
+/* Responsive: single column on small screens */
+@media (max-width: 768px) {
+  .alt-posts-section {
+    column-count: 1;
+  }
+}
+
+/* Each post card — must be inline-block and full width of column */
+.alt-post-card {
+  display: inline-block;      /* essential for CSS columns */
+  width: 100%;               /* fill the column width */
+  margin-bottom: 2rem;
+  break-inside: avoid;       /* avoid breaking inside column */
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  background-color: #fff;
+  border-left: 4px solid #007acc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  color: #1e1e2f;
+  padding: 1.5rem;
+  box-sizing: border-box;     /* include padding in width */
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.alt-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-left-color: #005a99;
+}
+
+/* Image container */
+.alt-post-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  width: 100%;               /* full width */
+  height: auto;              /* adapt height */
+}
+
+/* Image itself */
+.alt-post-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Date */
+.alt-post-date {
   font-size: 0.9rem;
-  font-style: italic;
   color: #666;
   margin-bottom: 0.5rem;
+  font-style: italic;
 }
 
-.timeline-title {
-  font-size: 1.5rem;
-  margin: 0 0 0.7rem;
+/* Title */
+.alt-post-title {
+  font-size: 1.4rem;
+  margin: 0.2rem 0 0.8rem;
 }
 
-.timeline-title a {
+.alt-post-title a {
   color: #007acc;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-.timeline-title a:hover {
+.alt-post-title a:hover {
   text-decoration: underline;
-  color: #005a99;
 }
 
-.timeline-excerpt {
+/* Excerpt */
+.alt-post-excerpt {
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
-.post-tags {
-  margin-bottom: 1rem;
-}
-
-.post-tags .tag {
-  display: inline-block;
-  background: #e0f0ff;
-  color: #007acc;
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  margin-right: 0.5rem;
-  text-decoration: none;
-}
-
+/* Read More link */
 .read-more {
-  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
   color: #007acc;
   text-decoration: none;
-  font-size: 1rem;
 }
 
 .read-more:hover {
   text-decoration: underline;
-  color: #005a99;
 }
 
-/* Responsive: single column stacked timeline */
-@media (max-width: 768px) {
-  .timeline-container::before {
-    left: 8px;
-  }
+/* Post tags */
+.post-tags {
+  margin-top: 10px;
+}
 
-  .timeline-item {
-    width: 100% !important;
-    padding-left: 2.5rem;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-  }
+.tag {
+  display: inline-block;
+  background: #007acc;
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  margin-right: 6px;
+  text-decoration: none;
+}
 
-  .timeline-item::before {
-    top: 1.3rem;
-    left: 0;
-    right: auto;
-  }
-
-  .timeline-item.right {
-    left: 0 !important;
-  }
+.tag:hover {
+  background-color: #005f99;
 }
 
 .view-all-box {
