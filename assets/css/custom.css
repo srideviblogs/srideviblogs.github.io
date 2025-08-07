@@ -693,7 +693,7 @@ header.site-header {
 .view-all-box {
   display: inline-block;
   margin-top: 3rem;
-  column-span: all;
+  text-align: center;
 }
 
 .view-all-box a {
