@@ -32,7 +32,6 @@ body {
   margin: 0;
   padding-left: 40px;   /* more padding on left */
   padding-right: 12px;  /* less padding on right */
-  padding-top: 20px;
   padding-bottom: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -60,6 +59,7 @@ a:hover {
 
 header.site-header {
   position: relative;
+  margin-top: 0;
   margin-left: -40px;   /* negative margin equals body's left padding */
   margin-right: -12px;  /* negative margin equals body's right padding */
   padding: 0.5rem 24px; /* internal padding */
