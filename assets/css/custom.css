@@ -563,14 +563,11 @@ header.site-header {
 .alt-posts-section {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 16px 2rem 60px;
+  padding: 2rem 16px 2rem 40px; /* ⬅️ reduced left padding */
 
   /* Masonry columns */
   column-count: 2;
-  column-gap: 2rem;
-
-  /* Make sure it stretches full width up to max-width */
-  width: 100%;
+  column-gap: 1.5rem; /* ⬅️ slightly smaller gap between columns */
   box-sizing: border-box;
 }
 
@@ -578,6 +575,7 @@ header.site-header {
 @media (max-width: 768px) {
   .alt-posts-section {
     column-count: 1;
+    padding-left: 20px; /* smaller padding for mobile */
   }
 }
 
@@ -585,23 +583,24 @@ header.site-header {
 .alt-post-card {
   display: inline-block;      /* essential for CSS columns */
   width: 100%;               /* fill the column width */
-  margin-bottom: 2rem;
   break-inside: avoid;       /* avoid breaking inside column */
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
 
+  margin-bottom: 1.5rem;     /* ⬅️ reduced vertical spacing */
+  padding: 1rem;             /* ⬅️ reduced internal spacing */
+  border-radius: 8px;        /* ⬅️ slightly smaller corners */
+
   background-color: #fff;
-  border-left: 4px solid #007acc;
-  border-radius: 10px;
+  border-left: 3px solid #007acc;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   color: #1e1e2f;
-  padding: 1.5rem;
   box-sizing: border-box;     /* include padding in width */
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 
 .alt-post-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
   border-left-color: #005a99;
 }
