@@ -73,7 +73,6 @@ header.site-header {
   justify-content: center;
   z-index: 1000;
   margin-bottom: 2rem;
-  margin: 0;
 }
 
 .site-header .container {
@@ -84,7 +83,6 @@ header.site-header {
   align-items: center;
   padding: 0;
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 .site-title {
