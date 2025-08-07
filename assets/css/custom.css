@@ -28,6 +28,10 @@ html, body {
   flex-direction: column;
 }
 
+body > main,
+body > .main-content {
+  flex-grow: 1;
+}
 
 /* Body styling */
 body {
