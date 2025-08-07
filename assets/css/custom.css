@@ -689,9 +689,9 @@ header.site-header {
   background-color: #005f99;
 }
 
-
 .view-all-box {
-  display: inline-block;
+  column-span: all;
+  display: block;           /* Full-width block element */
   margin-top: 3rem;
   text-align: center;
 }
