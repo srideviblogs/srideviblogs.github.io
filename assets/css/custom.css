@@ -62,7 +62,7 @@ header.site-header {
   margin-top: 0;
   margin-left: -40px;   /* negative margin equals body's left padding */
   margin-right: -12px;  /* negative margin equals body's right padding */
-  padding: 0.5rem 24px; /* internal padding */
+  padding: 0.3rem 24px; /* internal padding */
   width: calc(100% + 52px); /* 40 + 12 = 52px extra width to cover negative margins */
   background: #f5f7fa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
