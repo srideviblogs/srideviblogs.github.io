@@ -936,59 +936,62 @@ simple-blog-list {
    ========================= */
 
 @media (max-width: 768px) {
-  /* Make posts stack vertically */
+  /* Posts container */
   .alt-posts-section {
     display: flex;
     flex-direction: column;
-    align-items: center;   /* center the post cards */
-    gap: 20px;             /* spacing between posts */
-    padding: 0 1rem;       /* equal side padding */
+    align-items: center;     /* center posts */
+    padding: 0 1rem;         /* equal spacing left/right */
   }
 
-  /* Each post card full width but limited max width */
+  /* Post card wider + spacing between posts */
   .alt-post-card {
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 600px;        /* increase max width for larger mobile screens */
+    margin: 0 auto 2rem auto; /* center + 2rem bottom spacing */
     border-radius: 6px;
     padding: 1rem;
     box-sizing: border-box;
   }
 
-  /* Image full width inside card */
+  /* Image full width */
   .alt-post-image {
     width: 100%;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
   }
 
   .alt-post-image img {
     width: 100% !important;
     height: auto !important;
-    max-height: 220px;
+    max-height: 240px;       /* slightly bigger images */
     object-fit: cover;
     display: block;
   }
 
-  /* Content below image */
+  /* Post content centered */
   .alt-post-content {
     width: 100%;
     text-align: center;
   }
 
+  /* Title */
   .alt-post-title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     margin: 0.5rem 0;
     line-height: 1.4;
   }
 
+  /* Excerpt */
   .alt-post-excerpt {
     font-size: 1rem;
     margin-bottom: 0.8rem;
+    line-height: 1.5;
   }
 
+  /* Date */
   .alt-post-date {
     font-size: 0.85rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     display: block;
   }
 }
