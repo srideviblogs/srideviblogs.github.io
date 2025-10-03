@@ -934,44 +934,25 @@ simple-blog-list {
 /* =========================
    Mobile Fix for Home Posts
    ========================= */
-  
-/* --- Blog Grid Layout Fix for Mobile --- */
+
 @media (max-width: 768px) {
-  .blog-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* center align posts */
-    gap: 20px; /* spacing between posts */
-    padding: 0 15px; /* equal left/right spacing */
+  .alt-post-row {
+    flex-direction: column !important;
   }
 
-  .blog-post {
-    width: 100%;
-    max-width: 500px; /* control max size for readability */
-    margin: 0 auto; /* ensure centered */
+  .alt-post-image,
+  .alt-post-content {
+    flex: 1 1 100%;
   }
 
-  .blog-post img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-
-  .blog-post-title {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .blog-post-excerpt {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .blog-post a.read-more {
-    display: inline-block;
-    margin: 0 auto;
+  .alt-post-title {
+    font-size: 1.3rem;
   }
 }
+
+.view-all-box {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+  
