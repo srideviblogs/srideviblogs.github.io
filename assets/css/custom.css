@@ -732,6 +732,22 @@ header.site-header {
   background-color: #005f99;
 }
 
+@media (max-width: 768px) {
+  .alt-post-row {
+    flex-direction: column !important;
+  }
+
+  .alt-post-image,
+  .alt-post-content {
+    flex: 1 1 100%;
+    height: auto; /* Let content decide height on mobile */
+  }
+
+  .alt-post-title {
+    font-size: 1.3rem;
+  }
+}
+
 .view-all-box {
   column-span: all;
   display: block;           /* Full-width block element */
