@@ -934,102 +934,44 @@ simple-blog-list {
 /* =========================
    Mobile Fix for Home Posts
    ========================= */
+  
+/* --- Blog Grid Layout Fix for Mobile --- */
 @media (max-width: 768px) {
-
-  /* Posts section wrapper */
-  .alt-posts-section {
+  .blog-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;          /* center align posts */
-    padding: 1rem;                /* equal spacing left/right */
-    margin-top: 1.5rem !important;
-    gap: 20px;                    /* consistent space between posts */
+    align-items: center; /* center align posts */
+    gap: 20px; /* spacing between posts */
+    padding: 0 15px; /* equal left/right spacing */
   }
 
-  /* Post cards */
-  .alt-post-card {
-    width: 100% !important;       /* full width for mobile */
-    max-width: 500px;             /* prevent posts from looking oversized */
-    margin: 0 auto;               /* center horizontally */
-    border-radius: 6px;
-    padding: 1rem;
-    box-sizing: border-box;
+  .blog-post {
+    width: 100%;
+    max-width: 500px; /* control max size for readability */
+    margin: 0 auto; /* ensure centered */
   }
 
-  /* Thumbnail images */
-  .alt-post-image {
-    margin-bottom: 0.8rem;
+  .blog-post img {
+    width: 100%;
+    height: auto;
     border-radius: 4px;
-    overflow: hidden;
   }
 
-  .alt-post-image img {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 220px;            /* slightly larger than before */
-    object-fit: cover;
-    display: block;
-  }
-
-  /* Title */
-  .alt-post-title {
-    font-size: 1.3rem !important; /* make titles a bit larger */
-    margin: 0.4rem 0 0.6rem;
-    line-height: 1.4;
-    text-align: center;           /* centered titles */
-  }
-
-  /* Excerpt */
-  .alt-post-excerpt {
-    font-size: 1rem !important;
-    line-height: 1.6;
-    margin-bottom: 0.8rem;
+  .blog-post-title {
+    font-size: 1.2rem;
+    margin-top: 10px;
     text-align: center;
   }
 
-  /* Date */
-  .alt-post-date {
-    font-size: 0.85rem !important;
-    margin-bottom: 0.5rem;
+  .blog-post-excerpt {
+    font-size: 0.95rem;
+    line-height: 1.5;
     text-align: center;
-    display: block;
+    margin-bottom: 10px;
   }
 
-  /* Read More button */
-  .read-more {
-    font-size: 0.95rem !important;
-    padding: 0.4rem 0.8rem;
-    border: 1px solid #007acc;
-    border-radius: 0;             /* flat button style */
-    background: none;
+  .blog-post a.read-more {
     display: inline-block;
     margin: 0 auto;
   }
-
-  .read-more:hover {
-    background: #007acc;
-    color: white;
-    text-decoration: none;
-  }
-
-  /* View All box */
-  .view-all-box {
-    margin-top: 2rem !important;
-    text-align: center;
-  }
-
-  .view-all-box a {
-    font-size: 0.95rem !important;
-    padding: 0.5rem 1rem;
-    border: 1px solid #007acc;
-    border-radius: 0;
-    display: inline-block;
-  }
-
-  .view-all-box a:hover {
-    background: #007acc;
-    color: #fff;
-    text-decoration: none;
-  }
 }
-
