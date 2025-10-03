@@ -732,22 +732,6 @@ header.site-header {
   background-color: #005f99;
 }
 
-@media (max-width: 768px) {
-  .alt-post-row {
-    flex-direction: column !important;
-  }
-
-  .alt-post-image,
-  .alt-post-content {
-    flex: 1 1 100%;
-    height: auto; /* Let content decide height on mobile */
-  }
-
-  .alt-post-title {
-    font-size: 1.3rem;
-  }
-}
-
 .view-all-box {
   column-span: all;
   display: block;           /* Full-width block element */
@@ -946,3 +930,87 @@ simple-blog-list {
   color: #333;
   line-height: 1.6;
 }
+
+/* =========================
+   Mobile Fix for Home Posts
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Posts section padding fix */
+  .alt-posts-section {
+    column-count: 1 !important;
+    column-gap: 0 !important;
+    padding: 1rem 1rem !important; /* reduce side padding */
+    margin-top: 1.5rem !important;
+  }
+
+  /* Post cards full-width */
+  .alt-post-card {
+    width: 100% !important;
+    margin-bottom: 1.5rem !important;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+
+  /* Thumbnail images responsive */
+  .alt-post-image {
+    margin-bottom: 0.8rem;
+    border-radius: 4px;
+  }
+
+  .alt-post-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 180px;     /* keep thumbnails smaller */
+    object-fit: cover;
+  }
+
+  /* Title */
+  .alt-post-title {
+    font-size: 1.2rem !important;
+    margin: 0.4rem 0 0.6rem;
+    line-height: 1.3;
+  }
+
+  /* Excerpt */
+  .alt-post-excerpt {
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Date */
+  .alt-post-date {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Read More button */
+  .read-more {
+    font-size: 0.9rem !important;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #007acc;
+    border-radius: 0; /* flat style */
+    background: none;
+    display: inline-block;
+  }
+
+  .read-more:hover {
+    background: #007acc;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* View All box centered */
+  .view-all-box {
+    margin-top: 2rem !important;
+    text-align: center;
+  }
+
+  .view-all-box a {
+    font-size: 0.9rem !important;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0;
+  }
+}
+
