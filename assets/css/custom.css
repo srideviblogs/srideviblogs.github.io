@@ -530,21 +530,26 @@ header.site-header {
   flex-wrap: wrap;
 }
 
-.prev-post, .next-post {
+.prev-post,
+.next-post {
   position: relative;
-  padding: 0.5em 1em;
+  display: block; /* stack vertically */
+  width: 100%;
+  max-width: 320px; /* control width */
+  margin: 0.5rem auto; /* center horizontally with spacing */
+  padding: 0.6em 1em;
   background-color: #007acc;
   color: white;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
-  max-width: 48%;
+  text-align: center; /* center text inside button */
   box-sizing: border-box;
   transition: background-color 0.3s ease;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 2rem;
 }
 
 .prev-post:hover, .next-post:hover {
