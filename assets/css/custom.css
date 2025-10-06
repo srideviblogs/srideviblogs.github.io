@@ -545,7 +545,6 @@ header.site-header {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 2rem;
 }
 
 .prev-post:hover, .next-post:hover {
@@ -573,7 +572,6 @@ header.site-header {
     max-width: 100%;
     text-align: center;
     white-space: normal;
-    margin-bottom: 2rem;
   }
 }
 
