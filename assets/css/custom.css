@@ -1019,7 +1019,7 @@ simple-blog-list {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 2rem;
-}
+  }
 }
 
 /* ✅ Fix uneven left/right spacing across all pages on mobile */
