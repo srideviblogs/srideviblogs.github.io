@@ -996,5 +996,27 @@ simple-blog-list {
   }
 }
 
+/* ✅ Fix uneven left/right spacing across all pages on mobile */
+@media (max-width: 768px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* prevent sideways scroll */
+  }
 
+  .wrapper,
+  .page-content,
+  main,
+  .content,
+  .post-grid,
+  .alt-posts-section {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+}
   
