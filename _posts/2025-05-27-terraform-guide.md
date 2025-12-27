@@ -7,6 +7,9 @@ tags: [terraform, infrastructure-as-code, aws]
 image: /assets/images/terraform.jpg
 ---
 
+Terraform is one of the most widely used Infrastructure as Code tools in modern DevOps.
+In this post, I share why I started using Terraform and how understanding the basics helped me manage cloud infrastructure more reliably.
+
 ## Introduction
 
 When I first started working with cloud infrastructure, most of the setup was done manually using the cloud console. Creating VPCs, EC2 instances, security groups and repeating the same steps for different environments worked initially, but it quickly became difficult to manage.
