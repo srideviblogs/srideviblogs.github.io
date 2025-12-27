@@ -64,8 +64,8 @@ For small setups, Kubernetes alone is usually enough.
 
 ## Final Thoughts
 
-> Kubernetes manages containers.  
-> Istio manages how services talk to each other — securely and reliably.
+- Kubernetes manages containers.  
+- Istio manages how services talk to each other — securely and reliably.
 
 In the next post, I’ll explain Istio architecture and the sidecar proxy, which is the core idea behind how Istio works.
 
