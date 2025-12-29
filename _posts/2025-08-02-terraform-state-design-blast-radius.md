@@ -12,7 +12,7 @@ Terraform state design matters more than resource definitions.
 
 A poorly designed state can turn a small change into a production outage.
 
-Initially, Kubernetes cluster, networking, IAM and monitoring resources were all managed under a **single Terraform state file.
+Initially, Kubernetes cluster, networking, IAM and monitoring resources were all managed under a single Terraform state file.
 
 This meant:
 - Large plans
