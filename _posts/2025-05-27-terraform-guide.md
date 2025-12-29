@@ -8,10 +8,9 @@ image: /assets/images/terraform.jpg
 ---
 
 Most Terraform blogs start with definitions. My Terraform journey started with failures.
+
 I didn’t truly understand Terraform when I wrote my first `.tf` file.I understood it only after a failed apply blocked production changes.
 This post explains Terraform basics, but through real-world lessons I learned while working with AWS and Azure.
-
----
 
 ## What Is Terraform (In Real Life)
 
@@ -23,8 +22,6 @@ But in reality, Terraform is:
 - A **change safety mechanism**
 
 I realized this when a small change unexpectedly planned to destroy critical resources.
-
----
 
 ## My First Terraform Workflow (And Mistakes)
 
@@ -61,8 +58,6 @@ Error: Error acquiring the state lock
 
 That failure made me redesign how we managed state across environments.
 
----
-
 ## Local vs Remote State
 
 Local state is fine for learning:
@@ -94,8 +89,6 @@ backend "s3" {
 
 After moving to remote state, failures became isolated instead of global.
 
----
-
 ## Providers: Terraform’s Bridge to the Cloud
 
 Providers tell Terraform how to talk to AWS, Azure, Kubernetes, etc.
@@ -114,8 +107,6 @@ Error: Provider configuration not present
 
 That’s when I understood:
 Terraform state remembers providers, not just resources.
-
----
 
 ## Resources vs Data Sources
 
@@ -144,8 +135,6 @@ Using data sources helped me avoid:
 - Cross-account mistakes
 - Region mismatches
 
----
-
 ## Terraform Modules (How We Scaled Safely)
 
 As infrastructure grew, copy-paste became unmanageable.
@@ -164,8 +153,6 @@ module "eks" {
 
 Modules also taught me: bad module design can create hidden dependencies, which we later fixed by refactoring.
 
----
-
 ## Terraform Plan Is Not Optional
 
 Running terraform apply without reading the plan.
@@ -181,8 +168,6 @@ This command has saved me from:
 
 In production, plan reviews are mandatory.
 
----
-
 ## Terraform Is Not Everything
 
 Some misconceptions:
@@ -194,10 +179,9 @@ That’s why we pair it with:
 - GitOps (Argo CD)
 - Secret managers (AWS Secrets Manager, Azure Key Vault)
 
----
-
 ## Final Thoughts
 
-Terraform basics are easy to learn. Using Terraform in production that’s when the real learning happens.
-Every failure made me a better engineer, a safer operator, and a smarter problem solver.
+- Terraform basics are easy to learn. Using Terraform in production that’s when the real learning happens.
+- Every failure made me a better engineer, a safer operator, and a smarter problem solver.
+  
 This post lays the foundation for my Terraform series, where I share what really breaks and how to fix it.
