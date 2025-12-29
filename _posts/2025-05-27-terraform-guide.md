@@ -7,17 +7,15 @@ tags: [terraform, infrastructure-as-code, aws]
 image: /assets/images/terraform.jpg
 ---
 
-Most Terraform blogs start with definitions.
-My Terraform journey started with **failures**.
+Most Terraform blogs start with definitions. My Terraform journey started with failures.
+I didn’t truly understand Terraform when I wrote my first `.tf` file.I understood it only after a failed apply blocked production changes.
+This post explains Terraform basics, but through real-world lessons I learned while working with AWS and Azure.
 
-I didn’t truly understand Terraform when I wrote my first `.tf` file.
-I understood it only **after a failed apply blocked production changes**.
-
-This post explains **Terraform basics**, but through **real-world lessons** I learned while working with AWS and Azure.
+---
 
 ## What Is Terraform (In Real Life)
 
-Terraform is an **Infrastructure as Code (IaC)** tool that allows us to define, provision, and manage infrastructure using declarative configuration files.
+Terraform is an Infrastructure as Code (IaC) tool that allows us to define, provision and manage infrastructure using declarative configuration files.
 
 But in reality, Terraform is:
 - A **state management system**
@@ -40,7 +38,6 @@ terraform apply
 Everything worked fine — until it didn’t.
 
 What Went Wrong
-
 - Single state file for everything
 - No environment separation
 - Manual changes in cloud console
@@ -52,10 +49,9 @@ That’s when Terraform taught me its first real lesson: state matters more than
 Terraform state is Terraform’s source of truth about your infrastructure.
 
 When state is:
-
-Wrong → Terraform makes wrong decisions
-Locked → All changes stop
-Lost → Recovery becomes painful
+- Wrong → Terraform makes wrong decisions
+- Locked → All changes stop
+- Lost → Recovery becomes painful
 
 I learned this during a production incident where Terraform failed with:
 
@@ -64,6 +60,8 @@ Error: Error acquiring the state lock
 ```
 
 That failure made me redesign how we managed state across environments.
+
+---
 
 ## Local vs Remote State
 
@@ -80,7 +78,6 @@ terraform.tfstate
 ```
 
 Remote State (Mandatory in production):
-
 - AWS: S3 + DynamoDB
 - Azure: Blob Storage + locking
 
@@ -116,7 +113,6 @@ Error: Provider configuration not present
 ```
 
 That’s when I understood:
-
 Terraform state remembers providers, not just resources.
 
 ---
@@ -144,7 +140,6 @@ data "aws_vpc" "existing" {
 ```
 
 Using data sources helped me avoid:
-
 - Hardcoded IDs
 - Cross-account mistakes
 - Region mismatches
@@ -156,7 +151,6 @@ Using data sources helped me avoid:
 As infrastructure grew, copy-paste became unmanageable.
 
 Modules helped us:
-
 - Standardize infrastructure
 - Reduce mistakes
 - Enforce best practices
@@ -181,7 +175,6 @@ terraform plan
 ```
 
 This command has saved me from:
-
 - Accidental deletions
 - Downtime
 - Irreversible mistakes
@@ -193,13 +186,11 @@ In production, plan reviews are mandatory.
 ## Terraform Is Not Everything
 
 Some misconceptions:
-
 - Terraform is not a deployment tool
 - Terraform is not a configuration manager
 - Terraform should not manage secrets directly
 
 That’s why we pair it with:
-
 - GitOps (Argo CD)
 - Secret managers (AWS Secrets Manager, Azure Key Vault)
 
@@ -208,7 +199,5 @@ That’s why we pair it with:
 ## Final Thoughts
 
 Terraform basics are easy to learn. Using Terraform in production that’s when the real learning happens.
-
 Every failure made me a better engineer, a safer operator, and a smarter problem solver.
-
 This post lays the foundation for my Terraform series, where I share what really breaks and how to fix it.
