@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Understanding Istio Architecture: Control Plane, Data Plane & Envoy"
-date: 2025-09-02 10:00:00 +0000
+date: 2025-09-03 10:00:00 +0000
 categories: istio
 tags: [istio, service-mesh, architecture, envoy, kubernetes]
 image: /assets/images/istio.jpg
