@@ -5,6 +5,7 @@ date: 2025-09-01 10:00:00 +0000
 categories: kubernetes istio
 tags: [kubernetes, istio, service-mesh]
 image: /assets/images/istio.jpg
+permalink: /istio/why-istio/
 ---
 
 When I started with Kubernetes, everything felt sufficient — pods, services, deployments, ingress.  
