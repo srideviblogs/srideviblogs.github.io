@@ -23,15 +23,15 @@ Before Istio, most of our microservices handled:
 - Metrics
 - Logging
 
-Inside the **application code.
+Inside the application code.
 This led to:
 - Inconsistent behavior
 - Difficult debugging
 - Risky deployments
 
-Istio is a **service mesh** that helps manage service-to-service communication in Kubernetes:
+Istio is a service mesh that helps manage service-to-service communication in Kubernetes:
 
-- Provides **traffic management**, security (mTLS) and observability.
+- Provides traffic management, security (mTLS) and observability.
 - Works via sidecar proxies (Envoy) injected into pods.
 - Separates application logic from infrastructure concerns.
 
@@ -39,9 +39,9 @@ Why I Started Using Istio
 
 In my projects, I faced challenges like:
 
-- Managing **service-to-service TLS** manually
+- Managing service-to-service TLS** manually
 - Monitoring service latency and retries
-- Routing traffic for **canary deployments**
+- Routing traffic for canary deployments
 
 Istio solved these by standardizing communication, securing traffic and providing observability.
 
