@@ -2,7 +2,7 @@
 layout: post
 title: "Terraform Secrets Management: Azure Key Vault and AWS Secrets Manager"
 date: 2025-08-04
-categories: [terraform, security]
+categories: [terraform]
 tags: [terraform, secrets, keyvault, aws]
 image: /assets/images/terraform.jpg
 permalink: /terraform/secrets
