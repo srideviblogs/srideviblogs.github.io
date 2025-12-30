@@ -78,6 +78,28 @@ istioctl version
 istioctl proxy-status
 istioctl proxy-config routes <pod-name> -n my-namespace
 ```
+Traffic flow 
+
+- without Istio
+
+```nginx
+Service → Pod
+```
+- with Istio
+```nginx
+Service → Envoy → App → Envoy → Destination
+```
+
+When Istio Makes Sense
+
+- Istio is powerful, but not always needed.
+- It makes sense when:
+- You have many microservices
+- You need fine-grained traffic control
+- Security between services matters
+- Observability is critical
+
+It may be overkill for small setups.
 
 ## Lessons Learned
 
