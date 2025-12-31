@@ -5,7 +5,7 @@ date: 2025-09-05 10:00:00 +0000
 categories: istio
 tags: [istio, virtualservice, destinationrule, traffic-management]
 image: /assets/images/istio.jpg
-permalink: /istio/sidecar/
+permalink: /istio/traffic/
 ---
 
 Traffic management is the main reason most teams adopt Istio.
