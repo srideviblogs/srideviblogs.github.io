@@ -3,7 +3,7 @@ layout: post
 title: "Istio AuthorizationPolicy (RBAC in Production)"
 date: 2025-09-15 10:00:00 +0000
 categories: istio
-tags: [[istio, authorizationpolicy, rbac, security, service-mesh]
+tags: [istio, authorizationpolicy, rbac, security, service-mesh]
 image: /assets/images/istio.jpg
 permalink: /istio/rbac/
 ---
