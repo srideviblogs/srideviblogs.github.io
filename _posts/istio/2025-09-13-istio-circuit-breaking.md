@@ -5,7 +5,7 @@ date: 2025-09-13 10:00:00 +0000
 categories: istio
 tags: [istio, circuit-breaking, resilience, envoy, service-mesh]
 image: /assets/images/istio.jpg
-permalink: /istio/ingress-egress/
+permalink: /istio/circuit-breaking/
 ---
 
 Circuit breaking is one of those topics that sounds very theoretical until you actually bring down a production system.
