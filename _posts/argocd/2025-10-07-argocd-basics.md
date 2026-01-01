@@ -54,7 +54,7 @@ Core Components (You’ll See These in Logs)
 
 When debugging Argo CD, these components matter:
 
-| Component                       | What it does |
+|Component                        |What it does |
 |---------------------------------|----------------------------------|
 | `argocd-server`                 | UI, API, SSO                     |
 | `argocd-repo-server`            | Pulls Git repos, Helm, Kustomize |
