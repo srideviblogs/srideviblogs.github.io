@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Argo CD OutOfSync but No Changes Applied: A Real Debugging Story"
-date: 2025-10-07 
+date: 2025-10-10 
 categories: [argocd]
 tags: [argocd, debug, outofsync, gitops, kubernetes]
 image: /assets/images/argocd.jpg
