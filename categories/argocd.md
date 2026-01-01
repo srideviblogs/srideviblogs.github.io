@@ -1,6 +1,6 @@
 ---
 layout: category
 title: ArgoCD
-category: argocd
-permalink: /categories/argocd/
+category: argo cd
+permalink: /categories/argo cd/
 ---
