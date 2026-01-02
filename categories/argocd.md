@@ -1,6 +1,6 @@
 ---
 layout: category
 title: ArgoCD
-category: argo cd
+category: argocd
 permalink: /categories/argocd/
 ---
