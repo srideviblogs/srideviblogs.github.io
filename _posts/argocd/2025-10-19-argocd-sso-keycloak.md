@@ -2,7 +2,7 @@
 layout: post
 title: "Argo CD SSO Login Failure with Keycloak: Debugging a Redirect URI Mismatch"
 date: 2025-10-19 
-categories: [argo cd]
+categories: [argocd]
 tags: [argocd, keycloak, sso, oidc, kubernetes, aks, eks]
 image: /assets/images/argocd.jpg
 permalink: /argocd/sso
