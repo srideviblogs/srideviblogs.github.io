@@ -8,7 +8,7 @@ image: /assets/images/kubernetes.jpg
 permalink: /kubernetes/crashloop-backoff
 ---
 
-A few weeks ago, I deployed an updated version of an application in our Kubernetes cluster. Everything looked fine at first, but soon I noticed the pods were failing repeatedly. This post shows how I debugged a real CrashLoopBackOff caused by liveness/readiness and configuration issues and how to quickly find the root cause.
+Sometimes pods keep restarting even though everything looks fine in your YAML. Recently, while deploying a new version of our application, I noticed pods entering CrashLoopBackOff, causing temporary outages. This post shows how I debugged a real CrashLoopBackOff caused by liveness/readiness and configuration issues and how to quickly find the root cause.
 
 Running:
 ```bash
