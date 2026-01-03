@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Service Exists but Traffic Is Not Flowing: Debugging Kubernetes Networking"
-date: 2025-07-07 10:00:00 +0000
+date: 2025-07-10 10:00:00 +0000
 categories: [kubernetes]
 tags: [kubernetes, service, networking, debugging]
 image: /assets/images/kubernetes.jpg
