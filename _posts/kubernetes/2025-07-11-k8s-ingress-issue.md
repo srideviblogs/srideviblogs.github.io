@@ -2,7 +2,7 @@
 layout: post
 title: "Ingress Works in One Namespace but Not Another: A Kubernetes Mystery"
 date: 2025-07-11 10:00:00 +0000
-categories: [kubernetes]
+categories: kubernetes
 tags: [kubernetes, ingress, networking, troubleshooting]
 image: /assets/images/kubernetes.jpg
 permalink: /kubernetes/ingress
@@ -94,7 +94,7 @@ Additional Debugging Tips
 - Ingress resources are namespace-scoped, while ingress controllers watch multiple namespaces depending on configuration.
 - Always double-check the service namespace referenced by the Ingress backend.
 - Use `kubectl describe ingress -n <namespace>` to spot backend errors.
-- Check controller logs for warnings like “service not found” or “no endpoints available.”
+- Check controller logs for warnings like “service not found” or “no endpoints available".
 
 ## Key Takeaways
 
