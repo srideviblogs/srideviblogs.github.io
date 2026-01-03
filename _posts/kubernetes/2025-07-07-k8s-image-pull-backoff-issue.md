@@ -13,8 +13,9 @@ But none of them started.
 
 ```bash
 kubectl get pods
-NAME                     READY   STATUS             RESTARTS
-myapp-7d6f8c9d7b-qm4zv   0/1     ImagePullBackOff   0
+NAME                    READY   STATUS             RESTARTS   AGE
+my-app-8c9d7f6b9c-1     0/1     ImagePullBackOff   0          5m
+my-app-8c9d7f6b9c-2     0/1     ImagePullBackOff   0          5m
 ```
 No restarts. No logs. Just stuck
 
