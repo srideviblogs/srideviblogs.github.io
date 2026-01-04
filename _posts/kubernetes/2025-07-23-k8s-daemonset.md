@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Pods Stuck in Pending: The ReadWriteOnce Storage Trap"
+date: 2025-07-20 10:00:00 +0000
+categories: kubernetes
+tags: [kubernetes, pvc, pv, storage]
+image: /assets/images/kubernetes.jpg
+permalink: /kubernetes/storage
+---
