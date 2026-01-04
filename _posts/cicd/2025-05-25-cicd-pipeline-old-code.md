@@ -5,6 +5,7 @@ date: 2025-05-25 12:00:00 +0000
 categories: [cicd]
 tags: [cicd, pipelines, jenkins, devops]
 image: /assets/images/devops1.jpg
+permalink: /cicd/pipeline-oldcode
 ---
 
 A small feature change was merged into the main branch. CI ran automatically.
