@@ -3,7 +3,7 @@ layout: post
 title: "Node Is Ready but Pods Are Not Scheduling: A Real Kubernetes Scheduling Incident"
 date: 2025-07-18 10:00:00 +0000
 categories: kubernetes
-tags: [[kubernetes, scheduling, taints, tolerations, troubleshooting]
+tags: [kubernetes, scheduling, taints, tolerations, troubleshooting]
 image: /assets/images/kubernetes.jpg
 permalink: /kubernetes/taint-tolerance
 ---
