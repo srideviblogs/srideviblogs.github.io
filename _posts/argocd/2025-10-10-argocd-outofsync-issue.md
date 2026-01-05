@@ -5,7 +5,7 @@ date: 2025-10-10
 categories: [argocd]
 tags: [argocd, debug, outofsync, gitops, kubernetes]
 image: /assets/images/argocd.jpg
-permalink: /argocd/sync-issues
+permalink: /argocd/argocd-outofsync-no-changes-applied/
 ---
 
 This is one of the most confusing Argo CD issues I have faced in production:
