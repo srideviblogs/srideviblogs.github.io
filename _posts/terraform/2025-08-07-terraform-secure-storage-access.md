@@ -5,7 +5,7 @@ date: 2025-08-07
 categories: [terraform]
 tags: [terraform, aci, storage, security]
 image: /assets/images/terraform.jpg
-permalink: /terraform/security
+permalink: /terraform/secure-storage-access-aci-sas-tokens/
 ---
 
 Secure service-to-service access is a common production challenge.
