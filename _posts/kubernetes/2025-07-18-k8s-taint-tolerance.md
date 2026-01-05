@@ -5,7 +5,7 @@ date: 2025-07-18 10:00:00 +0000
 categories: kubernetes
 tags: [kubernetes, scheduling, taints, tolerations, troubleshooting]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/taint-tolerance
+permalink: /kubernetes/node-ready-pods-not-scheduling/
 ---
 
 This happened during a routine scale-up. New nodes joined the cluster. They showed up as Ready. Everything looked healthy.
