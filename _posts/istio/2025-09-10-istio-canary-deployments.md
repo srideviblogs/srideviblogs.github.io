@@ -5,7 +5,7 @@ date: 2025-09-10 10:00:00 +0000
 categories: istio
 tags: [istio, canary, deployments, traffic-management, service-mesh]
 image: /assets/images/istio.jpg
-permalink: /istio/canary/
+permalink: /istio/istio-canary-deployments-real-world-issues/
 ---
 
 Canary deployments are often described like this:
