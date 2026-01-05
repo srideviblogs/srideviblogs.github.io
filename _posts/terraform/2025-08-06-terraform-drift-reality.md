@@ -5,7 +5,7 @@ date: 2025-08-16
 categories: [terraform]
 tags: [terraform, drift, aws, azure]
 image: /assets/images/terraform.jpg
-permalink: /terraform/drift-detection
+permalink: /terraform/terraform-drift-aws-azure/
 ---
 
 Terraform drift is unavoidable in real-world environments.
