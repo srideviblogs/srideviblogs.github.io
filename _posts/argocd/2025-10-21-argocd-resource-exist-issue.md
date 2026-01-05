@@ -5,7 +5,7 @@ date: 2025-10-21
 categories: [argocd]
 tags: [argocd, debugging, gitops, ownership]
 image: /assets/images/argocd.jpg
-permalink: /argocd/resource
+permalink: /argocd/argocd-resource-exists-managed-by-another-app/
 ---
 
 This issue usually appears after a refactor or a new application rollout.
