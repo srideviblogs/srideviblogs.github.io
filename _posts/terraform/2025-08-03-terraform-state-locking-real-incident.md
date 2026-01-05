@@ -5,7 +5,7 @@ date: 2025-08-03
 categories: [terraform]
 tags: [terraform, state, locking, aws, azure]
 image: /assets/images/terraform.jpg
-permalink: /terraform/state-locking
+permalink: /terraform/terraform-state-locking-production-incident/
 ---
 
 Terraform state locking is something most engineers underestimate until it blocks production.
