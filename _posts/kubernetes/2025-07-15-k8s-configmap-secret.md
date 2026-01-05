@@ -5,7 +5,7 @@ date: 2025-07-15 10:00:00 +0000
 categories: kubernetes
 tags: [kubernetes, configmap, secret, pods, debug]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/configmap
+permalink: /kubernetes/configmap-secret-changes-not-reflecting-pods/
 ---
 
 In Kubernetes, updating a ConfigMap or Secret feels like it should be instant. The change applies successfully, no errors show up yet the application keeps behaving the old way.
