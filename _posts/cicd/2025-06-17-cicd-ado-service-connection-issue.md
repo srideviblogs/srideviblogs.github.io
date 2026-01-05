@@ -5,7 +5,7 @@ date: 2025-06-17 12:00:00 +0000
 categories: [cicd]
 tags: [cicd, azure-devops, service-connection, cicd, permissions, devops]
 image: /assets/images/devops1.jpg
-permalink: /cicd/ado-service-connection-issue
+permalink: /cicd/azure-devops-service-connection-worked-yesterday-not-today/
 ---
 
 An Azure DevOps pipeline failed because a service connection that worked perfectly yesterday suddenly stopped working today.  
