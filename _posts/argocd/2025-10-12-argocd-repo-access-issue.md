@@ -5,7 +5,7 @@ date: 2025-10-12
 categories: [argocd]
 tags: [argocd, gitops, ssh, debugging, repository]
 image: /assets/images/argocd.jpg
-permalink: /argocd/repo-access-issue
+permalink: /argocd/argocd-repo-access-ssh-issue/
 ---
 
 Sometimes, everything works perfectly… and then it suddenly doesn’t. This is exactly what happened in one of our production Argo CD environments. 
