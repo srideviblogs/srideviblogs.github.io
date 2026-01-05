@@ -5,7 +5,7 @@ date: 2025-07-23 10:00:00 +0000
 categories: kubernetes
 tags: [kubernetes, daemonset, scheduling, troubleshooting, nodes]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/daemonset
+permalink: /kubernetes/daemonset-pods-not-running-all-nodes/
 ---
 
 This happened during a monitoring agent rollout. A DaemonSet was created to deploy an agent on every node in the cluster.
