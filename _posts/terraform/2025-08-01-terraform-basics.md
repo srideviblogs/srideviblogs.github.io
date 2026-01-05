@@ -5,7 +5,7 @@ date: 2025-08-01
 categories: [terraform]
 tags: [terraform, infrastructure-as-code, aws]
 image: /assets/images/terraform.jpg
-permalink: /terraform/basics
+permalink: /terraform/terraform-basics-breaking-production/
 ---
 
 Most Terraform blogs start with definitions. My Terraform journey started with failures.
