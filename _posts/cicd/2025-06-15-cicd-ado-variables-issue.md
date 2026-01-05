@@ -6,7 +6,7 @@ date: 2025-06-15 12:00:00 +0000
 categories: [cicd]
 tags: [cicd, azure-devops, variables, variable-groups, devops]
 image: /assets/images/devops1.jpg
-permalink: /cicd/ado-variables-issue
+permalink: /cicd/azure-devops-variables-looked-correct-wrong-values-used/
 ---
 
 All variables in Azure DevOps looked correct in the UI, but during deployment the application picked up wrong values.  
