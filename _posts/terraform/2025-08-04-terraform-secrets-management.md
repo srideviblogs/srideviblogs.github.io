@@ -5,7 +5,7 @@ date: 2025-08-04
 categories: [terraform]
 tags: [terraform, secrets, keyvault, aws]
 image: /assets/images/terraform.jpg
-permalink: /terraform/secrets
+permalink: /terraform/terraform-secrets-management-azure-aws/
 ---
 
 Secrets management is where Terraform mistakes turn into security incidents.
