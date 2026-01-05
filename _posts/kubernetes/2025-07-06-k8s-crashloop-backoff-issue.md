@@ -5,7 +5,7 @@ date: 2025-07-06 10:00:00 +0000
 categories: [kubernetes]
 tags: [kubernetes, crashloopbackoff, liveness, readiness, containers]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/crashloop-backoff
+permalink: /kubernetes/crashloopbackoff-pod-startup-issues/
 ---
 
 Sometimes pods keep restarting even though everything looks fine in your YAML. Recently, while deploying a new version of our application, I noticed pods entering CrashLoopBackOff, causing temporary outages. This post shows how I debugged a real CrashLoopBackOff caused by liveness/readiness and configuration issues and how to quickly find the root cause.
