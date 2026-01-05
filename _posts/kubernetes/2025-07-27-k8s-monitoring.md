@@ -5,7 +5,7 @@ date: 2025-07-27 10:00:00 +0000
 categories: kubernetes
 tags: [kubernetes, monitoring, production-issues, observability]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/monitoring
+permalink: /kubernetes/monitoring-kubernetes-silent-failure/
 ---
 
 This happened during a peak traffic window in production. A web application was deployed across multiple clusters.  
