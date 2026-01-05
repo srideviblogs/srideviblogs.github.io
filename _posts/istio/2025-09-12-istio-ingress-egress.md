@@ -5,7 +5,7 @@ date: 2025-09-12 10:00:00 +0000
 categories: istio
 tags: [istio, ingress-gateway, egress-gateway, service-mesh, networking]
 image: /assets/images/istio.jpg
-permalink: /istio/ingress-egress/
+permalink: /istio/istio-gateways-ingress-vs-egress/
 ---
 
 Gateways are where Istio meets the outside world. Most teams understand sidecars and traffic inside the mesh, but production issues usually start when traffic enters or leaves the mesh**.
