@@ -5,7 +5,7 @@ date: 2025-09-06 10:00:00 +0000
 categories: istio
 tags: [istio, mtls, tls, security, service-mesh]
 image: /assets/images/istio.jpg
-permalink: /istio/mtls/
+permalink: /istio/istio-mtls-how-it-works-and-why-it-breaks/
 ---
 
 Before getting into Istio mTLS, let’s take a step back.
