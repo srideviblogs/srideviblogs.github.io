@@ -5,7 +5,7 @@ date: 2025-06-02 12:00:00 +0000
 categories: [cicd]
 tags: [cicd, pipelines, jenkins, docker]
 image: /assets/images/devops1.jpg
-permalink: /cicd/jenkins-pipeline-docker
+permalink: /cicd/jenkins-built-new-image-deployed-old-one/
 ---
 
 This is another real CI/CD issue I faced while using Jenkins with Docker. The Jenkins pipeline was successful.  
