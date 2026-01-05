@@ -5,7 +5,7 @@ date: 2025-07-02 10:00:00 +0000
 categories: [kubernetes]
 tags: [kubernetes, troubleshooting, pending, pods, yaml]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/pods
+permalink: /kubernetes/pending-pods-why-kubernetes-refuses-to-schedule/
 ---
 
 I recently faced a frustrating issue in a production cluster: I deployed a new version of an application, but some pods just stayed in Pending forever. 
