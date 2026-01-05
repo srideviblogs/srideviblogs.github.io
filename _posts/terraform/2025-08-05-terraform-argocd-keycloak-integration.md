@@ -5,7 +5,7 @@ date: 2025-06-10
 categories: [terraform]
 tags: [terraform, argocd, aks, keycloak]
 image: /assets/images/terraform.jpg
-permalink: /terraform/argocd
+permalink: /terraform/gitops-argocd-aks-keycloak/
 ---
 
 Terraform works best when it focuses on infrastructure provisioning, not application lifecycle management.
