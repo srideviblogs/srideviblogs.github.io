@@ -5,7 +5,7 @@ date: 2025-10-15
 categories: [argocd]
 tags: [argocd, secrets, azure, keyvault, debugging]
 image: /assets/images/argocd.jpg
-permalink: /argocd/secret
+permalink: /argocd/argocd-secrets-not-found-azure-key-vault/
 ---
 
 Argo CD was deployed and applications were syncing correctly, but authentication failed when SSO was enabled.
