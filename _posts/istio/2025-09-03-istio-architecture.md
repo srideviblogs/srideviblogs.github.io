@@ -5,7 +5,7 @@ date: 2025-09-03 10:00:00 +0000
 categories: istio
 tags: [istio, service-mesh, architecture, envoy, kubernetes]
 image: /assets/images/istio.jpg
-permalink: /istio/architecture/
+permalink: /istio/istio-architecture-control-plane-data-plane-envoy/
 ---
 
 When I first started with Istio, I tried to configure traffic rules without truly understanding how Istio is built internally.
