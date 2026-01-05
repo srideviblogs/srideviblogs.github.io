@@ -5,7 +5,7 @@ date: 2025-07-07 10:00:00 +0000
 categories: [kubernetes]
 tags: [kubernetes, imagepullbackoff, containers, debugging]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/imagepull-backoff
+permalink: /kubernetes/imagepullbackoff-cannot-fetch-image/
 ---
 
 The developer merged a small change. CI ran successfully. The deployment was created. Pods showed up immediately.
