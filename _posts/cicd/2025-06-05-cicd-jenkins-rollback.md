@@ -5,7 +5,7 @@ date: 2025-06-05 12:00:00 +0000
 categories: [cicd]
 tags: [cicd, jenkins, rollback, artifacts, production-issues]
 image: /assets/images/devops1.jpg
-permalink: /cicd/jenkins-rollback
+permalink: /cicd/jenkins-rollback-failed-missing-artifacts/
 ---
 
 A production deployment failed and we attempted a rollback but Jenkins couldn’t find the previous artifacts.  
