@@ -5,7 +5,7 @@ date: 2025-06-10 12:00:00 +0000
 categories: [cicd]
 tags: [cicd, jenkins, rollback, artifacts, production-issues]
 image: /assets/images/devops1.jpg
-permalink: /cicd/jenkins-pipeline-wrongbranch
+permalink: /cicd/jenkins-deployed-from-wrong-branch/
 ---
 
 This happened during a scheduled production release. A feature was merged into the `main` branch. Jenkins picked up the change and triggered the pipeline.
