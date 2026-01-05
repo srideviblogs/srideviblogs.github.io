@@ -5,7 +5,7 @@ date: 2025-10-19
 categories: [argocd]
 tags: [argocd, keycloak, sso, oidc, kubernetes, aks, eks]
 image: /assets/images/argocd.jpg
-permalink: /argocd/sso
+permalink: /argocd/argocd-sso-login-failure-keycloak-redirect-uri/
 ---
 
 When we tried enabling SSO via Keycloak for Argo CD, everything looked correct on paper:
