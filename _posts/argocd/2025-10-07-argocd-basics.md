@@ -5,7 +5,7 @@ date: 2025-10-07
 categories: [argocd]
 tags: [argocd, gitops, kubernetes, devops]
 image: /assets/images/argocd.jpg
-permalink: /argocd/basics
+permalink: /argocd/argocd-basics-how-gitops-works/
 ---
 
 Argo CD is often introduced as:
