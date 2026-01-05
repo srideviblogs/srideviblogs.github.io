@@ -5,7 +5,7 @@ date: 2025-08-02
 categories: [terraform]
 tags: [terraform, state, aks, eks, devops]
 image: /assets/images/terraform.jpg
-permalink: /terraform/state-design
+permalink: /terraform/terraform-state-design-aks-eks/
 ---
 
 When I started managing Kubernetes clusters (AKS and later EKS) using Terraform, I realized something critical:
