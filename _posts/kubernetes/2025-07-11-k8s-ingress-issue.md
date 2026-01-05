@@ -5,7 +5,7 @@ date: 2025-07-11 10:00:00 +0000
 categories: kubernetes
 tags: [kubernetes, ingress, networking, troubleshooting]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/ingress
+permalink: /kubernetes/ingress-works-one-namespace-not-another/
 ---
 
 Recently, I deployed an Ingress resource for a new service. It worked perfectly in the `dev` namespace, but when I tried the same configuration in `staging`, traffic wasn’t reaching the pods.  
