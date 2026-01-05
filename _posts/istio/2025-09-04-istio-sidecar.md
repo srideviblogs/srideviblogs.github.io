@@ -5,7 +5,7 @@ date: 2025-09-04 10:00:00 +0000
 categories: istio
 tags: [istio, sidecar, envoy, service-mesh, kubernetes]
 image: /assets/images/istio.jpg
-permalink: /istio/sidecar/
+permalink: /istio/istio-sidecar-injection-behind-the-scenes/
 ---
 
 What Is a Sidecar (in Simple Terms)?
