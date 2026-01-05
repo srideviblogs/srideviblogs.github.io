@@ -5,7 +5,7 @@ date: 2025-07-10 10:00:00 +0000
 categories: [kubernetes]
 tags: [kubernetes, service, networking, debugging]
 image: /assets/images/kubernetes.jpg
-permalink: /kubernetes/service-networking
+permalink: /kubernetes/service-exists-traffic-not-flowing/
 ---
 
 In Kubernetes, it’s easy to assume that if a Service exists, traffic will automatically flow to your Pods.  
