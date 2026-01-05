@@ -5,7 +5,7 @@ date: 2025-06-13 12:00:00 +0000
 categories: [cicd]
 tags: [cicd, azure-devops, ado, cicd, pipelines]
 image: /assets/images/devops1.jpg
-permalink: /cicd/ado-pipeline-issue
+permalink: /cicd/azure-devops-pipeline-green-nothing-deployed/
 ---
 
 The Azure DevOps pipeline finished successfully. Every stage was green. No warnings or failed tasks but production was still running old code.
