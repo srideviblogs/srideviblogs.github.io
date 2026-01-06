@@ -1,7 +1,7 @@
 title: "Sridevi Blogs"
 description: "A DevOps blog focused on real-world learning and career growth — by Sridevi Velpula."
 baseurl: "" 
-url: "https://srideviblogs.github.io"
+url: "https://sridevivelpula.github.io"
 
 author:
   name: "Sridevi Velpula"
@@ -65,7 +65,7 @@ disqus: ""             # Optional – replace with your shortname
 
 # Social Links (optional)
 social:
-  github: "https://github.com/srideviblogs"
+  github: "https://github.com/sridevivelpula"
   linkedin: "https://www.linkedin.com/in/sandeep-pochu-27589b274/"
 
 # Build settings (Important)
